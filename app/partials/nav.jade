@@ -1,7 +1,7 @@
-ul.nav
-  li
+ul.nav-menu
+  li(ng-class="getClass('/todo')")
     a(ng-href='#/todo') todo
-  li
+  li(ng-class="getClass('/view1')")
     a(ng-href='#/view1') view1
-  li
+  li(ng-class="getClass('/view2')")
     a(ng-href='#/view2') view2
