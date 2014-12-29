@@ -2,20 +2,22 @@ $sidebar: 300px;
 
 #container {
   padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-#flex {
+.flex-grid {
   @include display-flex;
-
-  .main {
-    @include flex(1 0);
-  }
-
-  .left {
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  .cell {
     @include flex(0 0 $sidebar);
-  }
-
-  .right {
-    @include flex(0 0 $sidebar);
+    height: $sidebar;
+    padding: 0px 20px 100px 20px;
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
   }
 }

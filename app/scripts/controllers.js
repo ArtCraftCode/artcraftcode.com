@@ -16,12 +16,20 @@ angular.module('app.controllers', [])
     };
   }
 ])
-.controller('MyCtrl1', ['$scope', function($scope) {
-    return $scope.onePlusOne = 2;
-  }
-])
-.controller('MyCtrl2', ['$scope', function($scope) {
-    return $scope;
+.controller('PatternCtrl', ['$scope', function($scope) {
+    $scope.patterns = [
+      {
+        name: 'Forest Park Cowl',
+        image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
+        src: '#/patterns/forest-park-cowl'
+      },
+      {
+        name: 'Very PDX Hat',
+        image: 'http://photos-e.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10735398_536669933134156_746872421_n.jpg',
+        src: '#/patterns/very-pdx-hat'
+      }
+    ];
+    // return $scope.onePlusOne = 2;
   }
 ])
 .controller('TodoCtrl', ['$scope', function($scope) {
