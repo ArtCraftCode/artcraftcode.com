@@ -40,9 +40,6 @@ App.config([
     .when('/calculators', {
       templateUrl: '/partials/calculators.html'
     })
-    .when('/todo', {
-      templateUrl: '/partials/todo.html'
-    })
     .otherwise({
       redirectTo: '/home'
     });
