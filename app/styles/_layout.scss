@@ -1,4 +1,7 @@
-$sidebar: 300px;
+@import "colors";
+
+$sidebar: 200px;
+$cell: 300px;
 
 #container {
   padding: 20px;
@@ -12,12 +15,44 @@ $sidebar: 300px;
   @include flex-wrap(wrap);
   @include justify-content(center);
   .cell {
-    @include flex(0 0 $sidebar);
-    height: $sidebar;
+    @include flex(0 0 $cell);
+    height: $cell;
     padding: 0px 20px 100px 20px;
     img {
       max-width: 100%;
       margin: 0 auto;
     }
+  }
+}
+
+.flex {
+  @include display-flex;
+
+  .left {
+    @include flex(0 0 $sidebar);
+    padding-right: 30px;
+    border-right: 1px solid color_lightest(gray);
+  }
+
+  .content {
+    @include flex(1 0);
+    padding-left: 30px;
+  }
+}
+
+.flex-grid--small {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  .cell {
+    @include flex(0 0 40%);
+    @include display-flex;
+    padding-right: 20px;
+  }
+  .small {
+    @include flex(0 0 30px);
+  }
+  .large {
+    @include flex(1 0);
   }
 }

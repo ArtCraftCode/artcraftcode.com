@@ -24,6 +24,10 @@ App.config([
     .when('/patterns', {
       templateUrl: '/partials/patterns.html'
     })
+    .when('/patterns/forest-park-cowl', {
+      templateUrl: '/partials/pattern.html',
+      controller: 'ForestParkCtrl'
+    })
     .when('/collections', {
       templateUrl: '/partials/collections.html'
     })

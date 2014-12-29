@@ -13,6 +13,14 @@ body {
   color: $text;
 }
 
+.content {
+  @include adjust-font-size-to(14px);
+}
+
+section {
+  padding: 20px 0px;
+}
+
 a {
   color: color(teal);
   text-decoration: none;
@@ -30,11 +38,16 @@ h2 {
 }
 
 h3 {
-  @include adjust-font-size-to(18px);
-  font-weight: 700;
+  @include adjust-font-size-to(20px);
+}
+
+h4 {
+  @include adjust-font-size-to(16px);
+  text-transform: uppercase;
 }
 
 .header {
+  text-transform: lowercase;
   h1, h2 {
     display: inline-block;
   }
@@ -42,4 +55,10 @@ h3 {
     content: ' / ';
   }
   padding-bottom: 40px;
+}
+
+#abbreviations {
+  @include adjust-font-size-to(12px);
+  border-top: 1px solid color_lightest(gray);
+  padding-top: 20px;
 }

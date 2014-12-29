@@ -1,0 +1,68 @@
+#pattern
+  .header
+    h1
+      span.text-teal art
+      span.text-red craft
+      span.text-orange code
+    h2 {{title}}
+
+  .flex
+    .left.materials
+      h3 Materials
+
+      .material(ng-if='yarns.length === 1')
+        h4 Yarn
+        p {{yarns[0]}}
+
+      .material(ng-if='yarns.length > 1')
+        h4 Yarns
+        ul.separated(ng-repeat='yarn in yarns')
+          li {{yarn}}
+
+      .material(ng-if='yarnsShown.length === 1')
+        h4 Yarn shown
+        p {{yarnsShown[0]}}
+
+      .material(ng-if='yarnsShown.length > 1')
+        h4 Yarns shown
+        ul.separated(ng-repeat='yarnShown in yarnsShown')
+          li {{yarnShown}}
+
+      .material(ng-if='needles.length > 1')
+        h4 Needles
+        ul.separated(ng-repeat='needle in needles')
+          li {{needle}}
+
+      .material(ng-if='needles.length === 1')
+        h4 Needle
+        p {{needles[0]}}
+
+      .material
+        h4 Gauge
+        p {{gauge}}
+
+      .material(ng-if='finishedSizes.length > 1')
+        h4 Finished sizes
+        ul.separated(ng-repeat='size in finishedSizes')
+          li {{size.label}}: {{size.measurements}}
+
+      .material(ng-if='finishedSizes.length === 1')
+        h4 Finished size
+        p {{finishedSizes[0].measurements}}
+
+      .material
+        h4 Notions
+        ul.separated(ng-repeat='notion in notions')
+          li {{notion}}
+
+    .content
+      .pattern-title
+        h3 by {{designer}}
+      .pattern-description
+        p {{description}}
+
+      .pattern-directive
+        div(ng-if='patternDirective === "forest-park"')
+          forest-park
+
+      abbreviations
