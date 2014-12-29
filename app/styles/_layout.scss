@@ -1,0 +1,25 @@
+@import "colors";
+
+#nav {
+  .stripe {
+    height: 5px;
+    width: 100%;
+  }
+}
+
+#container {
+  @include display-flex;
+  padding: 20px;
+}
+
+#sidebar-left {
+  // stuff
+}
+
+#sidebar-right {
+  // stuff
+}
+
+#content {
+  @include flex(1 0);
+}
