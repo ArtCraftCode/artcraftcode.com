@@ -1,0 +1,22 @@
+@import "colors";
+
+$min-line-padding: 3px;
+$font: "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+
+html {
+  @include establish-baseline;
+}
+
+body {
+  @include adjust-font-size-to(18px);
+  font-family: $font;
+  color: $text;
+}
+
+a {
+  color: color_dark(teal);
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

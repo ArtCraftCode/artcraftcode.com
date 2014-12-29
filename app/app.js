@@ -18,17 +18,29 @@ App.config([
   '$locationProvider',
   function($routeProvider, $locationProvider, config) {
     $routeProvider
+    .when('/home', {
+      templateUrl: '/partials/home.html'
+    })
+    .when('/patterns', {
+      templateUrl: '/partials/patterns.html'
+    })
+    .when('/collections', {
+      templateUrl: '/partials/collections.html'
+    })
+    .when('/generators', {
+      templateUrl: '/partials/generators.html'
+    })
+    .when('/converters', {
+      templateUrl: '/partials/converters.html'
+    })
+    .when('/calculators', {
+      templateUrl: '/partials/calculators.html'
+    })
     .when('/todo', {
       templateUrl: '/partials/todo.html'
     })
-    .when('/view1', {
-      templateUrl: '/partials/partial1.html'
-    })
-    .when('/view2', {
-      templateUrl: '/partials/partial2.html'
-    }).
-    otherwise({
-      redirectTo: '/todo'
+    .otherwise({
+      redirectTo: '/home'
     });
     return $locationProvider.html5Mode(false);
   }

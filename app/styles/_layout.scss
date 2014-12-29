@@ -1,0 +1,21 @@
+$sidebar: 300px;
+
+#container {
+  padding: 20px;
+}
+
+#flex {
+  @include display-flex;
+
+  .main {
+    @include flex(1 0);
+  }
+
+  .left {
+    @include flex(0 0 $sidebar);
+  }
+
+  .right {
+    @include flex(0 0 $sidebar);
+  }
+}
