@@ -30,8 +30,7 @@ h2 {
 }
 
 h3 {
-  @include adjust-font-size-to(18px);
-  font-weight: 700;
+  @include adjust-font-size-to(20px);
 }
 
 .header {
