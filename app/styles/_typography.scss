@@ -14,10 +14,10 @@ body {
 }
 
 a {
-  color: color_dark(teal);
+  color: color(teal);
   text-decoration: none;
   &:hover {
-    text-decoration: underline;
+    color: color_dark(teal);
   }
 }
 
@@ -41,4 +41,5 @@ h3 {
   h2:before {
     content: ' / ';
   }
+  padding-bottom: 40px;
 }
