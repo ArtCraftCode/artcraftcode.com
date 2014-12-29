@@ -20,3 +20,25 @@ a {
     text-decoration: underline;
   }
 }
+
+h1 {
+  @include adjust-font-size-to(36px);
+}
+
+h2 {
+  @include adjust-font-size-to(24px);
+}
+
+h3 {
+  @include adjust-font-size-to(18px);
+  font-weight: 700;
+}
+
+.header {
+  h1, h2 {
+    display: inline-block;
+  }
+  h2:before {
+    content: ' / ';
+  }
+}
