@@ -13,6 +13,14 @@ body {
   color: $text;
 }
 
+.content {
+  @include adjust-font-size-to(14px);
+}
+
+section {
+  padding: 20px 0px;
+}
+
 a {
   color: color(teal);
   text-decoration: none;
@@ -47,4 +55,10 @@ h4 {
     content: ' / ';
   }
   padding-bottom: 40px;
+}
+
+#abbreviations {
+  @include adjust-font-size-to(12px);
+  border-top: 1px solid color_lightest(gray);
+  padding-top: 20px;
 }
