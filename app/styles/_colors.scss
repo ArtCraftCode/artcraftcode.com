@@ -7,6 +7,10 @@ $colors: (
 
 $text: map-get($colors, gray);
 
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
 @each $color, $hex in $colors {
   .text-#{$color} {
     color: $hex;
