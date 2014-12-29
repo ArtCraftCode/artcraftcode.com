@@ -1,6 +1,4 @@
 #home {
-  max-width: 860px;
-  margin: 0 auto;
   padding-top: 50px;
   h1 {
     @include adjust-font-size-to(72px);
