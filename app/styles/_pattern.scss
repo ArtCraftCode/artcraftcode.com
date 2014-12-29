@@ -1,3 +1,6 @@
+@import "colors";
+@import "typography";
+
 #pattern {
   .materials {
     @include adjust-font-size-to(12px);
@@ -12,5 +15,16 @@
     li {
       list-style-type: circle;
     }
+  }
+
+  h4 {
+    padding-bottom: 5px;
+  }
+}
+
+.pattern-directive {
+  h3 {
+    @extend .text-teal;
+    @extend .text-medium;
   }
 }

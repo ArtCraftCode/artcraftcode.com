@@ -5,6 +5,7 @@
       span.text-red craft
       span.text-orange code
     h2 {{title}}
+    h3 by {{designer}}
 
   .flex
     .left.materials
@@ -56,11 +57,8 @@
           li {{notion}}
 
     .content
-      .pattern-title
-        h3 by {{designer}}
       .pattern-description
-        p {{description}}
-
+        h3 {{description}}
       .pattern-directive
         div(ng-if='patternDirective === "forest-park"')
           forest-park
