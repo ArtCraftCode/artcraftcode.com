@@ -21,10 +21,3 @@
     padding-bottom: 5px;
   }
 }
-
-.pattern-directive {
-  h3 {
-    @extend .text-teal;
-    @extend .text-medium;
-  }
-}
