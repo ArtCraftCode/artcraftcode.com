@@ -23,9 +23,6 @@
     "jade": "~0.33",
     "jade-angularjs-brunch": "~0.0.5",
     "javascript-brunch": ">= 1.0 < 1.8",
-    "karma": "~0.9.4",
-    "karma-coffee-preprocessor": "~0.0.2",
-    "karma-ng-scenario": "~0.0.2",
     "sass-brunch": "^1.8.8",
     "uglify-js-brunch": ">= 1.0 < 1.8"
   }
