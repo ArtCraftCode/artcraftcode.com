@@ -24,29 +24,9 @@ angular.module('app.controllers', [])
         src: '#/patterns/forest-park-cowl'
       },
       {
-        name: 'Taco Party Socks',
-        image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
-        src: '#/patterns/taco-party-socks'
-      },
-      {
-        name: 'Hooray It Is a Thing Socks',
-        image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
-        src: '#/patterns/taco-party-socks'
-      },
-      {
-        name: 'This is a really really really really long pattern name',
-        image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
-        src: '#/patterns/taco-party-socks'
-      },
-      {
-        name: 'Hooray It Is a Thing Socks',
-        image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
-        src: '#/patterns/taco-party-socks'
-      },
-      {
-        name: 'Hooray It Is a Thing Socks',
-        image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
-        src: '#/patterns/taco-party-socks'
+        name: 'Very PDX Hat',
+        image: 'http://photos-e.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10735398_536669933134156_746872421_n.jpg',
+        src: '#/patterns/very-pdx-hat'
       }
     ];
     // return $scope.onePlusOne = 2;
