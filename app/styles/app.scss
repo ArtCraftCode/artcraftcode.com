@@ -1,8 +1,12 @@
 // reset all the things
 @import "compass/reset";
+@import "compass/css3";
 
 // colors and color functions
 @import "colors";
+
+// basic skeleton
+@import "layout";
 
 // vertical rhythm & fonts
 @import "typography";
