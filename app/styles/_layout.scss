@@ -39,3 +39,20 @@ $cell: 300px;
     padding-left: 30px;
   }
 }
+
+.flex-grid--small {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  .cell {
+    @include flex(0 0 40%);
+    @include display-flex;
+    padding-right: 20px;
+  }
+  .small {
+    @include flex(0 0 30px);
+  }
+  .large {
+    @include flex(1 0);
+  }
+}
