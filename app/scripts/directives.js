@@ -5,6 +5,19 @@ angular.module('app.directives',
   [
     'app.services'
   ])
+.directive('forestPark', function() {
+    return {
+      restrict: 'E',
+      templateUrl: '/partials/pattern_forest-park.html'
+    }
+  }
+)
+.directive('abbreviations', function() {
+  return {
+    restrict: 'E',
+    templateUrl: '/partials/abbreviations.html'
+  }
+})
 .directive('appVersion', [
   'version', function(version) {
     return function(scope, elm, attrs) {
