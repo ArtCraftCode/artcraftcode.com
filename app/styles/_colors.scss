@@ -1,0 +1,22 @@
+$colors: (
+  teal: #80DDBE,
+  red: #FC584C,
+  orange: #FF8D45,
+  gray: #333333
+);
+
+$text: map-get($colors, gray);
+
+@each $color, $hex in $colors {
+  .text-#{$color} {
+    color: $hex;
+  }
+
+  .text-#{$color}-light {
+    color: lighten($hex, 10%);
+  }
+
+  .background-#{$color} {
+    background-color: $hex;
+  }
+}
