@@ -6,7 +6,7 @@ html(lang='en', ng-app='app')
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='description', content='')
     meta(name='author', content='')
-    title(ng-bind-template='{{pageTitle}}')
+    title artcraftcode.com !
     link(rel='stylesheet', href='/css/app.css')
     //-script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js')
     //if lte IE 7
@@ -22,24 +22,17 @@ html(lang='en', ng-app='app')
     script(src='/js/partials.js')
     script(src='/js/app.js')
   body(ng-controller='AppCtrl')
-    .wrapper
-      .navbar.navbar-static-top
-        .navbar-inner
-          .container
-            button.btn.btn-navbar(data-toggle='collapse', data-target='.nav-collapse')
-              span.icon-bar
-              span.icon-bar
-              span.icon-bar
-            a(href='/').brand Angular Brunch Seed
-            .nav-collapse
-              div(ng-include="'/partials/nav.html'")
-      .container.main-content
+    #nav
+      .stripe.background-teal
+      .stripe.background-orange
+      .stripe.background-red
+      .nav
+        div(ng-include="'/partials/nav.html'")
+    #container
+      #sidebar-left
+      #content
         div(ng-view)
-        div Angular Brunch seed app: v<span app-version></span>
-      .push
-
-    footer.footer
-      .container
-        p
-          small
-            a(href='https://github.com/scotch/angular-brunch-seed') angular-brunch-seed | source
+        div
+          p Angular brunch seed app
+          span(app-version)
+      #sidebar-right
