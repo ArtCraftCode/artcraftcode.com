@@ -1,3 +1,16 @@
 #pattern {
-  // stuff
+  .materials {
+    @include adjust-font-size-to(12px);
+  }
+
+  .material {
+    padding: 10px 0px;
+  }
+
+  ul.separated {
+    padding-left: 20px;
+    li {
+      list-style-type: circle;
+    }
+  }
 }
