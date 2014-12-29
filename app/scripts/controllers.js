@@ -30,5 +30,7 @@ angular.module('app.controllers', [])
   ];
 }])
 .controller('ForestParkCtrl', ['$scope', function($scope) {
-  $scope.stuff = 'stuff'
+  $scope.title = 'Forest Park Cowl';
+  $scope.designer = 'Liz Abinante';
+  $scope.description = 'A simple cabled cowl with garter stitch ribbing.';
 }]);

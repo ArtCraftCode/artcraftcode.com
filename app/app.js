@@ -25,7 +25,8 @@ App.config([
       templateUrl: '/partials/patterns.html'
     })
     .when('/patterns/forest-park-cowl', {
-      templateUrl: '/partials/patterns_forest-park-cowl.html'
+      templateUrl: '/partials/patterns_template.html',
+      controller: 'ForestParkCtrl'
     })
     .when('/collections', {
       templateUrl: '/partials/collections.html'

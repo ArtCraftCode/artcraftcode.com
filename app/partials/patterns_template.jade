@@ -4,7 +4,10 @@
       span.text-teal art
       span.text-red craft
       span.text-orange code
-    h2 Forest Park Cowl
+    h2 {{title}}
 
   .content(ng-controller='ForestParkCtrl')
-    p {{stuff}}
+    .pattern-title
+      h3 by {{designer}}
+    .pattern-description
+      p {{description}}
