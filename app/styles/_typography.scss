@@ -33,6 +33,11 @@ h3 {
   @include adjust-font-size-to(20px);
 }
 
+h4 {
+  @include adjust-font-size-to(16px);
+  text-transform: uppercase;
+}
+
 .header {
   text-transform: lowercase;
   h1, h2 {
