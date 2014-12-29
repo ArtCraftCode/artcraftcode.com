@@ -26,9 +26,12 @@ App.config([
     })
     .when('/view2', {
       templateUrl: '/partials/partial2.html'
-    }).
-    otherwise({
-      redirectTo: '/todo'
+    })
+    .when('/home', {
+      templateUrl: '/partials/home.html'
+    })
+    .otherwise({
+      redirectTo: '/home'
     });
     return $locationProvider.html5Mode(false);
   }
