@@ -4,63 +4,63 @@
       span.text-teal art
       span.text-red craft
       span.text-orange code
-    h2 {{title}}
-    h3 by {{designer}}
+    h2 {{pattern.title}}
+    h3 by {{pattern.designer}}
 
   .flex
     .left.materials
       h3 Materials
 
-      .material(ng-if='yarns.length === 1')
+      .material(ng-if='pattern.yarns.length === 1')
         h4 Yarn
-        p {{yarns[0]}}
+        p {{pattern.yarns[0]}}
 
-      .material(ng-if='yarns.length > 1')
+      .material(ng-if='pattern.yarns.length > 1')
         h4 Yarns
-        ul.separated(ng-repeat='yarn in yarns')
-          li {{yarn}}
+        ul.separated(ng-repeat='yarn in pattern.yarns')
+          li {{pattern.yarn}}
 
-      .material(ng-if='yarnsShown.length === 1')
+      .material(ng-if='pattern.yarnsShown.length === 1')
         h4 Yarn shown
-        p {{yarnsShown[0]}}
+        p {{pattern.yarnsShown[0]}}
 
-      .material(ng-if='yarnsShown.length > 1')
+      .material(ng-if='pattern.yarnsShown.length > 1')
         h4 Yarns shown
-        ul.separated(ng-repeat='yarnShown in yarnsShown')
-          li {{yarnShown}}
+        ul.separated(ng-repeat='yarnShown in pattern.yarnsShown')
+          li {{pattern.yarnShown}}
 
-      .material(ng-if='needles.length > 1')
+      .material(ng-if='pattern.needles.length > 1')
         h4 Needles
-        ul.separated(ng-repeat='needle in needles')
-          li {{needle}}
+        ul.separated(ng-repeat='needle in pattern.needles')
+          li {{pattern.needle}}
 
-      .material(ng-if='needles.length === 1')
+      .material(ng-if='pattern.needles.length === 1')
         h4 Needle
-        p {{needles[0]}}
+        p {{pattern.needles[0]}}
 
       .material
         h4 Gauge
-        p {{gauge}}
+        p {{pattern.gauge}}
 
-      .material(ng-if='finishedSizes.length > 1')
+      .material(ng-if='pattern.finishedSizes.length > 1')
         h4 Finished sizes
-        ul.separated(ng-repeat='size in finishedSizes')
+        ul.separated(ng-repeat='size in pattern.finishedSizes')
           li {{size.label}}: {{size.measurements}}
 
-      .material(ng-if='finishedSizes.length === 1')
+      .material(ng-if='pattern.finishedSizes.length === 1')
         h4 Finished size
-        p {{finishedSizes[0].measurements}}
+        p {{pattern.finishedSizes[0].measurements}}
 
       .material
         h4 Notions
-        ul.separated(ng-repeat='notion in notions')
+        ul.separated(ng-repeat='notion in pattern.notions')
           li {{notion}}
 
     .content
       .pattern-description
         h3 {{description}}
       .pattern-directive
-        div(ng-if='patternDirective === "forest-park"')
+        div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
 
       abbreviations
