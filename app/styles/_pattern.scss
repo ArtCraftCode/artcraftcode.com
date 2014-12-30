@@ -10,6 +10,10 @@
     padding: 10px 0px;
   }
 
+  .pattern-version {
+    @include adjust-font-size-to(12px);
+  }
+
   ul.separated {
     padding-left: 20px;
     li {
