@@ -21,13 +21,6 @@ App.config([
     .when('/home', {
       templateUrl: '/partials/home.html'
     })
-    .when('/patterns', {
-      templateUrl: '/partials/patterns.html'
-    })
-    .when('/patterns/forest-park-cowl', {
-      templateUrl: '/partials/pattern.html',
-      controller: 'ForestParkCtrl'
-    })
     .when('/collections', {
       templateUrl: '/partials/collections.html'
     })
@@ -39,6 +32,13 @@ App.config([
     })
     .when('/calculators', {
       templateUrl: '/partials/calculators.html'
+    })
+    .when('/patterns', {
+      templateUrl: '/partials/patterns.html'
+    })
+    .when('/patterns/forest-park-cowl', {
+      templateUrl: '/partials/pattern.html',
+      controller: 'ForestParkCtrl'
     })
     .otherwise({
       redirectTo: '/home'
