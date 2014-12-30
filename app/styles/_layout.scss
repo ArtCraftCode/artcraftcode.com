@@ -25,6 +25,23 @@ $cell: 300px;
   }
 }
 
+.flex-grid--small {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  .cell {
+    @include flex(0 0 40%);
+    @include display-flex;
+    padding-right: 20px;
+  }
+  .small {
+    @include flex(0 0 30px);
+  }
+  .large {
+    @include flex(1 0);
+  }
+}
+
 .flex-split {
   @include display-flex;
   @include flex-direction(row);
@@ -48,22 +65,5 @@ $cell: 300px;
   .content {
     @include flex(1 0);
     padding-left: 30px;
-  }
-}
-
-.flex-grid--small {
-  @include display-flex;
-  @include flex-direction(row);
-  @include flex-wrap(wrap);
-  .cell {
-    @include flex(0 0 40%);
-    @include display-flex;
-    padding-right: 20px;
-  }
-  .small {
-    @include flex(0 0 30px);
-  }
-  .large {
-    @include flex(1 0);
   }
 }
