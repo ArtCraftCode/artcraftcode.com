@@ -15,7 +15,7 @@ angular.module('app.controllers', [])
     }
   };
 }])
-.controller('ConvertersCtrl', ['$scope', function($scope) {
+.controller('ConvertersCtrl', ['$scope', 'app.services', function($scope, 'calculator') {
   $scope.yards = '';
   $scope.meters = '';
 
@@ -23,13 +23,13 @@ angular.module('app.controllers', [])
   // will this fall down and die?
   $scope.$watch('yards', function(oldValue, newValue){
     if (newValue !== oldValue) {
-      $scope.meters = newValue;
+      $scope.meters = calculator.toMeters(newValue);
     }
   });
 
   $scope.$watch('meters', function(oldValue, newValue){
      if (newValue !== oldValue) {
-      $scope.yards = newValue;
+      $scope.yards = calculator.toYards(newValue);
     }
   });
 }])
