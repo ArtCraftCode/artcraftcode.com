@@ -9,7 +9,7 @@ angular.module('app.services', [])
     title: 'Forest Park Cowl',
     description: 'A simple cabled cowl with garter stitch ribbing.',
     yarns: [
-      'Approximately 300 yards/274 meters aran (or worsted weight, depending on your gauge) yarn.'
+      'Approximately 300 yards/274 meters aran weight (or worsted weight, depending on your gauge) yarn.'
       ],
     yarnsShown: [
       'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams. Approximately 1.5 skeins used.'
