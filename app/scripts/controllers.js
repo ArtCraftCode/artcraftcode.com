@@ -15,7 +15,7 @@ angular.module('app.controllers', [])
     }
   };
 }])
-.controller('PatternsCtrl', ['$scope', 'app.services' function($scope, 'forestParkCowl', 'veryPdxHat') {
+.controller('PatternsCtrl', ['$scope', 'app.services', function($scope, 'forestParkCowl', 'veryPdxHat') {
   $scope.patterns = [forestParkCowl, veryPdxHat];
 }])
 .controller('ForestParkCtrl', ['$scope', 'app.services', function($scope, 'forestParkCowl') {
