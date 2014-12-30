@@ -25,7 +25,7 @@ $cell: 300px;
   }
 }
 
-.flex {
+.flex-fixed {
   @include display-flex;
 
   .left {
