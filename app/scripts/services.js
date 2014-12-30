@@ -7,6 +7,7 @@ angular.module('app.services', [])
 })
 .service('forestParkCowl', function() {
   return {
+    src: '#/patterns/forest-park-cowl'
     patternDirective: 'forest-park',
     title: 'Forest Park Cowl',
     description: 'A simple cabled cowl with garter stitch ribbing.',
@@ -25,6 +26,23 @@ angular.module('app.services', [])
         measurements: 'X"/Ycm tall; X"/Ycm circumference at smallest opening, X"/Ycm circumference at largest opening.'
       }],
     notions: ['stitch marker', 'cable needle (optional)', 'darning needle'],
-    version: '1 (December 29, 2014)'
+    version: '1 (December 29, 2014)',
+    image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg'
+  };
+}).
+service('veryPdxHat', function() {
+  return {
+    src: '#/patterns/very-pdx-hat'
+    patternDirective: 'very-pdx-hat',
+    title: 'Very PDX hat',
+    description: '',
+    yarns: [''],
+    yarnsShown: [''],
+    needles: [''],
+    gauge: '',
+    finishedSizes: [{ label: '', measurements: ''}],
+    notions: [],
+    version: '1 (December 29, 2014)',
+    image: 'http://photos-e.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10735398_536669933134156_746872421_n.jpg'
   };
 });
