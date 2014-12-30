@@ -28,7 +28,8 @@ App.config([
       templateUrl: '/partials/generators.html'
     })
     .when('/converters', {
-      templateUrl: '/partials/converters.html'
+      templateUrl: '/partials/converters.html',
+      controller: 'ConvertersCtrl'
     })
     .when('/calculators', {
       templateUrl: '/partials/calculators.html'

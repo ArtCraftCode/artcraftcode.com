@@ -8,7 +8,9 @@
 
   .flex-split
     .converter.cell
-      h3 Yards to Meters
+      h3 Yards
+      input(type='number' ng-model='yards' ng-change='meters')
 
     .converter.cell
-      h3 Meters to Yards
+      h3 Meters
+      input(type='number' ng-model='meters' ng-change='yards')
