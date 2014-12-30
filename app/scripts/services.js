@@ -59,6 +59,7 @@ service('veryPdxHat', function() {
     ravelry: {
       link: '',
       button: ''
-    }
+    },
+    custom: true
   };
 });
