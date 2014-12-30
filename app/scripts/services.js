@@ -2,9 +2,6 @@
 
 /* Sevices */
 angular.module('app.services', [])
-.factory('version', function() {
-  return "0.1";
-})
 .service('forestParkCowl', function() {
   return {
     src: '#/patterns/forest-park-cowl'
