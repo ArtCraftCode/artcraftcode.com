@@ -24,7 +24,11 @@ angular.module('app.services', [])
       }],
     notions: ['stitch marker', 'cable needle (optional)', 'darning needle'],
     version: '1 (December 29, 2014)',
-    image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg'
+    image: 'http://photos-f.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10848379_766588923390469_1766678445_n.jpg',
+    ravelry: {
+      link: '',
+      button: ''
+    }
   };
 }).
 service('veryPdxHat', function() {
@@ -40,6 +44,10 @@ service('veryPdxHat', function() {
     finishedSizes: [{ label: '', measurements: ''}],
     notions: [],
     version: '1 (December 29, 2014)',
-    image: 'http://photos-e.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10735398_536669933134156_746872421_n.jpg'
+    image: 'http://photos-e.ak.instagram.com/hphotos-ak-xaf1/t51.2885-15/10735398_536669933134156_746872421_n.jpg',
+    ravelry: {
+      link: '',
+      button: ''
+    }
   };
 });
