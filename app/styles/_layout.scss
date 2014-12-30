@@ -25,6 +25,17 @@ $cell: 300px;
   }
 }
 
+.flex-split {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  .cell {
+    @include flex(1 0);
+    padding: 0px 20px 100px 20px;
+  }
+}
+
 .flex-fixed {
   @include display-flex;
 
