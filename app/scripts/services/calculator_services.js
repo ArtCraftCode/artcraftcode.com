@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.calculators', [])
+angular.module('app.calculator_services', [])
 .factory('calculator', function() {
   return {
     toYards: function(num) {

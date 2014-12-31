@@ -3,7 +3,7 @@
 /* Directives */
 angular.module('app.directives',
   [
-    'app.patterns'
+    'app.patterns_services'
   ])
 .directive('forestPark', function() {
     return {

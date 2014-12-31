@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns', [])
+angular.module('app.patterns_services', [])
 .service('patterns', function() {
   var forestParkCowl = function() {
     return {
