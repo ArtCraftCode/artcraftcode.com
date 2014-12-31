@@ -1,7 +1,12 @@
 @import "colors";
 @import "typography";
+@import "functions";
 
 #pattern {
+  h4 {
+    padding-bottom: 5px;
+  }
+
   .materials {
     @include adjust-font-size-to(12px);
   }
@@ -17,7 +22,14 @@
     }
   }
 
-  h4 {
-    padding-bottom: 5px;
+  #abbreviations {
+    @include adjust-font-size-to(12px);
+    @include border-top;
+    @include border-bottom;
+  }
+
+  .pattern-version {
+    @include adjust-font-size-to(12px);
+    padding-top: 20px;
   }
 }
