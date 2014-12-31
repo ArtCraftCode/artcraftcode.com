@@ -69,3 +69,7 @@
       abbreviations
 
       .pattern-version Version {{pattern.version}}
+
+    .cell-fixed-right
+      div(ng-repeat='image in pattern.images')
+        img.scaled(ng-src='{{image}}')
