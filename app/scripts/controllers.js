@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('app.controllers', ['app.services'])
+angular.module('app.controllers', ['app.services', 'app.calculators'])
 .controller('AppCtrl', ['$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
   $scope.$location = $location;
   $scope.$watch('$location.path()', function(path) {

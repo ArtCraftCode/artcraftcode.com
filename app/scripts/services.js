@@ -2,17 +2,6 @@
 
 /* Sevices */
 angular.module('app.services', [])
-.factory('calculator', function() {
-  return {
-    toYards: function(num) {
-      return Number(num * 1.0936).toFixed(2)
-    },
-
-    toMeters: function(num) {
-      return Number(num / 1.0936).toFixed(2);
-    }
-  }
-})
 .service('patterns', function() {
   var forestParkCowl = function() {
     return {
