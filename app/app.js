@@ -44,6 +44,10 @@ App.config([
       templateUrl: '/partials/pattern.html',
       controller: 'ForestParkCtrl'
     })
+    .when('/patterns/very-pdx-hat', {
+      templateUrl: '/partials/pattern.html',
+      controller: 'VeryPdxCtrl'
+    })
     .otherwise({
       redirectTo: '/home'
     });

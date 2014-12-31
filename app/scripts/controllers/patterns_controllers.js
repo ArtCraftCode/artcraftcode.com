@@ -13,4 +13,7 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'ngDialog']
       data: img
     });
   };
+}])
+.controller('VeryPdxCtrl', ['$scope', 'patterns', function($scope, patterns) {
+  $scope.pattern = patterns.veryPdx;
 }]);

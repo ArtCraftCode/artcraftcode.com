@@ -3,7 +3,7 @@
 /* Sevices */
 angular.module('app.patterns_services', [])
 .service('patterns', function() {
-  var forestParkCowl = function() {
+  var forestPark = function() {
     return {
       src: '#/patterns/forest-park-cowl',
       patternDirective: 'forest-park',
@@ -34,19 +34,19 @@ angular.module('app.patterns_services', [])
     }
   }
 
-  var veryPdxHat = function() {
+  var veryPdx = function() {
     return {
       src: '#/patterns/very-pdx-hat',
-      patternDirective: 'very-pdx-hat',
+      patternDirective: 'very-pdx',
       name: 'Very PDX Hat',
       designer: 'Liz Abinante',
-      description: '',
-      yarns: [''],
-      yarnsShown: [''],
-      needles: [''],
-      gauge: '',
-      finishedSizes: [{ label: '', measurements: ''}],
-      notions: [],
+      description: 'A unisex cap with a double brim for warmth and smooth finish.',
+      yarns: ['Approximately 135 yards/123.4 meters bulky weight yarn (MC).', 'Approximately 25 yards/22.9 meters aran weight yarn (CC).'],
+      yarnsShown: ['madelinetosh tosh chunky in Steam Age (MC)', 'The Plucky Knitter Primo Aran in Think Pink (CC).'],
+      needles: ['US 8 (5 MM) 16" circular needle (contrast brim).', 'US 9 (5.5 MM) 16" circular needle (brim transition).', 'US 10 (6 MM) 16" circular needle (hat body).', 'US 10 (6 MM) set of DPNs or preferred needles for working small circumferences in the round.'],
+      gauge: 'i am a taco',
+      finishedSizes: [{ label: 'customized', measurements: '13"/33cm - 25"/63.55cm'}, { label: 'as written', measurements: 'women\'s medium (22"/56 cm).' }],
+      notions: ['stitch marker', 'waste yarn', 'darning needle'],
       version: '1 (December 29, 2014)',
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
       ravelry: {
@@ -57,8 +57,8 @@ angular.module('app.patterns_services', [])
     }
   }
   return {
-    all: [forestParkCowl(), veryPdxHat()],
-    forestParkCowl: forestParkCowl(),
-    veryPdxHat: veryPdxHat()
+    all: [forestPark(), veryPdx()],
+    forestPark: forestPark(),
+    veryPdx: veryPdx()
   }
 });

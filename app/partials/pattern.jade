@@ -18,7 +18,7 @@
       .material(ng-if='pattern.yarns.length > 1')
         h4 Yarns
         ul.separated(ng-repeat='yarn in pattern.yarns')
-          li {{pattern.yarn}}
+          li {{yarn}}
 
       .material(ng-if='pattern.yarnsShown.length === 1')
         h4 Yarn shown
@@ -27,12 +27,12 @@
       .material(ng-if='pattern.yarnsShown.length > 1')
         h4 Yarns shown
         ul.separated(ng-repeat='yarnShown in pattern.yarnsShown')
-          li {{pattern.yarnShown}}
+          li {{yarnShown}}
 
       .material(ng-if='pattern.needles.length > 1')
         h4 Needles
         ul.separated(ng-repeat='needle in pattern.needles')
-          li {{pattern.needle}}
+          li {{needle}}
 
       .material(ng-if='pattern.needles.length === 1')
         h4 Needle
@@ -58,13 +58,15 @@
 
     .cell.content
       .pattern-description
-        h3 {{description}}
+        h3 {{pattern.description}}
       .pattern-directive
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
           .special_abbreviations
             h4 Special abbreviations: cables
             cable-abbreviations-4
+        div(ng-if='pattern.patternDirective === "very-pdx"')
+          very-pdx
 
       abbreviations
 
