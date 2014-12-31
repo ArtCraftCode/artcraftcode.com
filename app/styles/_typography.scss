@@ -13,6 +13,10 @@ body {
   color: $text;
 }
 
+em {
+  font-style: italic;
+}
+
 .content {
   @include adjust-font-size-to(14px);
 }
