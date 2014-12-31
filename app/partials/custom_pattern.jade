@@ -57,9 +57,12 @@
           li {{notion}}
 
     .cell.content
-      .pattern-custom-instructions
-        span.text-orange &nbsp;&#9733;&nbsp;
-        {{pattern.customInstructions}}
+      .pattern-custom-instructions(ng-controller='CustomCtrl', ng-hide='customInstructions')
+        .button.red.clickable(ng-click='showCustom()')&nbsp;Customize pattern!
+        span.text-orange&nbsp;&#9733;&nbsp;
+        span
+          {{pattern.customInstructions}}
+        a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Hide
       .pattern-description
         h3 {{pattern.description}}
       .pattern-directive
