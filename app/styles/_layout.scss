@@ -9,6 +9,14 @@ $smallCell: 50px;
   margin: 0 auto;
 }
 
+img.scaled {
+  width: 100%;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
 .flex {
   @include display-flex;
 
@@ -20,6 +28,11 @@ $smallCell: 50px;
     @include flex(0 0 $sidebar);
     padding-right: 30px;
     border-right: 1px solid color_lightest(gray);
+  }
+
+  .cell-fixed-right {
+    @include flex(0 0 $sidebar);
+    padding-left: 30px;
   }
 
   .cell-small {

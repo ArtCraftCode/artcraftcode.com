@@ -11,4 +11,4 @@
       .cell(ng-repeat='pattern in patterns')
         a(ng-href='{{pattern.src}}')
           span.pattern-name {{pattern.name}}
-          img.pattern-image(ng-src='{{pattern.image}}')
+          img.pattern-image(ng-src='{{pattern.images[0]}}')

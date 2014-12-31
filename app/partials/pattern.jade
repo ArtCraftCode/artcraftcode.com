@@ -69,3 +69,7 @@
       abbreviations
 
       .pattern-version Version {{pattern.version}}
+
+    .cell-fixed-right
+      div(ng-repeat='image in pattern.images')
+        img.scaled.clickable(ng-src='{{image}}', ng-click='clickToOpen(image)')
