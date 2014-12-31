@@ -8,7 +8,7 @@ angular.module('app.directives',
 .directive('forestPark', function() {
     return {
       restrict: 'E',
-      templateUrl: '/partials/pattern_forest-park.html'
+      templateUrl: '/partials/forest-park.html'
     }
   }
 )
