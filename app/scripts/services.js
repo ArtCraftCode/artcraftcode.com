@@ -15,7 +15,7 @@ angular.module('app.services', [])
 })
 .service('forestParkCowl', function() {
   return {
-    src: '#/patterns/forest-park-cowl'
+    src: '#/patterns/forest-park-cowl',
     patternDirective: 'forest-park',
     title: 'Forest Park Cowl',
     description: 'A simple cabled cowl with garter stitch ribbing.',
@@ -44,7 +44,7 @@ angular.module('app.services', [])
 }).
 service('veryPdxHat', function() {
   return {
-    src: '#/patterns/very-pdx-hat'
+    src: '#/patterns/very-pdx-hat',
     patternDirective: 'very-pdx-hat',
     title: 'Very PDX hat',
     description: '',
