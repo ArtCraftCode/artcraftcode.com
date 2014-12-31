@@ -1,0 +1,15 @@
+@import "colors";
+
+.button {
+  @include box-shadow(lighten($text, 50%) 2px 2px 10px);
+  @include background-image(linear-gradient(lighten(color(gray), 50%), lighten(color(gray), 45%), lighten(color(gray), 30%)));
+  color: $white;
+  display: inline-block;
+  padding: 2px 5px;
+  &.red {
+    @include background-image(linear-gradient(lighten(color(red), 5%), lighten(color(red), 2%), color(red)));
+  }
+  &:hover {
+    @include background-image(linear-gradient(lighten(color(gray), 50%), lighten(color(gray), 45%), lighten(color(gray), 30%)));
+  }
+}

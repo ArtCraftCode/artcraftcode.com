@@ -33,6 +33,10 @@ $text: map-get($colors, gray);
     color: lighten($hex, 30%);
   }
 
+  .text-#{$color}-lightest {
+    color: lighten($hex, 50%);
+  }
+
   .background-#{$color} {
     background-color: $hex;
   }
