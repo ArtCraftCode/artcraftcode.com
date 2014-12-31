@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('app.controllers', ['app.services'])
+angular.module('app.main_controllers', ['app.calculator_services'])
 .controller('AppCtrl', ['$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
   $scope.$location = $location;
   $scope.$watch('$location.path()', function(path) {
@@ -42,10 +42,4 @@ angular.module('app.controllers', ['app.services'])
     $scope.toYards = undefined;
     $scope.toMeters = undefined;
   };
-}])
-.controller('PatternsCtrl', ['$scope', 'patterns', function($scope, patterns) {
-  $scope.patterns = patterns.all;
-}])
-.controller('ForestParkCtrl', ['$scope', 'patterns', function($scope, patterns) {
-  $scope.pattern = patterns.forestParkCowl;
 }]);

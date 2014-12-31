@@ -5,10 +5,12 @@ var App = angular.module('app',
     'ngCookies',
     'ngResource',
     'ngRoute',
-    'app.controllers',
-    'app.directives',
-    'app.filters',
-    'app.services',
+    'app.main_controllers',
+    'app.patterns_controllers',
+    'app.patterns_services',
+    'app.calculator_services',
+    'app.patterns_directives',
+    'app.widget_directives',
     'partials'
   ]
 );
