@@ -8,7 +8,7 @@ var App = angular.module('app',
     'app.controllers',
     'app.directives',
     'app.filters',
-    'app.services',
+    'app.patterns',
     'app.calculators',
     'partials'
   ]
