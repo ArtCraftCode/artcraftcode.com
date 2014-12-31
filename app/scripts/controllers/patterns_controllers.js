@@ -14,6 +14,17 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     });
   };
 }])
+.controller('CustomCtrl', ['$scope', function($scope) {
+  $scope.customInstructions = false;
+
+  $scope.showCustom = function() {
+    console.log('click');
+  };
+
+  $scope.toggleCustomInstructions = function() {
+    $scope.customInstructions = !$scope.customInstructions;
+  }
+}])
 .controller('ForestParkCtrl', ['$scope', 'patterns', function($scope, patterns) {
   $scope.pattern = patterns.forestPark;
 }])
