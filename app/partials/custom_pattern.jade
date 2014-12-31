@@ -58,11 +58,11 @@
 
     .cell.content
       .pattern-custom-instructions(ng-controller='CustomCtrl', ng-hide='customInstructions')
-        .button.red.clickable(ng-click='showCustom()')&nbsp;Customize pattern!
+        .button.red.clickable(ng-click='showCustom()')&nbsp;Click to customize!
         span.text-orange&nbsp;&#9733;&nbsp;
         span
           {{pattern.customInstructions}}
-        a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Hide
+        a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Dismiss
       .pattern-description
         h3 {{pattern.description}}
       .pattern-directive
