@@ -1,8 +1,9 @@
 'use strict';
 
-angular.module('app.patterns_controllers', ['app.patterns_services', 'ngDialog'])
-.controller('PatternsCtrl', ['$scope', 'patterns', function($scope, patterns) {
+angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom_patterns_services'])
+.controller('PatternsCtrl', ['$scope', 'patterns', 'customPatterns',function($scope, patterns, customPatterns) {
   $scope.patterns = patterns.all;
+  $scope.customPatterns = customPatterns.all;
 }])
 .controller('ForestParkCtrl', ['$scope', 'patterns', 'ngDialog', function($scope, patterns, ngDialog) {
   $scope.pattern = patterns.forestParkCowl;

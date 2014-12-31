@@ -1,14 +1,29 @@
-#patterns(ng-app='ng-app')
+#patterns
   .header
     h1
       span.text-teal art
       span.text-red craft
       span.text-orange code
-    h2 Individual Patterns
+    h2 Patterns
 
-  .content(ng-controller='PatternsCtrl')
+  .content
     .flex-grid
       .cell(ng-repeat='pattern in patterns')
         a(ng-href='{{pattern.src}}')
           span.pattern-name {{pattern.name}}
           img.pattern-image(ng-src='{{pattern.images[0]}}')
+
+  .header
+    h1
+      span.text-teal art
+      span.text-red craft
+      span.text-orange code
+    h2 Customizable patterns
+
+  .content
+    .flex-grid
+      .cell(ng-repeat='pattern in customPatterns')
+        a(ng-href='{{pattern.origin.src}}')
+          span.pattern-name {{pattern.origin.name}}
+          img.pattern-image(ng-src='{{pattern.origin.image}}')
+

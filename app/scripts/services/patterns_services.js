@@ -52,8 +52,7 @@ angular.module('app.patterns_services', [])
       ravelry: {
         link: '',
         button: ''
-      },
-      custom: true
+      }
     }
   }
   return {
