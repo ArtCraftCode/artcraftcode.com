@@ -8,9 +8,16 @@
 
   .flex-split
     .converter.cell
-      h3 Yards
-      input(type='number' ng-model='yards' ng-change='meters')
+      h3 Yards &rarr; Meters
+      input(type='number', ng-model='yards', ng-disabled='meters > 0')
+      input(type='submit', ng-click='calculate()', value='Calculate')
+      input(type='submit', ng-click='clear()', value='Clear')
+      h4(ng-show='toMeters') {{yards}} yards is {{meters}} meters.
 
     .converter.cell
-      h3 Meters
-      input(type='number' ng-model='meters' ng-change='yards')
+      h3 Meters &rarr; Yards
+      input(type='number', ng-model='meters', ng-disabled='yards > 0')
+      input(type='submit', ng-click='calculate()', value='Calculate')
+      input(type='submit', ng-click='clear()', value='Clear')
+      h4(ng-show='toYards') {{meters}} meters is {{yards}} yards.
+
