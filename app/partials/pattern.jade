@@ -7,8 +7,8 @@
     h2 {{pattern.name}}
     h3 by {{pattern.designer}}
 
-  .flex-fixed
-    .left.materials
+  .flex
+    .cell-fixed-left.materials
       h3 Materials
 
       .material(ng-if='pattern.yarns.length === 1')
@@ -56,12 +56,15 @@
         ul.separated(ng-repeat='notion in pattern.notions')
           li {{notion}}
 
-    .content
+    .cell.content
       .pattern-description
         h3 {{description}}
       .pattern-directive
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
+          .special_abbreviations
+            h4 Special abbreviations: cables
+            cable-abbreviations-4
 
       abbreviations
 
