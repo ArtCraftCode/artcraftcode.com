@@ -43,9 +43,9 @@ angular.module('app.controllers', ['app.services'])
     $scope.toMeters = undefined;
   };
 }])
-.controller('PatternsCtrl', ['$scope', 'app.services', function($scope, forestParkCowl, veryPdxHat) {
-  $scope.patterns = [forestParkCowl, veryPdxHat];
+.controller('PatternsCtrl', ['$scope', 'patterns', function($scope, patterns) {
+  $scope.patterns = patterns.all;
 }])
-.controller('ForestParkCtrl', ['$scope', 'app.services', function($scope, forestParkCowl) {
-  $scope.pattern = forestParkCowl;
+.controller('ForestParkCtrl', ['$scope', 'patterns', function($scope, patterns) {
+  $scope.pattern = patterns.forestParkCowl;
 }]);

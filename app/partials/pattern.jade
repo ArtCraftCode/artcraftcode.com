@@ -4,7 +4,7 @@
       span.text-teal art
       span.text-red craft
       span.text-orange code
-    h2 {{pattern.title}}
+    h2 {{pattern.name}}
     h3 by {{pattern.designer}}
 
   .flex-fixed
@@ -62,6 +62,7 @@
       .pattern-directive
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
-      .pattern-version Version {{pattern.version}}
 
       abbreviations
+
+      .pattern-version Version {{pattern.version}}
