@@ -7,9 +7,10 @@ var App = angular.module('app',
     'ngRoute',
     'app.main_controllers',
     'app.patterns_controllers',
-    'app.directives',
     'app.patterns_services',
     'app.calculator_services',
+    'app.patterns_directives',
+    'app.widget_directives',
     'partials'
   ]
 );
