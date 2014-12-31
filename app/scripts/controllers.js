@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['app.services'])
 .controller('AppCtrl', ['$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
   $scope.$location = $location;
   $scope.$watch('$location.path()', function(path) {
@@ -15,27 +15,37 @@ angular.module('app.controllers', [])
     }
   };
 }])
-.controller('ConvertersCtrl', ['$scope', 'app.services', function($scope, 'calculator') {
-  $scope.yards = '';
-  $scope.meters = '';
+.controller('ConvertersCtrl', ['$scope', 'calculator', function($scope, calculator) {
+  $scope.yards;
+  $scope.meters;
+  $scope.convertedMeters;
+  $scope.convertedYards;
+  $scope.error;
 
-  // ideally i want to change either one
-  // will this fall down and die?
-  $scope.$watch('yards', function(oldValue, newValue){
-    if (newValue !== oldValue) {
-      $scope.meters = calculator.toMeters(newValue);
+  $scope.calculate = function() {
+    if ($scope.yards > 0) {
+      $scope.meters = calculator.toMeters($scope.yards);
+      $scope.toMeters = true;
+    } else if ($scope.meters > 0) {
+      $scope.yards = calculator.toYards($scope.meters);
+      $scope.toYards = true;
     }
-  });
+  };
 
-  $scope.$watch('meters', function(oldValue, newValue){
-     if (newValue !== oldValue) {
-      $scope.yards = calculator.toYards(newValue);
-    }
-  });
+  $scope.converted = function() {
+    return $scope.yards > 0 && $scope.meters > 0;
+  };
+
+  $scope.clear = function() {
+    $scope.yards = undefined;
+    $scope.meters = undefined;
+    $scope.toYards = undefined;
+    $scope.toMeters = undefined;
+  };
 }])
-.controller('PatternsCtrl', ['$scope', 'app.services', function($scope, 'forestParkCowl', 'veryPdxHat') {
+.controller('PatternsCtrl', ['$scope', 'app.services', function($scope, forestParkCowl, veryPdxHat) {
   $scope.patterns = [forestParkCowl, veryPdxHat];
 }])
-.controller('ForestParkCtrl', ['$scope', 'app.services', function($scope, 'forestParkCowl') {
+.controller('ForestParkCtrl', ['$scope', 'app.services', function($scope, forestParkCowl) {
   $scope.pattern = forestParkCowl;
 }]);
