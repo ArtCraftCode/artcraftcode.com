@@ -51,7 +51,7 @@ App.config([
       controller: 'VeryPdxCustomCtrl'
     })
     .when('/patterns/very-pdx-hat', {
-      templateUrl: '/partials/pattern.html',
+      templateUrl: '/partials/custom_pattern.html',
       controller: 'VeryPdxCtrl'
     })
     .otherwise({
