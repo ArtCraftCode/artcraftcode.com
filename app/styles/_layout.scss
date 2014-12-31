@@ -13,6 +13,10 @@ img.scaled {
   width: 100%;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 .flex {
   @include display-flex;
 
