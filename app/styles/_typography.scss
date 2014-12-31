@@ -21,6 +21,10 @@ section {
   padding: 20px 0px;
 }
 
+em {
+  font-style: italic;
+}
+
 a {
   color: color(teal);
   text-decoration: none;
@@ -44,6 +48,10 @@ h3 {
 h4 {
   @include adjust-font-size-to(16px);
   text-transform: uppercase;
+}
+
+h5 {
+  text-decoration: underline;
 }
 
 .header {
