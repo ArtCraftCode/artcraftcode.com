@@ -31,7 +31,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
         brim_rows: 11,
         brim_height: 2,
         body_height: 6.5,
-        multiple: 8
+        multiple: 8,
+        baby_decreases: true
       }
     }
   }
