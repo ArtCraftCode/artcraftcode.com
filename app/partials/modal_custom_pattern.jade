@@ -1,0 +1,9 @@
+.custom_pattern_modal
+  .header
+    h1
+      span.text-orange&nbsp;&#9733;&nbsp;
+      {{$parent.pattern.name}}
+    h2 By {{$parent.pattern.customize_by}}
+
+  .options
+    .button.large.orange.clickable.margin-10(ng-repeat='option in $parent.pattern.custom_options', ng-click='applyCustomizations(option)'){{option.label}}
