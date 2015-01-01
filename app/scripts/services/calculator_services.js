@@ -10,6 +10,10 @@ angular.module('app.calculator_services', [])
 
     toMeters: function(num) {
       return Number(num / 1.0936).toFixed(2);
+    },
+
+    inToCm: function(num) {
+      return Number(num * 2.54).toFixed(2);
     }
   }
 });
