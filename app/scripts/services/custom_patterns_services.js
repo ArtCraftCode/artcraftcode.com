@@ -21,6 +21,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
       ],
       needles: ['US 8 (5 MM) 16" circular needle (contrast brim).', 'US 9 (5.5 MM) 16" circular needle (brim RS and hat body).', 'US 9 (5.5 MM) set of DPNs or preferred needles for working small circumferences in the round.'],
       gauge: '13 sts, 20 rows per 4"/10cm in stockinette stitch using largest needle',
+      gaugeInch: 3.25,
+      gaugeRowInch: 5,
       finishedSizes: [{ label: 'customized', measurements: '13"/33cm - 25"/63.55cm'}, { label: 'as written', measurements: 'women\'s small (21"/53 cm) to fit a 22"/56cm head' }],
       customNote: 'The finished measurements are the actual measurements of the hat. Choose a size that gives you approximately 1"/2.54cm negative ease. I knit a women\'s small (21"/53cm) for myself and my head is approximately 22"/56cm around.',
       notions: ['stitch marker', 'waste yarn', 'darning needle'],
