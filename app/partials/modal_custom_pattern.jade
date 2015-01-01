@@ -2,8 +2,12 @@
   .header
     h1
       span.text-orange&nbsp;&#9733;&nbsp;
-      {{$parent.pattern.name}}
-    h2 By {{$parent.pattern.customize_by}}
+      {{pattern.name}}
+    h2 By {{pattern.customize_by}}
+
+  h3 Customization notes
+  p(ng-if='pattern.customNote') {{pattern.customNote}}
+  br
 
   .options
-    .button.large.orange.clickable.margin-10(ng-repeat='option in $parent.pattern.custom_options', ng-click='applyCustomizations(option)'){{option.label}}
+    .button.large.orange.clickable.margin-10(ng-repeat='option in pattern.custom_options', ng-click='applyCustomizations(option)'){{option.label}}
