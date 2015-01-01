@@ -20,11 +20,11 @@
         ul.separated(ng-repeat='yarn in pattern.yarns')
           li {{yarn.label}}: Approximately {{yarn.yards}} yards/{{yarn.yards | ydToM}} meters {{yarn.weight}} weight yarn.
 
-      .material(ng-if='pattern.yarnsShown.length === 1' ng-hide='customInstructions')
+      .material(ng-if='pattern.yarnsShown.length === 1', ng-hide='customInstructions')
         h4 Yarn shown
         p {{pattern.yarnsShown[0]}}
 
-      .material(ng-if='pattern.yarnsShown.length > 1' ng-hide='customInstructions')
+      .material(ng-if='pattern.yarnsShown.length > 1', ng-hide='customInstructions')
         h4 Yarns shown
         ul.separated(ng-repeat='yarnShown in pattern.yarnsShown')
           li {{yarnShown.label}}: {{yarnShown.info}}
