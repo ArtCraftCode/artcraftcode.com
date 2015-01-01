@@ -8,17 +8,27 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
 .controller('ModalCtrl', ['$scope', 'ngDialog', function($scope, ngDialog) {
   $scope.clickToOpen = function(img) {
     ngDialog.open({
-      template: '/partials/modal.html',
+      template: '/partials/modal_image.html',
       className: 'ngdialog-theme-default-large',
       data: img
     });
   };
 }])
-.controller('CustomCtrl', ['$scope', function($scope) {
+.controller('CustomCtrl', ['$scope', 'ngDialog', function($scope, ngDialog) {
   $scope.customInstructions = false;
 
   $scope.showCustom = function() {
-    console.log('click');
+    ngDialog.open({
+      template: '/partials/modal_custom_pattern.html',
+      className: 'ngdialog-theme-default-large',
+      scope: $scope,
+      controller: ['$scope', function($scope) {
+        $scope.applyCustomizations = function(option) {
+          $scope.customInstructions = true;
+          $scope.$parent.customize(option);
+        }
+      }]
+    });
   };
 
   $scope.toggleCustomInstructions = function() {
@@ -30,4 +40,9 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
 }])
 .controller('VeryPdxCtrl', ['$scope', 'customPatterns', function($scope, customPatterns) {
   $scope.pattern = customPatterns.veryPdx;
+  $scope.customized = false;
+
+  $scope.customize = function(size) {
+    $scope.customized = true;
+  };
 }]);
