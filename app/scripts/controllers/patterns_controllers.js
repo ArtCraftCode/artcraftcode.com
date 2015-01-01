@@ -18,16 +18,15 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
   $scope.customInstructions = false;
 
   $scope.showCustom = function() {
-    ngDialog.open({
+    var dialog = ngDialog.open({
       template: '/partials/modal_custom_pattern.html',
       className: 'ngdialog-theme-default-large',
-      scope: $scope,
-      controller: ['$scope', function($scope) {
-        $scope.applyCustomizations = function(option) {
-          $scope.customInstructions = true;
-          $scope.$parent.customize(option);
-        }
-      }]
+      scope: $scope
+    });
+
+    dialog.closePromise.then(function (data) {
+      $scope.customInstructions = true;
+      $scope.$parent.customize(data.value);
     });
   };
 
@@ -43,12 +42,11 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
   $scope.customized = false;
 
   $scope.customize = function(size) {
+    $scope.customSize = size;
     $scope.customized = true;
 
     // baby decreases get a special flag
-    if (size.value >= 17) {
-      $scope.pattern.custom_fields.baby_decreases = true;
-    }
+    babyDecreases();
     // things to update
     // custom_fields: {
     //   cast_on: 72,
@@ -58,5 +56,27 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     //   multiple: 8,
     //   baby_decreases: false
     // }
+  };
+
+  var castOn = function() {
+
+  };
+
+  var brimRows = function() {
+
+  };
+
+  var brimHeight = function() {
+
+  };
+
+  var bodyHeight = function() {
+
+  };
+
+  var babyDecreases = function() {
+    if ($scope.customSize.value <= 17) {
+      $scope.pattern.custom_fields.baby_decreases = true;
+    }
   };
 }]);
