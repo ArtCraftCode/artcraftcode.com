@@ -11,6 +11,9 @@ angular.module('app.patterns_directives', [])
 .directive('veryPdx', function() {
   return {
     restrict: 'E',
+    scope: {
+      custom: '='
+    },
     templateUrl: '/partials/very-pdx.html'
   }
 });
