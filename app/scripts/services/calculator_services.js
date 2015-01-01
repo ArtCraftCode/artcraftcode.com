@@ -14,6 +14,10 @@ angular.module('app.calculator_services', [])
 
     inToCm: function(num) {
       return Number(num * 2.54).toFixed(2);
+    },
+
+    nearestMultiple: function(num, multiple) {
+      return num + multiple - (num % multiple);
     }
   }
 });
