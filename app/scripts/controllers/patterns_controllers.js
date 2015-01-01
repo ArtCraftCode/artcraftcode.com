@@ -24,7 +24,7 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
       scope: $scope
     });
 
-    dialog.closePromise.then(function (data) {
+    dialog.closePromise.then(function(data) {
       $scope.customInstructions = true;
       $scope.$parent.customize(data.value);
     });
