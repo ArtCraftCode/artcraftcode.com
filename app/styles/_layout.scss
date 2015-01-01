@@ -21,6 +21,10 @@ img.scaled {
   cursor: pointer;
 }
 
+.margin-10 {
+  margin: 10px;
+}
+
 .flex {
   @include display-flex;
 
@@ -56,6 +60,9 @@ img.scaled {
   .cell {
     @include flex(0 0 40%);
     padding: 0px 20px 100px 20px;
+    &.padding-bottom-small {
+      padding-bottom: 20px;
+    }
     img {
       max-width: 100%;
       margin: 0 auto;
