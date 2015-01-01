@@ -44,5 +44,19 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
 
   $scope.customize = function(size) {
     $scope.customized = true;
+
+    // baby decreases get a special flag
+    if (size.value >= 17) {
+      $scope.pattern.custom_fields.baby_decreases = true;
+    }
+    // things to update
+    // custom_fields: {
+    //   cast_on: 72,
+    //   brim_rows: 11,
+    //   brim_height: 2,
+    //   body_height: 6.5,
+    //   multiple: 8,
+    //   baby_decreases: false
+    // }
   };
 }]);
