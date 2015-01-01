@@ -1,8 +1,8 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', [])
-.service('customPatterns', function() {
+angular.module('app.custom_patterns_services', ['app.custom_options_services'])
+.service('customPatterns', function(hatSizes) {
   var veryPdx = function() {
     return {
       src: '#/patterns/very-pdx-hat',
@@ -23,7 +23,16 @@ angular.module('app.custom_patterns_services', [])
         link: '',
         button: ''
       },
-      custom: true
+      custom: true,
+      customize_by: 'size',
+      custom_options: hatSizes.all,
+      custom_fields: {
+        cast_on: 72,
+        brim_rows: 11,
+        brim_height: 2,
+        body_height: 6.5,
+        multiple: 8
+      }
     }
   }
 
