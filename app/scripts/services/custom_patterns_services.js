@@ -11,11 +11,18 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
       designer: 'Liz Abinante',
       customInstructions: 'Knit as-written for a women\'s medium aran weight hat, or customize based on your desired size.',
       description: 'A unisex cap with a double brim for warmth and smooth finish.',
-      yarns: ['Approximately 135 yards/123.4 meters bulky weight yarn (MC).', 'Approximately 25 yards/22.9 meters aran weight yarn (CC).'],
-      yarnsShown: ['madelinetosh tosh chunky in Steam Age (MC)', 'The Plucky Knitter Primo Aran in Think Pink (CC).'],
+      yarns: [
+        { label: 'MC', weight: 'bulky', yards: 135 },
+        { label: 'CC', weight: 'aran', yards: 25 }
+      ],
+      yarnsShown: [
+        { label: 'MC', info: 'madelinetosh tosh chunky in Steam Age' },
+        { label: 'CC', info: 'The Plucky Knitter Primo Aran in Think Pink' }
+      ],
       needles: ['US 8 (5 MM) 16" circular needle (contrast brim).', 'US 9 (5.5 MM) 16" circular needle (brim RS and hat body).', 'US 9 (5.5 MM) set of DPNs or preferred needles for working small circumferences in the round.'],
       gauge: '13 sts, 20 rows per 4"/10cm in stockinette stitch using largest needle',
-      finishedSizes: [{ label: 'customized', measurements: '13"/33cm - 25"/63.55cm'}, { label: 'as written', measurements: 'women\'s medium (22"/56 cm).' }],
+      finishedSizes: [{ label: 'customized', measurements: '13"/33cm - 25"/63.55cm'}, { label: 'as written', measurements: 'women\'s small (21"/53 cm) to fit a 22"/56cm head' }],
+      customNote: 'The finished measurements are the actual measurements of the hat. Choose a size that gives you approximately 1"/2.54cm negative ease. I knit a women\'s small (21"/53cm) for myself and my head is approximately 22"/56cm around.',
       notions: ['stitch marker', 'waste yarn', 'darning needle'],
       version: '1 (December 29, 2014)',
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
@@ -32,7 +39,7 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
         brim_height: 2,
         body_height: 6.5,
         multiple: 8,
-        baby_decreases: true
+        baby_decreases: false
       }
     }
   }

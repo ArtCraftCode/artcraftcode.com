@@ -18,16 +18,16 @@
       .material(ng-if='pattern.yarns.length > 1')
         h4 Yarns
         ul.separated(ng-repeat='yarn in pattern.yarns')
-          li {{yarn}}
+          li {{yarn.label}}: Approximately {{yarn.yards}} yards/{{yarn.yards | ydToM}} meters {{yarn.weight}} weight yarn.
 
-      .material(ng-if='pattern.yarnsShown.length === 1')
+      .material(ng-if='pattern.yarnsShown.length === 1' ng-hide='customInstructions')
         h4 Yarn shown
         p {{pattern.yarnsShown[0]}}
 
-      .material(ng-if='pattern.yarnsShown.length > 1')
+      .material(ng-if='pattern.yarnsShown.length > 1' ng-hide='customInstructions')
         h4 Yarns shown
         ul.separated(ng-repeat='yarnShown in pattern.yarnsShown')
-          li {{yarnShown}}
+          li {{yarnShown.label}}: {{yarnShown.info}}
 
       .material(ng-if='pattern.needles.length > 1')
         h4 Needles
