@@ -72,10 +72,9 @@
             h4 Special abbreviations: cables
             cable-abbreviations-4
         div(ng-if='pattern.patternDirective === "very-pdx"')
-          very-pdx
+          very-pdx(custom='pattern.custom_fields')
 
       abbreviations
-
       .pattern-version Version {{pattern.version}}
 
     .cell-fixed-right(ng-controller='ModalCtrl')
