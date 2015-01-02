@@ -6,8 +6,11 @@ var App = angular.module('app',
     'ngResource',
     'ngRoute',
     'ngDialog',
+    'app.filters',
     'app.main_controllers',
     'app.patterns_controllers',
+    'app.custom_patterns_services',
+    'app.custom_options_services',
     'app.patterns_services',
     'app.calculator_services',
     'app.patterns_directives',
@@ -38,11 +41,20 @@ App.config([
       templateUrl: '/partials/calculators.html'
     })
     .when('/patterns', {
-      templateUrl: '/partials/patterns.html'
+      templateUrl: '/partials/patterns.html',
+      controller: 'PatternsCtrl'
     })
     .when('/patterns/forest-park-cowl', {
       templateUrl: '/partials/pattern.html',
       controller: 'ForestParkCtrl'
+    })
+    .when('/patterns/very-pdx-hat/custom', {
+      templateUrl: '/partials/custom.html',
+      controller: 'VeryPdxCustomCtrl'
+    })
+    .when('/patterns/very-pdx-hat', {
+      templateUrl: '/partials/custom_pattern.html',
+      controller: 'VeryPdxCtrl'
     })
     .otherwise({
       redirectTo: '/home'

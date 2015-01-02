@@ -7,4 +7,13 @@ angular.module('app.patterns_directives', [])
     restrict: 'E',
     templateUrl: '/partials/forest-park.html'
   }
+})
+.directive('veryPdx', function() {
+  return {
+    restrict: 'E',
+    scope: {
+      custom: '='
+    },
+    templateUrl: '/partials/very-pdx.html'
+  }
 });

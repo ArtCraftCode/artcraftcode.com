@@ -9,6 +9,7 @@
 // basic skeleton
 @import "layout";
 @import "nav";
+@import "buttons";
 @import "ngDialog";
 
 // vertical rhythm & fonts
@@ -16,6 +17,7 @@
 
 // single pages only
 @import "converters";
+@import "custom_pattern";
 @import "home";
 @import "pattern";
 @import "patterns";

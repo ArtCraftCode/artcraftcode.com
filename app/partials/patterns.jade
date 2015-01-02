@@ -1,14 +1,20 @@
-#patterns(ng-app='ng-app')
+#patterns
   .header
     h1
       span.text-teal art
       span.text-red craft
       span.text-orange code
-    h2 Individual Patterns
+    h2 Patterns
+    .intro
+      span.text-orange &nbsp;&#9733;&nbsp;
+      span customizable
 
-  .content(ng-controller='PatternsCtrl')
+  .content
     .flex-grid
       .cell(ng-repeat='pattern in patterns')
         a(ng-href='{{pattern.src}}')
-          span.pattern-name {{pattern.name}}
+          span.pattern-name
+            {{pattern.name}}
+            span(ng-if='pattern.custom')
+              span.text-orange &nbsp;&#9733;
           img.pattern-image(ng-src='{{pattern.images[0]}}')

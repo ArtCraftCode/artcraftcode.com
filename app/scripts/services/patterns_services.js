@@ -3,7 +3,7 @@
 /* Sevices */
 angular.module('app.patterns_services', [])
 .service('patterns', function() {
-  var forestParkCowl = function() {
+  var forestPark = function() {
     return {
       src: '#/patterns/forest-park-cowl',
       patternDirective: 'forest-park',
@@ -34,31 +34,8 @@ angular.module('app.patterns_services', [])
     }
   }
 
-  var veryPdxHat = function() {
-    return {
-      src: '#/patterns/very-pdx-hat',
-      patternDirective: 'very-pdx-hat',
-      name: 'Very PDX Hat',
-      designer: 'Liz Abinante',
-      description: '',
-      yarns: [''],
-      yarnsShown: [''],
-      needles: [''],
-      gauge: '',
-      finishedSizes: [{ label: '', measurements: ''}],
-      notions: [],
-      version: '1 (December 29, 2014)',
-      images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
-      ravelry: {
-        link: '',
-        button: ''
-      },
-      custom: true
-    }
-  }
   return {
-    all: [forestParkCowl(), veryPdxHat()],
-    forestParkCowl: forestParkCowl(),
-    veryPdxHat: veryPdxHat()
+    all: [forestPark()],
+    forestPark: forestPark()
   }
 });

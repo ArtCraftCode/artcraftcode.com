@@ -27,6 +27,15 @@
     }
   }
 
+  .pattern-custom-instructions {
+    @extend .background-gray-lightest;
+    padding: 10px;
+  }
+
+  .custom {
+    margin-bottom: 15px;
+  }
+
   #abbreviations, .special_abbreviations {
     @include adjust-font-size-to(12px);
     @include border-top;

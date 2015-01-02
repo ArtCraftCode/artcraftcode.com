@@ -18,16 +18,17 @@
       .material(ng-if='pattern.yarns.length > 1')
         h4 Yarns
         ul.separated(ng-repeat='yarn in pattern.yarns')
-          li {{yarn}}
+          li {{yarn.label}}: Approximately {{yarn.yards}} yards/{{yarn.yards | ydToM}} meters {{yarn.weight}} weight yarn.
+        p(ng-if='customized') Yardage estimates for custom patterns are approximate and include a little wiggle room, just in case.
 
-      .material(ng-if='pattern.yarnsShown.length === 1')
+      .material(ng-if='pattern.yarnsShown.length === 1', ng-hide='customInstructions')
         h4 Yarn shown
         p {{pattern.yarnsShown[0]}}
 
-      .material(ng-if='pattern.yarnsShown.length > 1')
+      .material(ng-if='pattern.yarnsShown.length > 1', ng-hide='customInstructions')
         h4 Yarns shown
         ul.separated(ng-repeat='yarnShown in pattern.yarnsShown')
-          li {{yarnShown}}
+          li {{yarnShown.label}}: {{yarnShown.info}}
 
       .material(ng-if='pattern.needles.length > 1')
         h4 Needles
@@ -49,7 +50,7 @@
 
       .material(ng-if='pattern.finishedSizes.length === 1')
         h4 Finished size
-        p {{pattern.finishedSizes[0].measurements}}
+        p {{pattern.finishedSizes[0]}}
 
       .material
         h4 Notions
@@ -57,19 +58,25 @@
           li {{notion}}
 
     .cell.content
-      .pattern-description
-        h3 {{pattern.description}}
+      .custom(ng-controller='CustomCtrl', ng-hide='customInstructions')
+        .pattern-custom-instructions
+          .button.red.clickable(ng-click='showCustom()')&nbsp;Click to customize!
+          span.text-orange&nbsp;&#9733;&nbsp;
+          span
+            {{pattern.customInstructions}}
+          a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Dismiss
       .pattern-directive
+        .pattern-description
+          h3(ng-hide='customized') {{pattern.description}}
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
           .special_abbreviations
             h4 Special abbreviations: cables
             cable-abbreviations-4
         div(ng-if='pattern.patternDirective === "very-pdx"')
-          very-pdx
+          very-pdx(custom='pattern.custom_fields')
 
       abbreviations
-
       .pattern-version Version {{pattern.version}}
 
     .cell-fixed-right(ng-controller='ModalCtrl')
