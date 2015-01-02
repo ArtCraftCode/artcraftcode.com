@@ -3,6 +3,17 @@
     span.text-teal art
     span.text-red craft
     span.text-orange code
-  h2 customizable knitting patterns & resources for the modern knitter.
+  h2 customizable
+    span.text-orange&nbsp;&#9733;&nbsp;
+    span knitting patterns for the modern knitter.
 
-
+#patterns
+  .content
+    .flex-grid
+      .cell.padding-bottom-small(ng-repeat='pattern in patterns')
+        a(ng-href='{{pattern.src}}')
+          span.pattern-name
+            {{pattern.name}}
+            span(ng-if='pattern.custom')
+              span.text-orange &nbsp;&#9733;
+          img.pattern-image(ng-src='{{pattern.images[0]}}')

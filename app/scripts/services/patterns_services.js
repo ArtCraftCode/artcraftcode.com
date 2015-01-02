@@ -28,8 +28,8 @@ angular.module('app.patterns_services', [])
       version: '1 (December 29, 2014)',
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-1.jpg', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-2.jpg'],
       ravelry: {
-        link: '',
-        button: ''
+        link: 'http://www.ravelry.com/patterns/library/forest-park-cowl',
+        button: 'http://api.ravelry.com/badges/projects?p=forest-park-cowl&amp;t=.gif'
       }
     }
   }

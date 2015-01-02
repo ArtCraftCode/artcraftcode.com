@@ -25,8 +25,10 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     });
 
     dialog.closePromise.then(function(data) {
-      $scope.customInstructions = true;
-      $scope.$parent.customize(data.value);
+      if (typeof data.value !== 'string') {
+        $scope.customInstructions = true;
+        $scope.$parent.customize(data.value);
+      }
     });
   };
 
