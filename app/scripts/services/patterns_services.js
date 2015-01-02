@@ -25,7 +25,10 @@ angular.module('app.patterns_services', [])
           measurements: '10.5"/26.6cm tall; 24"/61cm circumference at smallest opening, 33"/84cm circumference at largest opening.'
         }],
       notions: ['stitch marker', 'cable needle (optional)', 'darning needle'],
-      version: '1 (December 29, 2014)',
+      version: '2 (January 2, 2015)',
+      updates: [
+        'Version 2: corrected Cable Set Two, Round 2. Originally ended with p1, k2, p1. Corrected to p1, k1, p1.'
+      ],
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-1.jpg', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-2.jpg'],
       ravelry: {
         link: 'http://www.ravelry.com/patterns/library/forest-park-cowl',

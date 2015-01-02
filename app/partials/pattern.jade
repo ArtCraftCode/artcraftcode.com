@@ -73,7 +73,10 @@
 
       abbreviations
 
-      .pattern-version Version {{pattern.version}}
+      .pattern-version
+        p Version {{pattern.version}}
+        ul.separated(ng-if='pattern.updates.length > 0')
+          li(ng-repeat='update in pattern.updates') {{update}}
 
     .cell-fixed-right(ng-controller='ModalCtrl')
       div(ng-repeat='image in pattern.images')
