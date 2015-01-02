@@ -27,18 +27,8 @@ App.config([
     .when('/home', {
       templateUrl: '/partials/home.html'
     })
-    .when('/collections', {
-      templateUrl: '/partials/collections.html'
-    })
-    .when('/generators', {
-      templateUrl: '/partials/generators.html'
-    })
-    .when('/converters', {
-      templateUrl: '/partials/converters.html',
-      controller: 'ConvertersCtrl'
-    })
-    .when('/calculators', {
-      templateUrl: '/partials/calculators.html'
+    .when('/about', {
+      templateUrl: '/partials/about.html'
     })
     .when('/patterns', {
       templateUrl: '/partials/patterns.html',
@@ -47,10 +37,6 @@ App.config([
     .when('/patterns/forest-park-cowl', {
       templateUrl: '/partials/pattern.html',
       controller: 'ForestParkCtrl'
-    })
-    .when('/patterns/very-pdx-hat/custom', {
-      templateUrl: '/partials/custom.html',
-      controller: 'VeryPdxCustomCtrl'
     })
     .when('/patterns/very-pdx-hat', {
       templateUrl: '/partials/custom_pattern.html',
