@@ -49,7 +49,7 @@
 
       .material(ng-if='pattern.finishedSizes.length === 1')
         h4 Finished size
-        p {{pattern.finishedSizes[0].measurements}}
+        p {{pattern.finishedSizes[0]}}
 
       .material
         h4 Notions
@@ -57,15 +57,16 @@
           li {{notion}}
 
     .cell.content
-      .pattern-custom-instructions(ng-controller='CustomCtrl', ng-hide='customInstructions')
-        .button.red.clickable(ng-click='showCustom()')&nbsp;Click to customize!
-        span.text-orange&nbsp;&#9733;&nbsp;
-        span
-          {{pattern.customInstructions}}
-        a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Dismiss
-      .pattern-description
-        h3 {{pattern.description}}
+      .custom(ng-controller='CustomCtrl', ng-hide='customInstructions')
+        .pattern-custom-instructions
+          .button.red.clickable(ng-click='showCustom()')&nbsp;Click to customize!
+          span.text-orange&nbsp;&#9733;&nbsp;
+          span
+            {{pattern.customInstructions}}
+          a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Dismiss
       .pattern-directive
+        .pattern-description
+          h3(ng-hide='customized') {{pattern.description}}
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
           .special_abbreviations
