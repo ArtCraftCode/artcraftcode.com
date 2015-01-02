@@ -12,8 +12,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
       customInstructions: 'Knit as-written for a women\'s small aran weight hat, or customize based on your desired size from infant to men\'s large.',
       description: 'A unisex cap with a double brim for warmth and smooth finish.',
       yarns: [
-        { label: 'MC', weight: 'bulky', yards: 135 },
-        { label: 'CC', weight: 'aran', yards: 25 }
+        { label: 'MC', weight: 'aran (or a lighter bulky)', yards: 135 },
+        { label: 'CC', weight: 'aran (or a heavy worsted)', yards: 25 }
       ],
       yarnsShown: [
         { label: 'MC', info: 'madelinetosh tosh chunky in Steam Age' },
