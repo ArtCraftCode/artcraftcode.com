@@ -29,8 +29,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
       version: '1 (December 29, 2014)',
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
       ravelry: {
-        link: '',
-        button: ''
+        link: 'http://www.ravelry.com/patterns/library/very-pdx-hat',
+        button: 'http://api.ravelry.com/badges/projects?p=very-pdx-hat&amp;t=.gif'
       },
       custom: true,
       customize_by: 'size',
