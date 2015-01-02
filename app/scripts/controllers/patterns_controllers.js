@@ -51,6 +51,7 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     bodyHeight();
     babyDecreases();
     decreaseMultiples();
+    yardage();
 
     $scope.pattern.custom_fields.size_label = $scope.customSize.label;
     $scope.pattern.finishedSizes = ['Custom: ' + $scope.customSize.label];
@@ -94,5 +95,26 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     } else {
       $scope.pattern.custom_fields.decrease_4 = false;
     }
+  };
+
+  var yardage = function() {
+    var height;
+    if ($scope.pattern.custom_fields.baby_decreases) {
+      height = $scope.pattern.custom_fields.body_height + 1.4;
+    } else {
+      height = $scope.pattern.custom_fields.body_height + 2.2;
+    }
+
+    // main hat
+    var area = calculator.areaHat($scope.customSize.value, height);
+    var yards = Math.floor(calculator.estimateYardage(area, 0.8));
+
+    // contrast brim
+    var ccArea = calculator.areaRectangle($scope.customSize.value, $scope.customSize.ribbing - 0.25);
+    var ccYards = Math.floor(calculator.estimateYardage(ccArea, 0.9));
+    $scope.pattern.yarns = [
+      { label: 'MC', yards: yards },
+      { label: 'CC', yards: ccYards }
+    ];
   }
 }]);
