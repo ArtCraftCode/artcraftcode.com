@@ -115,8 +115,8 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     var ccArea = calculator.areaRectangle($scope.customSize.value, $scope.customSize.ribbing - 0.25);
     var ccYards = Math.floor(calculator.estimateYardage(ccArea, 0.9));
     $scope.pattern.yarns = [
-      { label: 'MC', yards: yards },
-      { label: 'CC', yards: ccYards }
+      { label: 'MC', yards: yards, weight: 'aran (or a lighter bulky)' },
+      { label: 'CC', yards: ccYards, weight: 'aran (or a heavy worsted)' }
     ];
   }
 }]);
