@@ -1,0 +1,47 @@
+h3 Materials
+
+.material(ng-if='pattern.yarns.length === 1')
+  h4 Yarn
+  p {{pattern.yarns[0]}}
+
+.material(ng-if='pattern.yarns.length > 1')
+  h4 Yarns
+  ul.separated(ng-repeat='yarn in pattern.yarns')
+    li {{yarn.label}}: Approximately {{yarn.yards}} yards/{{yarn.yards | ydToM}} meters {{yarn.weight}} weight yarn.
+  p(ng-if='customized') Yardage estimates for custom patterns are approximate and include a little wiggle room, just in case.
+
+.material(ng-if='pattern.yarnsShown.length === 1', ng-hide='customInstructions')
+  h4 Yarn shown
+  p {{pattern.yarnsShown[0]}}
+
+.material(ng-if='pattern.yarnsShown.length > 1', ng-hide='customInstructions')
+  h4 Yarns shown
+  ul.separated(ng-repeat='yarnShown in pattern.yarnsShown')
+    li {{yarnShown.label}}: {{yarnShown.info}}
+
+.material(ng-if='pattern.needles.length > 1')
+  h4 Needles
+  ul.separated(ng-repeat='needle in pattern.needles')
+    li {{needle}}
+
+.material(ng-if='pattern.needles.length === 1')
+  h4 Needle
+  p {{pattern.needles[0]}}
+
+.material
+  h4 Gauge
+  p {{pattern.gauge}}
+
+.material(ng-if='pattern.finishedSizes.length > 1')
+  h4 Finished sizes
+  ul.separated(ng-repeat='size in pattern.finishedSizes')
+    li {{size.label}}: {{size.measurements}}
+
+.material(ng-if='pattern.finishedSizes.length === 1')
+  h4 Finished size
+  p {{pattern.finishedSizes[0]}}
+
+.material
+  h4 Notions
+  ul.separated(ng-repeat='notion in pattern.notions')
+    li {{notion}}
