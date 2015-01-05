@@ -14,21 +14,19 @@
     .cell.content
       .pattern-description
         h3 {{pattern.description}}
+
+      //- conditional for pattern directive
       .pattern-directive
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
           .special_abbreviations
             h4 Special abbreviations: cables
             cable-abbreviations-4
-        div(ng-if='pattern.patternDirective === "very-pdx"')
-          very-pdx
 
       abbreviations
 
       .pattern-version
-        p Version {{pattern.version}}
-        ul.separated(ng-if='pattern.updates.length > 0')
-          li(ng-repeat='update in pattern.updates') {{update}}
+        pattern-errata(pattern='pattern')
 
     .cell-fixed-right(ng-controller='ModalCtrl')
       div(ng-repeat='image in pattern.images')

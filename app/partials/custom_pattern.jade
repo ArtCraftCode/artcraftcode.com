@@ -22,18 +22,14 @@
       .pattern-directive
         .pattern-description
           h3(ng-hide='customized') {{pattern.description}}
-        div(ng-if='pattern.patternDirective === "forest-park"')
-          forest-park
-          .special_abbreviations
-            h4 Special abbreviations: cables
-            cable-abbreviations-4
+
+        //- custom pattern directive conditional
         div(ng-if='pattern.patternDirective === "very-pdx"')
           very-pdx(custom='pattern.custom_fields')
 
       abbreviations
-      .pattern-version Version {{pattern.version}}
-        ul.separated(ng-if='pattern.updates.length > 0')
-            li(ng-repeat='update in pattern.updates') {{update}}
+      .pattern-version
+        pattern-errata(pattern='pattern')
 
     .cell-fixed-right(ng-controller='ModalCtrl')
       div(ng-repeat='image in pattern.images')
