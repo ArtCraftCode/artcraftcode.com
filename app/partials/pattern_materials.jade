@@ -32,14 +32,10 @@ h3 Materials
   h4 Gauge
   p {{pattern.gauge}}
 
-.material(ng-if='pattern.finishedSizes.length > 1')
+.material(ng-if='pattern.finishedSizes.length >= 1')
   h4 Finished sizes
   ul.separated(ng-repeat='size in pattern.finishedSizes')
     li {{size.label}}: {{size.measurements}}
-
-.material(ng-if='pattern.finishedSizes.length === 1')
-  h4 Finished size
-  p {{pattern.finishedSizes[0]}}
 
 .material
   h4 Notions
