@@ -25,9 +25,10 @@ angular.module('app.patterns_services', [])
           measurements: '10.5"/26.6cm tall; 24"/61cm circumference at smallest opening, 33"/84cm circumference at largest opening.'
         }],
       notions: ['stitch marker', 'cable needle (optional)', 'darning needle'],
-      version: '2 (January 2, 2015)',
+      version: '3 (January 4, 2015)',
       updates: [
-        'Version 2: corrected Cable Set Two, Round 2. Originally ended with p1, k2, p1. Corrected to p1, k1, p1.'
+        'Version 2: corrected Cable Set Two, Round 2. Originally ended with p1, k2, p1. Corrected to p1, k1, p1.',
+        'Version 3: corrected Cable Set Two, Round 3. Originally ended with p1, m1l, k1, m1r, p1. Corrected to p1, m1l, kfb, m1r, p1.'
       ],
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-1.jpg', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-2.jpg'],
       ravelry: {
