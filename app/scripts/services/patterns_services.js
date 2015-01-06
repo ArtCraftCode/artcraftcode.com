@@ -38,8 +38,32 @@ angular.module('app.patterns_services', [])
     }
   }
 
+  var winterSea = function() {
+    return {
+      src: '#/patterns/winter-sea-shawl',
+      patternDirective: 'winter-sea',
+      name: 'Winter Sea',
+      designer: 'Liz Abinante',
+      description: 'Shaped asymmetrically, the shawl is surprisingly easy to wear and can be secured with a loose knot.',
+      yarns: ['Approximately 390 yards/357 meters worsted weight.'],
+      yarnsShown: ['Madelinetosh Tosh Vintage (100% superwash merino; 200 yards/182 meters per 100 grams), shown in Opaline. '],
+      needles: ['US 7 (4.5mm) needle, circular recommended due to size.'],
+      gauge: '20 sts and 30 rows per 4 in/10 cm, stockinette stitch.',
+      finishedSizes: [{label: 'one', measurements: '53.25 in/135 cm wingspan, 19 in/48 cm at deepest point (see diagram)'}],
+      notions: ['split-ring marker', 'darning needle'],
+      version: '1 (January 4, 2015)',
+      updates: [],
+      images: [''],
+      ravelry: {
+        link: 'http://www.ravelry.com/patterns/library/winter-sea-shawl',
+        button: 'http://api.ravelry.com/badges/projects?p=winter-sea-shawl&amp;t=.gif'
+      }
+    }
+  }
+
   return {
-    all: [forestPark()],
-    forestPark: forestPark()
+    all: [forestPark(), winterSea()],
+    forestPark: forestPark(),
+    winterSea: winterSea()
   }
 });
