@@ -38,6 +38,10 @@ App.config([
       templateUrl: '/partials/pattern.html',
       controller: 'ForestParkCtrl'
     })
+    .when('/patterns/winter-sea-shawl', {
+      templateUrl: '/partials/pattern.html',
+      controller: 'WinterSeaCtrl'
+    })
     .when('/patterns/very-pdx-hat', {
       templateUrl: '/partials/custom_pattern.html',
       controller: 'VeryPdxCtrl'
