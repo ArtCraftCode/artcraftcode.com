@@ -59,7 +59,7 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
     yardage();
 
     $scope.pattern.custom_fields.size_label = $scope.customSize.label;
-    $scope.pattern.finishedSizes = ['Custom: ' + $scope.customSize.label];
+    $scope.pattern.finishedSizes = [{label: 'Custom', measurements: $scope.customSize.label}];
   };
 
   var castOn = function() {
