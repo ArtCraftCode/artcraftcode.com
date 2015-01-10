@@ -62,8 +62,8 @@ angular.module('app.patterns_services', [])
         'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG'
       ],
       ravelry: {
-        link: 'http://www.ravelry.com/patterns/library/winter-sea-shawl',
-        button: 'http://api.ravelry.com/badges/projects?p=winter-sea-shawl&amp;t=.gif'
+        link: 'http://www.ravelry.com/patterns/library/winter-sea-shawl-2',
+        button: 'http://api.ravelry.com/badges/projects?p=winter-sea-shawl-2&amp;t=.gif'
       }
     }
   }
