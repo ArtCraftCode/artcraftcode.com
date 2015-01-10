@@ -38,8 +38,39 @@ angular.module('app.patterns_services', [])
     }
   }
 
+  var winterSea = function() {
+    return {
+      src: '#/patterns/winter-sea-shawl',
+      patternDirective: 'winter-sea',
+      name: 'Winter Sea',
+      designer: 'Liz Abinante',
+      description: 'An asymmetrically shaped shawl that\'s surprisingly easy to wear.',
+      yarns: ['Approximately 390 yards/357 meters worsted weight.'],
+      yarnsShown: ['Madelinetosh Tosh Vintage (100% superwash merino; 200 yards/182 meters per 100 grams), shown in Opaline. '],
+      needles: ['US 7 (4.5mm) needle, circular recommended due to size.'],
+      gauge: '20 sts and 30 rows per 4 in/10 cm, stockinette stitch.',
+      finishedSizes: [{label: 'one', measurements: '53.25 in/135 cm wingspan, 19 in/48 cm at deepest point (see diagram)'}],
+      notions: ['split-ring marker', 'darning needle'],
+      version: '1 (January 4, 2015)',
+      updates: [],
+      images: [
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/closeup.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/hanging.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/fence.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG'
+      ],
+      ravelry: {
+        link: 'http://www.ravelry.com/patterns/library/winter-sea-shawl',
+        button: 'http://api.ravelry.com/badges/projects?p=winter-sea-shawl&amp;t=.gif'
+      }
+    }
+  }
+
   return {
-    all: [forestPark()],
-    forestPark: forestPark()
+    all: [winterSea(), forestPark()],
+    forestPark: forestPark(),
+    winterSea: winterSea()
   }
 });

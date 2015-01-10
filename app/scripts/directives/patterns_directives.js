@@ -8,6 +8,12 @@ angular.module('app.patterns_directives', [])
     templateUrl: '/partials/forest-park.html'
   }
 })
+.directive('winterSea', function() {
+  return {
+    restrict: 'E',
+    templateUrl: '/partials/winter-sea.html'
+  }
+})
 .directive('veryPdx', function() {
   return {
     restrict: 'E',

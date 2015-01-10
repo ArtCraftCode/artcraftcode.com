@@ -17,6 +17,8 @@
 
       //- conditional for pattern directive
       .pattern-directive
+        div(ng-if='pattern.patternDirective === "winter-sea"')
+          winter-sea
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
           .special_abbreviations

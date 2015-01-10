@@ -39,6 +39,9 @@ angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom
 .controller('ForestParkCtrl', ['$scope', 'patterns', function($scope, patterns) {
   $scope.pattern = patterns.forestPark;
 }])
+.controller('WinterSeaCtrl', ['$scope', 'patterns', function($scope, patterns) {
+  $scope.pattern = patterns.winterSea;
+}])
 .controller('VeryPdxCtrl', ['$scope', 'customPatterns', 'calculator', function($scope, customPatterns, calculator) {
   $scope.pattern = customPatterns.veryPdx;
   $scope.customized = false;
