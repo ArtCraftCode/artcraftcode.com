@@ -44,7 +44,7 @@ angular.module('app.patterns_services', [])
       patternDirective: 'winter-sea',
       name: 'Winter Sea',
       designer: 'Liz Abinante',
-      description: 'Shaped asymmetrically, the shawl is surprisingly easy to wear and can be secured with a loose knot.',
+      description: 'An asymmetrically shaped shawl that\'s surprisingly easy to wear.',
       yarns: ['Approximately 390 yards/357 meters worsted weight.'],
       yarnsShown: ['Madelinetosh Tosh Vintage (100% superwash merino; 200 yards/182 meters per 100 grams), shown in Opaline. '],
       needles: ['US 7 (4.5mm) needle, circular recommended due to size.'],
@@ -55,10 +55,10 @@ angular.module('app.patterns_services', [])
       updates: [],
       images: [
         'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/closeup.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG',
         'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/hanging.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG',
         'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/fence.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG',
         'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG'
       ],
       ravelry: {
