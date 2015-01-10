@@ -69,7 +69,7 @@ angular.module('app.patterns_services', [])
   }
 
   return {
-    all: [forestPark(), winterSea()],
+    all: [winterSea(), forestPark()],
     forestPark: forestPark(),
     winterSea: winterSea()
   }
