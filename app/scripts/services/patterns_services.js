@@ -53,7 +53,14 @@ angular.module('app.patterns_services', [])
       notions: ['split-ring marker', 'darning needle'],
       version: '1 (January 4, 2015)',
       updates: [],
-      images: [''],
+      images: [
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/closeup.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/hanging.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/fence.JPG',
+        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG'
+      ],
       ravelry: {
         link: 'http://www.ravelry.com/patterns/library/winter-sea-shawl',
         button: 'http://api.ravelry.com/badges/projects?p=winter-sea-shawl&amp;t=.gif'
