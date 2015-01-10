@@ -18,6 +18,10 @@
   .content {
     padding-left: 30px;
     display: block;
+    .separator-top {
+      @include border-top;
+      margin-top: 10px;
+    }
   }
 
   ul.separated {
