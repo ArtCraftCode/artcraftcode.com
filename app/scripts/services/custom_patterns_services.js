@@ -26,8 +26,11 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
       finishedSizes: [{ label: 'customized', measurements: '13"/33cm - 25"/63.55cm'}, { label: 'as written', measurements: 'women\'s small (21"/53 cm) to fit a 22"/56cm head' }],
       customNote: 'The finished measurements are the actual measurements of the hat. Choose a size that gives you approximately 1"/2.54cm negative ease. I knit a women\'s small (21"/53cm) for myself and my head is approximately 22"/56cm around.',
       notions: ['stitch marker', 'waste yarn', 'darning needle'],
-      version: '2 (January 3, 2015)',
-      updates: ['Version 2: Corrected missing CC for brim CO; corrected missing yarn weight labels for custom sizes.'],
+      version: '3 (January 25, 2015)',
+      updates: [
+        'Version 2: Corrected missing CC for brim CO; corrected missing yarn weight labels for custom sizes.',
+        'Verison 3: Corrected last line of brim instructions before folding; originally read "Using smallest circular needle, k all sts", changed to "Using largest circular needle, k all sts".'
+      ],
       images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
       ravelry: {
         link: 'http://www.ravelry.com/patterns/library/very-pdx-hat',
