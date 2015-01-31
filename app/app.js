@@ -19,6 +19,7 @@ var App = angular.module('app',
     'library.needle',
     'library.yarn',
     'factory.custom_pattern',
+    'versions',
     'partials'
   ]
 );
