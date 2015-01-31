@@ -21,7 +21,7 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services', '
         { label: 'MC', info: 'madelinetosh tosh chunky in Steam Age' },
         { label: 'CC', info: 'The Plucky Knitter Primo Aran in Think Pink' }
       ],
-      needles: [contrastNeedle.circular("16") + ' (contrast brim)', bodyNeedle.circular("16") + ' (brim RS and hat body).', bodyNeedle.dpns() + ' preferred needles for working small circumferences in the round.'],
+      needles: [contrastNeedle.circular('16"') + ' (contrast brim)', bodyNeedle.circular('16"') + ' (brim RS and hat body).', bodyNeedle.dpns() + ' or preferred needles for working small circumferences in the round.'],
       gauge: '13 sts, 20 rows per 4"/10cm in stockinette stitch using largest needle',
       gaugeInch: 3.25,
       gaugeRowInch: 5,
