@@ -14,6 +14,7 @@ var App = angular.module('app',
     'app.custom_options_services',
     'app.patterns_services',
     'app.calculator_services',
+    'app.library_services',
     'app.patterns_directives',
     'app.widget_directives',
     'partials'
