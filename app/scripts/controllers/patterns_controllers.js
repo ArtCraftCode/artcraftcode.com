@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom_patterns_services', 'app.calculator_services'])
+angular.module('app.patterns_controllers', ['app.patterns_services', 'app.custom_patterns_services'])
 .controller('PatternsCtrl', ['$scope', 'patterns', 'customPatterns',function($scope, patterns, customPatterns) {
   $scope.patterns = patterns.all.concat(customPatterns.all);
   // $scope.customPatterns = customPatterns.all;
