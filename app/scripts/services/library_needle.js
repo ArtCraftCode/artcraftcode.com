@@ -9,7 +9,6 @@ angular.module('library.needle', [])
   }
 
   Needle.prototype.string = function() {
-    debugger
     return 'US ' + this.us + ' (' + this.mm + 'mm)';
   }
 
