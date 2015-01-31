@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('versions', [])
+angular.module('pattern.versions', [])
 .service('Version', [function() {
   return {
     forestPark: {

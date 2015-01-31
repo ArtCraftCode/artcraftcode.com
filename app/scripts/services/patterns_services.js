@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'versions'])
+angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'pattern.versions'])
 .service('patterns', ['Needle', 'Yarn', 'Version', function(Needle, Yarn, Version) {
   var forestPark = function() {
     var needle = new Needle(4.5);

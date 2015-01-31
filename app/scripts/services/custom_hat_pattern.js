@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('factory.custom_pattern', ['app.calculator_services'])
+angular.module('custom_hat_pattern', ['app.calculator_services'])
 .factory('CustomHatPattern', ['calculator', 'hatCalculator', function(calculator, hatCalculator) {
   var gaugeInch, gaugeRow, size, multiple;
 

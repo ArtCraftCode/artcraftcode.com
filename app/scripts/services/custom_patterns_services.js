@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle', 'library.yarn', 'versions'])
+angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle', 'library.yarn', 'pattern.versions'])
 .service('customPatterns', ['hatSizes', 'Needle', 'Yarn', 'Version', function(hatSizes, Needle, Yarn, Version) {
   var veryPdx = function() {
     var contrastNeedle = new Needle(5);

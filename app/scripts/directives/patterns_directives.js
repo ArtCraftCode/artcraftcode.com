@@ -1,7 +1,7 @@
 'use strict';
 
 /* Directives */
-angular.module('app.patterns_directives', ['app.calculator_services', 'factory.custom_pattern', 'library.yarn'])
+angular.module('app.patterns_directives', ['app.calculator_services', 'custom_hat_pattern', 'library.yarn'])
 .directive('forestPark', function() {
   return {
     restrict: 'E',
