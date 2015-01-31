@@ -13,7 +13,7 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn'])
       designer: 'Liz Abinante',
       description: 'A simple cabled cowl with garter stitch ribbing.',
       yarns: [
-        { label: yarn.string() + ' (or ' + yarn.lightAlternate().string() + ', depending on your gauge)', yards: 300 }
+        { weight: yarn.string() + ' (or ' + yarn.lightAlternate().string() + ', depending on your gauge)', yards: 300 }
       ],
       yarnsShown: [
         'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams. Approximately 1.5 skeins used.'
@@ -49,7 +49,7 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn'])
       description: 'An asymmetrically shaped shawl that\'s surprisingly easy to wear.',
       yarns: [
         {
-          label: yarn.string(),
+          weight: yarn.string(),
           yards: 390
         }
       ],
