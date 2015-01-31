@@ -1,11 +1,12 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'pattern.versions'])
-.service('patterns', ['Needle', 'Yarn', 'Version', function(Needle, Yarn, Version) {
+angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes'])
+.service('patterns', ['Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize' function(Needle, Yarn, YarnShown, Version, FinishedSize) {
   var forestPark = function() {
     var needle = new Needle(4.5);
     var yarn = new Yarn('Aran', 300);
+    var yarnShown = new YarnShown('main', 'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams.', '1.5 skeins');
     var version = Version.forestPark;
 
     return {
@@ -15,9 +16,7 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'patt
       designer: 'Liz Abinante',
       description: 'A simple cabled cowl with garter stitch ribbing.',
       yarns: [yarn],
-      yarnsShown: [
-        'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams. Approximately 1.5 skeins used.'
-        ],
+      yarnsShown: [],
       needles: [needle.circular('16" or 20"')],
       gauge: '16 sts, 24 rows per 4"/10cm, garter stitch ribbing.',
       finishedSizes: [{

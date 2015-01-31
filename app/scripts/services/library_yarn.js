@@ -3,10 +3,13 @@
 /* Sevices */
 angular.module('library.yarn', [])
 .factory('YarnShown', function(Yarn) {
-  function YarnShown(label, info) {
+  function YarnShown(label, detail, used) {
     this.label = label;
-    this.info = info;
+    this.detail = detail;
+    this.used = used;
   }
+
+  YarnShown.prototype.info = this.detail + ', approximately ' + this.used + ' used';
 
   return (YarnShown);
 })
