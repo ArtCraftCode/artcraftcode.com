@@ -38,6 +38,7 @@ angular.module('app.patterns_services', ['app.library_services'])
   }
 
   var winterSea = function() {
+    var needle = new Needle(4.5);
     return {
       src: '#/patterns/winter-sea-shawl',
       patternDirective: 'winter-sea',
@@ -46,7 +47,7 @@ angular.module('app.patterns_services', ['app.library_services'])
       description: 'An asymmetrically shaped shawl that\'s surprisingly easy to wear.',
       yarns: ['Approximately 390 yards/357 meters worsted weight.'],
       yarnsShown: ['Madelinetosh Tosh Vintage (100% superwash merino; 200 yards/182 meters per 100 grams), shown in Opaline. '],
-      needles: ['US 7 (4.5mm) needle, circular recommended due to size.'],
+      needles: [needle.string() + ', circular recommended due to size'],
       gauge: '20 sts and 30 rows per 4 in/10 cm, stockinette stitch.',
       finishedSizes: [{label: 'one', measurements: '53.25 in/135 cm wingspan, 19 in/48 cm at deepest point (see diagram)'}],
       notions: ['split-ring marker', 'darning needle'],
