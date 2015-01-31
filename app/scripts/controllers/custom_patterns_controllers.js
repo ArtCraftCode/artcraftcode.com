@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('app.custom_patterns_controllers', ['ngDialog'])
+angular.module('app.custom_patterns_controllers', ['ngDialog', 'app.calculator_services'])
 .controller('CustomCtrl', ['$scope', 'ngDialog', function($scope, ngDialog) {
   $scope.customInstructions = false;
 

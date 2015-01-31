@@ -1,7 +1,7 @@
 'use strict';
 
 /* Directives */
-angular.module('app.patterns_directives', [])
+angular.module('app.patterns_directives', ['app.calculator_services'])
 .directive('forestPark', function() {
   return {
     restrict: 'E',
@@ -14,7 +14,7 @@ angular.module('app.patterns_directives', [])
     templateUrl: '/partials/winter-sea.html'
   }
 })
-.directive('veryPdx', function() {
+.directive('veryPdx', ['calculator', function(calculator) {
   return {
     restrict: 'E',
     scope: {
@@ -26,6 +26,7 @@ angular.module('app.patterns_directives', [])
 
     link: function(scope, element, attrs) {
       // change the value of scope.custom
+      // based on the customSize value
       if (scope.customized) { customize(); }
 
       var customize = function() {
@@ -33,4 +34,4 @@ angular.module('app.patterns_directives', [])
       };
     }
   }
-});
+}]);
