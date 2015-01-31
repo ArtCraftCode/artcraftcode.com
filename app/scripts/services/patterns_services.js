@@ -5,16 +5,14 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn'])
 .service('patterns', ['Needle', 'Yarn', function(Needle, Yarn) {
   var forestPark = function() {
     var needle = new Needle(4.5);
-    var yarn = new Yarn('Aran');
+    var yarn = new Yarn('Aran', 300);
     return {
       src: '#/patterns/forest-park-cowl',
       patternDirective: 'forest-park',
       name: 'Forest Park Cowl',
       designer: 'Liz Abinante',
       description: 'A simple cabled cowl with garter stitch ribbing.',
-      yarns: [
-        { weight: yarn.string() + ' (or ' + yarn.lightAlternate().string() + ', depending on your gauge)', yards: 300 }
-      ],
+      yarns: [yarn],
       yarnsShown: [
         'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams. Approximately 1.5 skeins used.'
         ],
@@ -40,19 +38,14 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn'])
 
   var winterSea = function() {
     var needle = new Needle(4.5);
-    var yarn = new Yarn('Worsted');
+    var yarn = new Yarn('Worsted', 390);
     return {
       src: '#/patterns/winter-sea-shawl',
       patternDirective: 'winter-sea',
       name: 'Winter Sea',
       designer: 'Liz Abinante',
       description: 'An asymmetrically shaped shawl that\'s surprisingly easy to wear.',
-      yarns: [
-        {
-          weight: yarn.string(),
-          yards: 390
-        }
-      ],
+      yarns: [yarn],
       yarnsShown: ['Madelinetosh Tosh Vintage (100% superwash merino; 200 yards/182 meters per 100 grams), shown in Opaline. '],
       needles: [needle.string() + ', circular recommended due to size'],
       gauge: '20 sts and 30 rows per 4 in/10 cm, stockinette stitch.',
