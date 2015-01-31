@@ -20,6 +20,7 @@ var App = angular.module('app',
     'library.yarn',
     'custom_hat_pattern',
     'pattern.versions',
+    'pattern.finished_sizes',
     'partials'
   ]
 );

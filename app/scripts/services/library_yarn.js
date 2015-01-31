@@ -2,6 +2,14 @@
 
 /* Sevices */
 angular.module('library.yarn', [])
+.factory('YarnShown', function(Yarn) {
+  function YarnShown(label, info) {
+    this.label = label;
+    this.info = info;
+  }
+
+  return (YarnShown);
+})
 .factory('Yarn', ['yarnLibrary', function(yarnLibrary) {
   function Yarn(bareWeight, yards, label) {
     this.bareWeight = bareWeight;
