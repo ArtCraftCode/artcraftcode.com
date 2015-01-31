@@ -40,13 +40,19 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn'])
 
   var winterSea = function() {
     var needle = new Needle(4.5);
+    var yarn = new Yarn('Worsted');
     return {
       src: '#/patterns/winter-sea-shawl',
       patternDirective: 'winter-sea',
       name: 'Winter Sea',
       designer: 'Liz Abinante',
       description: 'An asymmetrically shaped shawl that\'s surprisingly easy to wear.',
-      yarns: ['Approximately 390 yards/357 meters worsted weight.'],
+      yarns: [
+        {
+          label: yarn.string(),
+          yards: 390
+        }
+      ],
       yarnsShown: ['Madelinetosh Tosh Vintage (100% superwash merino; 200 yards/182 meters per 100 grams), shown in Opaline. '],
       needles: [needle.string() + ', circular recommended due to size'],
       gauge: '20 sts and 30 rows per 4 in/10 cm, stockinette stitch.',
