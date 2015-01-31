@@ -33,7 +33,6 @@ angular.module('app.patterns_directives', ['app.calculator_services'])
       });
 
       var customize = function() {
-        debugger
         scope.custom.cast_on = calculator.castOn(scope.customSize.value, pattern.gaugeInch, scope.custom.multiple);
         scope.custom.brim_rows = hatCalculator.brimRows(pattern.gaugeRowInch, scope.customSize.ribbing);
         scope.custom.brim_height = scope.customSize.ribbing;
