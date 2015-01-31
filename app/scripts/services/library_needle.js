@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.library_services', [])
+angular.module('library.needle', [])
 .factory('Needle', ['needleLibrary', function(needleLibrary) {
   function Needle(mm) {
     this.mm = mm;

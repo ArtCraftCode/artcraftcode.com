@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', ['app.custom_options_services', 'app.library_services'])
+angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle'])
 .service('customPatterns', ['hatSizes', 'Needle', function(hatSizes, Needle) {
   var veryPdx = function() {
     var contrastNeedle = new Needle(5);
