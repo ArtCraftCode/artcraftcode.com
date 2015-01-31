@@ -3,14 +3,17 @@
 /* Sevices */
 angular.module('library.yarn', [])
 .factory('Yarn', ['yarnLibrary', function(yarnLibrary) {
-  function Yarn(label) {
+  function Yarn(bareWeight, yards, label) {
+    this.bareWeight = bareWeight;
+    this.weight = this.string();
     this.label = label;
-    this.factor = yarnLibrary[this.label].factor;
-    this.position = yarnLibrary[this.label].position;
+    this.yards = yards;
+    this.factor = yarnLibrary[this.bareWeight].factor;
+    this.position = yarnLibrary[this.bareWeight].position;
   }
 
   Yarn.prototype.string = function() {
-    return this.label + ' weight yarn';
+    return this.bareWeight + ' weight yarn';
   }
 
   Yarn.prototype.lightAlternate = function() {

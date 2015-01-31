@@ -6,7 +6,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services', '
   var veryPdx = function() {
     var contrastNeedle = new Needle(5);
     var bodyNeedle = new Needle(5.5);
-    var yarn = new Yarn('Aran');
+    var mc = new Yarn('Aran', 135, 'MC');
+    var cc = new Yarn('Aran', 25, 'CC');
     return {
       src: '#/patterns/very-pdx-hat',
       patternDirective: 'very-pdx',
@@ -14,10 +15,7 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services', '
       designer: 'Liz Abinante',
       customInstructions: 'Knit as-written for a women\'s small aran weight hat, or customize based on your desired size from infant to men\'s large.',
       description: 'A unisex cap with a double brim for warmth and smooth finish.',
-      yarns: [
-        { label: 'MC', weight: yarn.string() + ' (or a lighter ' + yarn.heavyAlternate().string() + ')', yards: 135 },
-        { label: 'CC', weight: yarn.string() + ' (or a heavy ' + yarn.lightAlternate().string() + ')', yards: 25 }
-      ],
+      yarns: [ mc, cc ],
       yarnsShown: [
         { label: 'MC', info: 'madelinetosh tosh chunky in Steam Age' },
         { label: 'CC', info: 'The Plucky Knitter Primo Aran in Think Pink' }
