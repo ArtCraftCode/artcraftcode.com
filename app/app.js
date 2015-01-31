@@ -21,6 +21,8 @@ var App = angular.module('app',
     'custom_hat_pattern',
     'pattern.versions',
     'pattern.finished_sizes',
+    'pattern.ravelry',
+    'pattern.images',
     'partials'
   ]
 );

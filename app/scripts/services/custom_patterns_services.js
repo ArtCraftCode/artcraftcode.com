@@ -1,8 +1,8 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes'])
-.service('customPatterns', ['hatSizes', 'Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', function(hatSizes, Needle, Yarn, YarnShown, Version, FinishedSize) {
+angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes', 'pattern.images', 'pattern.ravelry'])
+.service('customPatterns', ['hatSizes', 'Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', 'Images', 'Ravelry', function(hatSizes, Needle, Yarn, YarnShown, Version, FinishedSize, Images, Ravelry) {
   var veryPdx = function() {
     var contrastNeedle = new Needle(5);
     var bodyNeedle = new Needle(5.5);
@@ -32,11 +32,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services', '
       notions: ['stitch marker', 'waste yarn', 'darning needle'],
       version: version.current,
       updates: version.updates,
-      images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
-      ravelry: {
-        link: 'http://www.ravelry.com/patterns/library/very-pdx-hat',
-        button: 'http://api.ravelry.com/badges/projects?p=very-pdx-hat&amp;t=.gif'
-      },
+      images: Images.veryPdx,
+      ravelry: new Ravelry('very-pdx-hat'),
       custom: true,
       customize_by: 'size',
       custom_options: hatSizes.all,

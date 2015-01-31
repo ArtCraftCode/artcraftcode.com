@@ -1,8 +1,8 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes'])
-.service('patterns', ['Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', function(Needle, Yarn, YarnShown, Version, FinishedSize) {
+angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes', 'pattern.images', 'pattern.ravelry'])
+.service('patterns', ['Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', 'Images', 'Ravelry', function(Needle, Yarn, YarnShown, Version, FinishedSize, Images, Ravelry) {
   var forestPark = function() {
     var needle = new Needle(4.5);
     var yarn = new Yarn('Aran', 300);
@@ -24,11 +24,8 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'patt
       notions: ['stitch marker', 'cable needle (optional)', 'darning needle'],
       version: version.current,
       updates: version.updates,
-      images: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-1.jpg', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-2.jpg'],
-      ravelry: {
-        link: 'http://www.ravelry.com/patterns/library/forest-park-cowl',
-        button: 'http://api.ravelry.com/badges/projects?p=forest-park-cowl&amp;t=.gif'
-      }
+      images: Images.forestPark,
+      ravelry: new Ravelry('forest-park-cowl')
     }
   }
 
@@ -53,18 +50,8 @@ angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'patt
       notions: ['split-ring marker', 'darning needle'],
       version: version.current,
       updates: version.updates,
-      images: [
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/closeup.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/hanging.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/fence.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG',
-        'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG'
-      ],
-      ravelry: {
-        link: 'http://www.ravelry.com/patterns/library/winter-sea-shawl-2',
-        button: 'http://api.ravelry.com/badges/projects?p=winter-sea-shawl-2&amp;t=.gif'
-      }
+      images: Images.winterSea,
+      ravelry: new Ravelry('winter-sea-shawl-2')
     }
   }
 
