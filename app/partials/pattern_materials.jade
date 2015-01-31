@@ -6,7 +6,7 @@ h3 Materials
 
 .material(ng-if='pattern.yarns.length === 1')
   h4 Yarn
-  p {{pattern.yarns[0]}}
+  p Approximately {{pattern.yarns[0].yards}} yards / {{pattern.yarns[0].yards | ydToM}} meters {{pattern.yarns[0].label}}
 
 .material(ng-if='pattern.yarns.length > 1')
   h4 Yarns

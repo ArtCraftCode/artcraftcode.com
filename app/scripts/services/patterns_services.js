@@ -1,10 +1,11 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns_services', ['library.needle'])
-.service('patterns', ['Needle', function(Needle) {
+angular.module('app.patterns_services', ['library.needle', 'library.yarn'])
+.service('patterns', ['Needle', 'Yarn', function(Needle, Yarn) {
   var forestPark = function() {
     var needle = new Needle(4.5);
+    var yarn = new Yarn('Aran');
     return {
       src: '#/patterns/forest-park-cowl',
       patternDirective: 'forest-park',
@@ -12,8 +13,8 @@ angular.module('app.patterns_services', ['library.needle'])
       designer: 'Liz Abinante',
       description: 'A simple cabled cowl with garter stitch ribbing.',
       yarns: [
-        'Approximately 300 yards/274 meters aran weight (or worsted weight, depending on your gauge) yarn.'
-        ],
+        { label: yarn.string() + ' (or ' + yarn.lightAlternate().string() + ', depending on your gauge)', yards: 300 }
+      ],
       yarnsShown: [
         'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams. Approximately 1.5 skeins used.'
         ],
