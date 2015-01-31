@@ -9,7 +9,7 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services', '
     var mc = new Yarn('Aran', 135, 'MC');
     var cc = new Yarn('Aran', 25, 'CC');
     var mcShown = new YarnShown('MC', 'madelinetosh tosh chunky in Steam Age', 'less than 1/4 skein')
-    var ccShown = new YarnShown('CC', 'The Plucky Knitter Primo Aran in Think Pink', 'about 2/3 skein')
+    var ccShown = new YarnShown('CC', 'The Plucky Knitter Primo Aran in Think Pink', '2/3 skein')
     var customSize = new FinishedSize('customized', '13"/33cm - 25"/63.55cm');
     var writtenSize = new FinishedSize('as written', 'women\'s small (21"/53 cm) to fit a 22"/56cm head');
     var version = Version.veryPdx;
