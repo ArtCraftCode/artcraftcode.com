@@ -9,7 +9,9 @@ angular.module('library.yarn', [])
     this.used = used;
   }
 
-  YarnShown.prototype.info = this.detail + ', approximately ' + this.used + ' used';
+  YarnShown.prototype.info = function() {
+    return this.detail + ', approximately ' + this.used + ' used';
+  }
 
   return (YarnShown);
 })
