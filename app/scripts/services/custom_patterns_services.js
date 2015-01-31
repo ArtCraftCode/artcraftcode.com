@@ -1,9 +1,11 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', ['app.custom_options_services'])
-.service('customPatterns', function(hatSizes) {
+angular.module('app.custom_patterns_services', ['app.custom_options_services', 'app.library_services'])
+.service('customPatterns', ['hatSizes', 'Needle', function(hatSizes, Needle) {
   var veryPdx = function() {
+    var contrastNeedle = new Needle(5);
+    var bodyNeedle = new Needle(5.5);
     return {
       src: '#/patterns/very-pdx-hat',
       patternDirective: 'very-pdx',
@@ -19,7 +21,7 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
         { label: 'MC', info: 'madelinetosh tosh chunky in Steam Age' },
         { label: 'CC', info: 'The Plucky Knitter Primo Aran in Think Pink' }
       ],
-      needles: ['US 8 (5 MM) 16" circular needle (contrast brim).', 'US 9 (5.5 MM) 16" circular needle (brim RS and hat body).', 'US 9 (5.5 MM) set of DPNs or preferred needles for working small circumferences in the round.'],
+      needles: [contrastNeedle.circular("16") + ' (contrast brim)', bodyNeedle.circular("16") + ' (brim RS and hat body).', bodyNeedle.dpns() + ' preferred needles for working small circumferences in the round.'],
       gauge: '13 sts, 20 rows per 4"/10cm in stockinette stitch using largest needle',
       gaugeInch: 3.25,
       gaugeRowInch: 5,
@@ -54,4 +56,4 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services'])
     all: [veryPdx()],
     veryPdx: veryPdx()
   }
-});
+}]);
