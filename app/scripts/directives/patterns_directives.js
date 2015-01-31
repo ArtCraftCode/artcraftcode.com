@@ -34,11 +34,23 @@ angular.module('app.patterns_directives', ['app.calculator_services'])
         customize();
       });
 
+      // does this size need decreases for babies?
+      scope.babyDecreases = function() {
+        if (!scope.customSize) {
+          return false;
+        } else if (scope.customSize.value < 17) {
+          return true;
+        } else {
+          return false;
+        }
+      };
+
+      // customization functions
       var customize = function() {
         scope.custom.cast_on = calculator.castOn(scope.customSize.value, pattern.gaugeInch, scope.custom.multiple);
         scope.custom.brim_rows = hatCalculator.brimRows(pattern.gaugeRowInch, scope.customSize.ribbing);
         scope.custom.brim_height = scope.customSize.ribbing;
-        scope.custom.body_height = hatCalculator.bodyHeight(scope.custom.cast_on, scope.customSize.height, decreaseMultiple, babyDecreases());
+        scope.custom.body_height = hatCalculator.bodyHeight(scope.custom.cast_on, scope.customSize.height, decreaseMultiple, scope.babyDecreases());
         scope.custom.size_label = scope.customSize.label;
 
         // special decreases for non-multiples
@@ -54,17 +66,8 @@ angular.module('app.patterns_directives', ['app.calculator_services'])
         ];
       };
 
-      // does this size need decreases for babies?
-      var babyDecreases = function() {
-        if (scope.customSize.value < 17) {
-          return true;
-        } else {
-          return false;
-        }
-      };
-
       var mcYards = function() {
-        var height = babyDecreases() ? scope.custom.body_height + 1.4 : scope.custom.body_height + 2.2;
+        var height = scope.babyDecreases() ? scope.custom.body_height + 1.4 : scope.custom.body_height + 2.2;
         var area = calculator.areaHat(scope.customSize.value, height);
         return Math.floor(calculator.estimateYardage(area, 0.8));
       };

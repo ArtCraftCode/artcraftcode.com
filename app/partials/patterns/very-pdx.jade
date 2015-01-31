@@ -39,7 +39,7 @@ section
   br
   p If desired, you can continue to work the crown decreases in the Garter Rib pattern.
   br
-  div(ng-hide='custom.baby_decreases || custom.decrease_4')
+  div(ng-hide='babyDecreases() || custom.decrease_4')
     p Round 1: *k7, k2tog, rpt from * to end.
     p Rounds 2, 4, 6, 8: k all sts.
     p Round 3: *k6, k2tog, rpt from * to end.
@@ -49,7 +49,7 @@ section
     p Round 10: *k2, k2tog, rpt from * to end.
     p Round 11: *k1, k2tog, rpt from * to end.
     p Round 12: *k2tog, rpt from * to end.
-  div(ng-show='custom.baby_decreases && !custom.decrease_4')
+  div(ng-show='babyDecreases() && !custom.decrease_4')
     p Round 1: *k4, k2tog, rpt from * to end.
     p Rounds 2, 4: k all sts.
     p Round 3: *k3, k2tog, rpt from * to end.
@@ -58,7 +58,7 @@ section
     p Round 7: *k2tog, rpt from * to end.
   div(ng-if='custom.decrease_4')
     p Round 1: *k{{custom.decrease_multiple}}, k2tog, rpt from * to end.
-  div(ng-if='custom.decrease_4 && !custom.baby_decreases')
+  div(ng-if='custom.decrease_4 && !babyDecreases()')
     p Round 2, 4, 6, 8, 10, 12: k all sts.
     p Round 3: *k7, k2tog, rpt from * to end.
     p Round 5: *k6, k2tog, rpt from * to end.
@@ -68,7 +68,7 @@ section
     p Round 13: *k2, k2tog, rpt from * to end.
     p Round 14: *k1, k2tog, rpt from * to end.
     p Round 15: *k2tog, rpt from * to end.
-  div(ng-if='custom.decrease_4 && custom.baby_decreases')
+  div(ng-if='custom.decrease_4 && babyDecreases()')
     p Rounds 2, 4, 6, 8: k all sts.
     p Round 3: *k7, k2tog, rpt from * to end.
     p Round 5: *k6, k2tog, rpt from * to end.
