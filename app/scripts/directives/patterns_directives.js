@@ -18,8 +18,19 @@ angular.module('app.patterns_directives', [])
   return {
     restrict: 'E',
     scope: {
-      custom: '='
+      custom: '=',
+      customized: '=',
+      customSize: '='
     },
-    templateUrl: '/partials/very-pdx.html'
+    templateUrl: '/partials/very-pdx.html',
+
+    link: function(scope, element, attrs) {
+      // change the value of scope.custom
+      if (scope.customized) { customize(); }
+
+      var customize = function() {
+
+      };
+    }
   }
 });

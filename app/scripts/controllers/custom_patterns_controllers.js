@@ -14,7 +14,8 @@ angular.module('app.custom_patterns_controllers', ['ngDialog'])
     dialog.closePromise.then(function(data) {
       if (typeof data.value !== 'string') {
         $scope.customInstructions = true;
-        $scope.$parent.customize(data.value);
+        $scope.customized = true;
+        $scope.customSize = data.value;
       }
     });
   };
@@ -26,6 +27,7 @@ angular.module('app.custom_patterns_controllers', ['ngDialog'])
 .controller('VeryPdxCtrl', ['$scope', 'customPatterns', 'calculator', function($scope, customPatterns, calculator) {
   $scope.pattern = customPatterns.veryPdx;
   $scope.customized = false;
+  $scope.customSize = undefined;
 
   $scope.customize = function(size) {
     $scope.customSize = size;
