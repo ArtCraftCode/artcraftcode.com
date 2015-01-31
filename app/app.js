@@ -18,6 +18,7 @@ var App = angular.module('app',
     'app.widget_directives',
     'library.needle',
     'library.yarn',
+    'factory.custom_pattern',
     'partials'
   ]
 );
