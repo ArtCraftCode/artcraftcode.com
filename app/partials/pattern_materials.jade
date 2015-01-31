@@ -11,7 +11,7 @@ h3 Materials
 .material(ng-if='pattern.yarns.length > 1')
   h4 Yarns
   ul.separated(ng-repeat='yarn in pattern.yarns')
-    li {{yarn.label}}: Approximately {{yarn.yards}} yards/{{yarn.yards | ydToM}} meters {{yarn.weight}} weight yarn.
+    li {{yarn.label}}: {{yarn.yards}} yards/{{yarn.yards | ydToM}} meters {{yarn.weight}}
   p(ng-if='customized') Yardage estimates for custom patterns are approximate and include a little wiggle room, just in case.
 
 .material(ng-if='pattern.yarnsShown.length === 1', ng-hide='customInstructions')

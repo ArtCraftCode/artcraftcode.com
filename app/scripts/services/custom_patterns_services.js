@@ -1,11 +1,12 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle'])
-.service('customPatterns', ['hatSizes', 'Needle', function(hatSizes, Needle) {
+angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle', 'library.yarn'])
+.service('customPatterns', ['hatSizes', 'Needle', 'Yarn', function(hatSizes, Needle, Yarn) {
   var veryPdx = function() {
     var contrastNeedle = new Needle(5);
     var bodyNeedle = new Needle(5.5);
+    var yarn = new Yarn('Aran');
     return {
       src: '#/patterns/very-pdx-hat',
       patternDirective: 'very-pdx',
@@ -14,8 +15,8 @@ angular.module('app.custom_patterns_services', ['app.custom_options_services', '
       customInstructions: 'Knit as-written for a women\'s small aran weight hat, or customize based on your desired size from infant to men\'s large.',
       description: 'A unisex cap with a double brim for warmth and smooth finish.',
       yarns: [
-        { label: 'MC', weight: 'aran (or a lighter bulky)', yards: 135 },
-        { label: 'CC', weight: 'aran (or a heavy worsted)', yards: 25 }
+        { label: 'MC', weight: yarn.string() + ' (or a lighter ' + yarn.heavyAlternate().string() + ')', yards: 135 },
+        { label: 'CC', weight: yarn.string() + ' (or a heavy ' + yarn.lightAlternate().string() + ')', yards: 25 }
       ],
       yarnsShown: [
         { label: 'MC', info: 'madelinetosh tosh chunky in Steam Age' },
