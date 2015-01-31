@@ -1,9 +1,10 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns_services', [])
-.service('patterns', function() {
+angular.module('app.patterns_services', ['app.library_services'])
+.service('patterns', ['Needle', function(Needle) {
   var forestPark = function() {
+    var needle = new Needle(4.5);
     return {
       src: '#/patterns/forest-park-cowl',
       patternDirective: 'forest-park',
@@ -16,9 +17,7 @@ angular.module('app.patterns_services', [])
       yarnsShown: [
         'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams. Approximately 1.5 skeins used.'
         ],
-      needles: [
-          'One US 7 (4.5mm) 16" circular (or 20" if preferred) needle.'
-        ],
+      needles: [needle.circular('16" or 20"')],
       gauge: '16 sts, 24 rows per 4"/10cm, garter stitch ribbing.',
       finishedSizes: [{
           label: 'one',
@@ -73,4 +72,4 @@ angular.module('app.patterns_services', [])
     forestPark: forestPark(),
     winterSea: winterSea()
   }
-});
+}]);
