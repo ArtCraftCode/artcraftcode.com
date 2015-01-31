@@ -24,9 +24,11 @@ angular.module('app.patterns_directives', ['app.calculator_services'])
     templateUrl: '/partials/very-pdx.html',
 
     link: function(scope, element, attrs) {
+      // don't change these or you'll die
       var decreaseMultiple = 8;
       var pattern = scope.pattern;
 
+      // listen for customization
       scope.$on('customized', function(customized, customSize) {
         scope.customSize = customSize;
         customize();
