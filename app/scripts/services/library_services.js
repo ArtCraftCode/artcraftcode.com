@@ -14,7 +14,7 @@ angular.module('app.library_services', [])
   }
 
   Needle.prototype.circular= function(length) {
-    return this.string() + ' ' + length + '" circular needle';
+    return this.string() + ' ' + length + ' circular needle';
   }
 
   Needle.prototype.dpns = function() {
