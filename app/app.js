@@ -54,6 +54,10 @@ App.config([
       templateUrl: '/partials/pattern.html',
       controller: 'ForestParkCtrl'
     })
+    .when('/patterns/misdirected-cowl', {
+      templateUrl: '/partials/pattern.html',
+      controller: 'MisdirectedCtrl'
+    })
     .when('/patterns/winter-sea-shawl', {
       templateUrl: '/partials/pattern.html',
       controller: 'WinterSeaCtrl'

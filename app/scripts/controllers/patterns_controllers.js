@@ -17,6 +17,9 @@ angular.module('app.patterns_controllers', ['app.patterns', 'app.custom_patterns
 .controller('ForestParkCtrl', ['$scope', 'patterns', function($scope, patterns) {
   $scope.pattern = patterns.forestPark;
 }])
+.controller('MisdirectedCtrl', ['$scope', 'patterns', function($scope, patterns) {
+  $scope.pattern = patterns.misdirected;
+}])
 .controller('WinterSeaCtrl', ['$scope', 'patterns', function($scope, patterns) {
   $scope.pattern = patterns.winterSea;
 }]);

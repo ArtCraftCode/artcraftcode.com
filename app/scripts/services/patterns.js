@@ -37,6 +37,14 @@ angular.module('app.patterns',
   }
 
   var misdirected = function() {
+    // NEED INFO: gauge, finished size
+    var size = new FinishedSize('one', 'TBD');
+
+    var needle = new Needle(4.5);
+    var mc = new Yarn('DK', 220);
+    var cc = new Yarn('DK', 170);
+    var mcYarn = new YarnShown('MC', 'Wooly Wonka Freya DK (100% BFL, 300 yards/274 meters per 100 grams) in Pewter (gray)', '3/4 skein');
+    var ccYarn = new YarnShown('CC', 'Wooly Wonka Freya DK in Winterfell (green)', '2/3 skein');
     var version = Version.misdirected;
 
     return {
@@ -44,12 +52,12 @@ angular.module('app.patterns',
       patternDirective: 'misdirected',
       name: 'Misdirected Cowl',
       designer: 'Liz Abinante',
-      description: '',
-      yarns: [],
-      yarnsShown: [],
-      needles: [],
-      gauge: '',
-      finishedSizes: [],
+      description: 'A warm, oversized, easy-to-knit lace cowl that\'s great for color scraps!',
+      yarns: [ mc, cc ],
+      yarnsShown: [ mcYarn, ccYarn ],
+      needles: [ needle ],
+      gauge: 'TBD',
+      finishedSizes: [ size ],
       notions: ['stitch marker', 'darning needle'],
       version: version.current,
       updates: version.updates,
