@@ -8,6 +8,12 @@ angular.module('app.patterns_directives', ['app.calculator_services', 'custom_ha
     templateUrl: '/partials/forest-park.html'
   }
 })
+.directive('misdirected', function() {
+  return {
+    restrict: 'E',
+    templateUrl: '/partials/misdirected.html'
+  }
+})
 .directive('winterSea', function() {
   return {
     restrict: 'E',

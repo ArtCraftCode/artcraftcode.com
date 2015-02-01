@@ -12,6 +12,11 @@ angular.module('pattern.versions', [])
       ]
     },
 
+    misdirected: {
+      current: '1 (January 31, 2015)',
+      updates: []
+    },
+
     veryPdx: {
       current: '3 (January 25, 2015)',
       updates: [

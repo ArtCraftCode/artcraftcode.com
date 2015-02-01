@@ -6,6 +6,8 @@ angular.module('pattern.images', [])
   return {
     forestPark: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-1.jpg', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-2.jpg'],
 
+    misdirected: [],
+
     veryPdx: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg'],
 
     winterSea: ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/closeup.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/hanging.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/fence.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG']

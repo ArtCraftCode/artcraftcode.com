@@ -36,6 +36,28 @@ angular.module('app.patterns',
     }
   }
 
+  var misdirected = function() {
+    var version = Version.misdirected;
+
+    return {
+      src: '#/patterns/misdirected-cowl',
+      patternDirective: 'misdirected',
+      name: 'Misdirected Cowl',
+      designer: 'Liz Abinante',
+      description: '',
+      yarns: [],
+      yarnsShown: [],
+      needles: [],
+      gauge: '',
+      finishedSizes: [],
+      notions: ['stitch marker', 'darning needle'],
+      version: version.current,
+      updates: version.updates,
+      images: Images.misdirected,
+      ravelry: new Ravelry('misdirected-cowl')
+    }
+  }
+
   var winterSea = function() {
     var needle = new Needle(4.5);
     var yarn = new Yarn('Worsted', 390);
