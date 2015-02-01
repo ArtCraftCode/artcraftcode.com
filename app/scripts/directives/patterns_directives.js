@@ -26,13 +26,8 @@ angular.module('app.patterns_directives', ['app.calculator_services', 'custom_ha
     link: function(scope, element, attrs) {
       // listen for customization
       scope.$on('customized', function(customized, customSize) {
-        scope.customSize = customSize;
-        customize();
-      });
-
-      // generate CustomHatPattern
-      var customize = function() {
-        var customHat = new CustomHatPattern(scope.customSize, scope.pattern, 8);
+        var customHat = new CustomHatPattern(customSize, scope.pattern, 8);
+        customHat.generate();
 
         // baby + odd numbered decreases
         customHat.set('decrease_4', false);
@@ -40,17 +35,15 @@ angular.module('app.patterns_directives', ['app.calculator_services', 'custom_ha
           customHat.set('decrease_4', true);
         }
 
-        // generate all other values + assign
-        customHat.generate();
+        // putting shit on the global scope
         scope.custom = customHat;
+        scope.customSize = customSize;
 
         // yarns
-        var yarn = new Yarn('Aran');
-        scope.pattern.yarns = [
-          { label: 'MC', yards: mcYards(), weight: yarn.string() + ' (or a lighter ' + yarn.heavyAlternate().string() + ')' },
-          { label: 'CC', yards: ccYards(), weight: yarn.string() + ' (or a heavy ' + yarn.lightAlternate().string() + ')' },
-        ];
-      };
+        var mcYarn = new Yarn('Aran', mcYards(), 'MC');
+        var ccYarn = new Yarn('Aran', ccYards(), 'CC');
+        scope.pattern.yarns = [ mcYarn, ccYarn ];
+      });
 
       // private - main color yards
       var mcYards = function() {
