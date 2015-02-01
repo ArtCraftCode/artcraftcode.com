@@ -1,8 +1,15 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.patterns_services', ['library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes', 'pattern.images', 'pattern.ravelry'])
-.service('patterns', ['Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', 'Images', 'Ravelry', function(Needle, Yarn, YarnShown, Version, FinishedSize, Images, Ravelry) {
+angular.module('app.patterns',
+  [
+  'library.needle', 'library.yarn',
+  'pattern.versions', 'pattern.finished_sizes',
+  'pattern.images', 'pattern.ravelry'
+  ])
+.service('patterns',
+  ['Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', 'Images', 'Ravelry',
+  function(Needle, Yarn, YarnShown, Version, FinishedSize, Images, Ravelry) {
   var forestPark = function() {
     var needle = new Needle(4.5);
     var yarn = new Yarn('Aran', 300);

@@ -1,7 +1,7 @@
 'use strict';
 
 /* Controllers */
-angular.module('app.main_controllers', ['app.calculator_services', 'app.patterns_services', 'app.custom_patterns_services'])
+angular.module('app.main_controllers', ['app.calculator_services', 'app.patterns', 'app.custom_patterns'])
 .controller('AppCtrl', ['$scope', '$location', '$resource', '$rootScope', 'patterns', 'customPatterns', function($scope, $location, $resource, $rootScope, patterns, customPatterns) {
   $scope.patterns = patterns.all.concat(customPatterns.all);
   $scope.$location = $location;

@@ -6,23 +6,31 @@ var App = angular.module('app',
     'ngResource',
     'ngRoute',
     'ngDialog',
+
     'app.filters',
+
     'app.main_controllers',
     'app.custom_patterns_controllers',
     'app.patterns_controllers',
-    'app.custom_patterns_services',
+
     'app.custom_options_services',
-    'app.patterns_services',
     'app.calculator_services',
+
     'app.patterns_directives',
     'app.widget_directives',
+
     'library.needle',
     'library.yarn',
+    
+    'app.custom_patterns',
     'custom_hat_pattern',
+
+    'app.patterns',
     'pattern.versions',
     'pattern.finished_sizes',
     'pattern.ravelry',
     'pattern.images',
+    
     'partials'
   ]
 );

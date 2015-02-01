@@ -1,7 +1,7 @@
 'use strict';
 
 /* Sevices */
-angular.module('app.custom_patterns_services', ['app.custom_options_services', 'library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes', 'pattern.images', 'pattern.ravelry'])
+angular.module('app.custom_patterns', ['app.custom_options_services', 'library.needle', 'library.yarn', 'pattern.versions', 'pattern.finished_sizes', 'pattern.images', 'pattern.ravelry'])
 .service('customPatterns', ['hatSizes', 'Needle', 'Yarn', 'YarnShown', 'Version', 'FinishedSize', 'Images', 'Ravelry', function(hatSizes, Needle, Yarn, YarnShown, Version, FinishedSize, Images, Ravelry) {
   var veryPdx = function() {
     var contrastNeedle = new Needle(5);
