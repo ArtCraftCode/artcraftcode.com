@@ -21,11 +21,11 @@
           a.text-gray-lightest.right.clickable(ng-click='toggleCustomInstructions()')&nbsp; &times; Dismiss
       .pattern-directive
         .pattern-description
-          h3(ng-hide='customized') {{pattern.description}}
+          h3 {{pattern.description}}
 
         //- custom pattern directive conditional
         div(ng-if='pattern.patternDirective === "very-pdx"')
-          very-pdx(custom='pattern.custom_fields')
+          very-pdx(custom='pattern.custom_fields', pattern='pattern')
 
       abbreviations
       .pattern-version
