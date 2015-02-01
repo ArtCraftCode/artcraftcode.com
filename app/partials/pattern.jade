@@ -17,13 +17,15 @@
 
       //- conditional for pattern directive
       .pattern-directive
-        div(ng-if='pattern.patternDirective === "winter-sea"')
-          winter-sea
         div(ng-if='pattern.patternDirective === "forest-park"')
           forest-park
           .special_abbreviations
             h4 Special abbreviations: cables
             cable-abbreviations-4
+        div(ng-if='pattern.patternDirective === "misdirected"')
+          misdirected
+        div(ng-if='pattern.patternDirective === "winter-sea"')
+          winter-sea
 
       abbreviations
 
