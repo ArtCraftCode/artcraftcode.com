@@ -38,8 +38,10 @@ h3 Materials
 
 .material(ng-if='pattern.finishedSizes.length >= 1')
   h4 Finished sizes
-  ul.separated(ng-repeat='size in pattern.finishedSizes')
-    li {{size.label}}: {{size.measurements}}
+  .size(ng-repeat='size in pattern.finishedSizes')
+    h5 {{size.label}}
+    ul.separated(ng-repeat='measurement in size.measurements')
+      li {{measurement.label}}: {{measurement.inches}}" / {{measurement.inches | inToCm}} cm
 
 .material
   h4 Notions

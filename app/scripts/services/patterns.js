@@ -14,7 +14,12 @@ angular.module('app.patterns',
     var needle = new Needle(4.5);
     var yarn = new Yarn('Aran', 300);
     var yarnShown = new YarnShown('main', 'The Plucky Knitter Primo Aran (75% Merino, 20% Cashmere, 5% Nylon); 200 yards/183 meters per 115 grams', '1.5 skeins');
+
     var size = new FinishedSize('one', '10.5"/26.6cm tall; 24"/61cm circumference at smallest opening, 33"/84cm circumference at largest opening.');
+    size.measurement('height', 10.5);
+    size.measurement('circumference (smallest opening)', 24);
+    size.measurement('circumference (largest opening)', 33);
+     
     var version = Version.forestPark;
 
     return {
