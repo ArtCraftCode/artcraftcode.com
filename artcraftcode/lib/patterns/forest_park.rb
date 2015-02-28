@@ -39,7 +39,7 @@ module ForestPark
 
   DATA = {
     name: 'Forest Park Cowl',
-    ravelry: 'forest-park-cowl',
+    ravelry: Ravelry.new('forest-park-cowl'),
     designer: 'Liz Abinante',
     description: DESCRIPTION,
     version: VERSION,
