@@ -1,13 +1,9 @@
-require_relative '../needle.rb'
-require_relative '../yarn.rb'
-require_relative '../yarn_shown.rb'
+require_relative './utils.rb'
 
 module ForestPark
   DESCRIPTION = 'A simple cabled cowl with garter stitch ribbing.'
 
   NEEDLES = [Needle.new(4.5)]
-
-  SIZES = ['10.5"/26.6cm tall; 24"/61cm circumference at smallest opening, 33"/84cm circumference at largest opening.']
 
   IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-1.jpg', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/forest-park-2.jpg']
 
@@ -33,6 +29,14 @@ module ForestPark
     [yarn]
   end
 
+  def self.sizes
+    sizes = []
+    sizes << Measurement.new("tall", 10.5)
+    sizes << Measurement.new("circumference at smallest opening", 24)
+    sizes << Measurement.new("circumference at largest opening", 33)
+    [Size.new('One', sizes)]
+  end
+
   DATA = {
     name: 'Forest Park Cowl',
     ravelry: 'forest-park-cowl',
@@ -45,6 +49,6 @@ module ForestPark
     yarns: self.yarns,
     yarns_shown: self.yarns_shown,
     needles: NEEDLES,
-    sizes: SIZES
+    sizes: self.sizes
   }
 end
