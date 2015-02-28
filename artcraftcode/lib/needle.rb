@@ -5,7 +5,11 @@ class Needle
 
   def initialize(mm)
     @mm = mm
-    @us = Libraries::NEEDLES[mm]
+    @source = set_source
+  end
+
+  def us
+    @source[mm]
   end
 
   def to_s
@@ -14,5 +18,14 @@ class Needle
 
   def circular_to_s
     "#{self.to_s} circular needle"
+  end
+
+  protected
+  def index
+    Libraries::NEEDLES.index { |hsh| hsh.key?(mm) }
+  end
+
+  def set_source
+    Libraries::NEEDLES.find { |hsh| hsh.key?(mm) }
   end
 end
