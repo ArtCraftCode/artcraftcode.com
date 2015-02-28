@@ -7,15 +7,15 @@ module Libraries
     9 => 13,    10 => 1
   }
 
-  YARNS = {
-    lace: { position: 0, factor: 1.6 },
-    'light fingering' => { position: 1, factor: 1.4 },
-    fingering: { position: 2, factor: 1.3 },
-    sport: { position: 3, factor: 1.2 },
-    dk: { position: 4, factor: 1.1 },
-    worsted: { position: 5, factor: 1 },
-    aran: { position: 6, factor: 0.9 },
-    bulky: { position: 7, factor: 0.7 },
-    'super bulky' => { position: 8, factor: 0.4 }
-  }
+  YARNS = [
+    { 'lace' => { position: 0, factor: 1.6 } },
+    { 'light fingering' => { position: 1, factor: 1.4 } },
+    { 'fingering' => { position: 2, factor: 1.3 } },
+    { 'sport' => { position: 3, factor: 1.2 } },
+    { 'dk' => { position: 4, factor: 1.1 } },
+    { 'worsted' => { position: 5, factor: 1 } },
+    { 'aran' => { position: 6, factor: 0.9 } },
+    { 'bulky' => { position: 7, factor: 0.7 } },
+    { 'super bulky' => { position: 8, factor: 0.4  }}
+  ]
 end
