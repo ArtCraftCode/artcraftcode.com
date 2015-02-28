@@ -1,0 +1,26 @@
+@import "layout";
+
+#home {
+  .flex-grid {
+    @include display-flex;
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    .cell {
+      // &:hover { background-color: #8332ee; }
+      @include flex(0 0 100%);
+      .pattern {
+        max-width: 800px;
+        margin: 40px auto;
+      }
+      .image {
+        height: 400px;
+        overflow: hidden;
+        img {
+          margin-top: -300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
