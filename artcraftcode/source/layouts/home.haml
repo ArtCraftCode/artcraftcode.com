@@ -8,5 +8,6 @@
     %title= current_page.data.title || "artcraftcode.com"
     = stylesheet_link_tag "normalize", "app"
     = javascript_include_tag  "all"
-  %body{:class => page_classes}
-    = yield
+  %body
+    #home
+      = yield
