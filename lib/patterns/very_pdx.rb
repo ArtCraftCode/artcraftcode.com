@@ -60,7 +60,7 @@ module VeryPDX
     sizes: self.sizes,
     notions: NOTIONS,
     version: VERSION,
-    images: IMAGES
+    images: IMAGES,
     ravelry: Ravelry.new("very-pdx-hat")
   }
 

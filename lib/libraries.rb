@@ -1,6 +1,7 @@
-require_realtive './measurement.rb'
-require_realtive './size.rb'
-require_realtive './data/hat_sizes.rb'
+require_relative './measurement.rb'
+require_relative './size.rb'
+require_relative './custom_hat_size.rb'
+require_relative './data/hat_sizes.rb'
 
 module Libraries
   NEEDLES = [
@@ -26,9 +27,9 @@ module Libraries
   def self.hat_sizes
     datum = HatSizes::DATA
     sizes = datum.map do |data|
-      m = Measurement.new("circumference", data.value)
-      s = Size.new(data.label, [m])
-      CustomHatSize.new(s, data.height, data.ribbing)
+      m = Measurement.new("circumference", data[:value])
+      s = Size.new(data[:label], [m])
+      CustomHatSize.new(s, data[:height], data[:ribbing])
     end
     sizes
   end

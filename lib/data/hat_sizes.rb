@@ -23,7 +23,7 @@ module HatSizes
     {
       value: 21, label: "women's small",
       height: 5, ribbing: 2
-    }
+    },
     {
       value: 22, label: "women's medium",
       height: 6.5, ribbing: 2
