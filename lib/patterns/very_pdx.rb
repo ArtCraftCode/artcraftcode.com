@@ -50,7 +50,7 @@ module VeryPDX
   end
 
   DATA = {
-    name: "Winter Sea",
+    name: "Very PDX",
     designer: "Liz Abinante",
     description: DESCRIPTION,
     yarns: self.yarns,

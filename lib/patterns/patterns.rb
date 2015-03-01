@@ -18,4 +18,5 @@ module Patterns
   FOREST_PARK = Pattern.new(ForestPark::DATA)
   WINTER_SEA = Pattern.new(WinterSea::DATA)
   VERY_PDX = self.very_pdx
+  ALL = [FOREST_PARK, WINTER_SEA, VERY_PDX]
 end
