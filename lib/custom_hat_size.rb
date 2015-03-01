@@ -10,6 +10,10 @@ class CustomHatSize
   end
 
   def label
-    "#{size.label}: #{size.measurements_string}"
+    size.label
+  end
+
+  def to_s
+    size.to_s
   end
 end
