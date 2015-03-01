@@ -3,13 +3,32 @@ title: artcraftcode.com - customizable knitting patterns for the modern knitter
 layout: home
 ---
 
+#header
+  %h1
+    %span.brand_red art
+    %br
+    %span.brand_orange craft
+    %br
+    %span.brand_teal code
+  %h2 uniquely simple, customizable knitting patterns for the modern knitter.
+
 .patterns.flex-grid
-  - pattern.images.each do |image|
+  - patterns.each do |pattern|
     .cell
       .pattern
-        .image
-          .title
-            .name forest park cowl
-            .description
+        .title
+          .name
+            %h3
+              = pattern.name
+            %p
               = pattern.description
-          %img{ src: image }
+        %img.pattern-image{ src: pattern.images[0] }
+
+#footer
+  %p
+    %a(href='http://www.ravelry.com/groups/traveling-woman') Get pattern help!
+  %p
+    %span &copy; 2014-2015 Liz Abinante
+    %a(href='https://github.com/ArtCraftCode/artcraftcode.com/blob/master/LICENSE') (license)
+    %span ArtCraftCode.com is an
+    %a(href='https://github.com/ArtCraftCode/artcraftcode.com') open source project.

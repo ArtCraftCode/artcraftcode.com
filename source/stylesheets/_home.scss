@@ -1,42 +1,45 @@
+@import "colors";
 @import "layout";
 @import "typography";
 
 #home {
+  max-width: 400px;
+  margin: 0 auto;
+
+  #header {
+    padding: 0px 20px;
+    background-color: $white;
+    h1 {
+      @include adjust-font-size-to(72px);
+      text-transform: uppercase;
+      font-family: $accent;
+    }
+    h2 {
+      font-weight: 300;
+    }
+  }
+
+  .pattern-image {
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(100%);
+    &:hover {
+      filter: none;
+      -webkit-filter: grayscale(0%);
+    }
+  }
+
   .flex-grid {
     @include display-flex;
     @include flex-direction(row);
     @include flex-wrap(wrap);
     @include justify-content(center);
     .cell {
-      // &:hover { background-color: #8332ee; }
-      @include flex(0 0 100%);
-      .pattern {
-        max-width: 800px;
-        margin: 40px auto;
+      @include flex(0 0 400px);
+      padding: 50px 0px;
+      img {
+        width: 100%;
       }
-    }
-  }
-
-  .image {
-    height: 400px;
-    overflow: hidden;
-    img {
-      margin-top: -300px;
-      width: 100%;
-    }
-  }
-
-  .title {
-    position: relative;
-    top: 275px;
-    left: 30px;
-    color: #fff;
-    .name {
-      font-family: $accent;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: -2px;
-      @include adjust-font-size-to(64px);
     }
   }
 }

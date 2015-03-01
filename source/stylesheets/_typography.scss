@@ -45,6 +45,8 @@ h2 {
 }
 
 h3 {
+  font-family: $accent;
+  text-transform: uppercase;
   @include adjust-font-size-to(20px);
 }
 

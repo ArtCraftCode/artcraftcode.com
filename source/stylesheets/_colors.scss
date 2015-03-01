@@ -1,0 +1,35 @@
+$colors: (
+  brand_teal: #80DDBE,
+  brand_red: #FC584C,
+  brand_orange: #FF8D45,
+  brand_gray: #333336
+);
+
+$white: darken(#fff, 3%);
+$text: map-get($colors, gray);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@each $color, $hex in $colors {
+  .#{$color} {
+    color: $hex;
+  }
+
+  // .text-#{$color}-light {
+  //   color: lighten($hex, 30%);
+  // }
+
+  // .text-#{$color}-lightest {
+  //   color: lighten($hex, 50%);
+  // }
+
+  // .background-#{$color} {
+  //   background-color: $hex;
+  // }
+
+  // .background-#{$color}-lightest {
+  //   background-color: lighten($hex, 70%);
+  // }
+}
