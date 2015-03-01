@@ -1,3 +1,7 @@
+require_realtive './measurement.rb'
+require_realtive './size.rb'
+require_realtive './data/hat_sizes.rb'
+
 module Libraries
   NEEDLES = [
     { 2 => 0 },     { 2.25 => 1 },    { 2.5 => 1.5 },   { 2.75 => 2 },
@@ -18,4 +22,16 @@ module Libraries
     { 'bulky' => { position: 7, factor: 0.7 } },
     { 'super bulky' => { position: 8, factor: 0.4  }}
   ]
+
+  def self.hat_sizes
+    datum = HatSizes::DATA
+    sizes = datum.map do |data|
+      m = Measurement.new("circumference", data.value)
+      s = Size.new(data.label, [m])
+      CustomHatSize.new(s, data.height, data.ribbing)
+    end
+    sizes
+  end
+
+  HAT_SIZES = self.hat_sizes
 end
