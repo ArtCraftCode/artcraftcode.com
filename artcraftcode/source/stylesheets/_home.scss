@@ -1,4 +1,5 @@
 @import "layout";
+@import "typography";
 
 #home {
   .flex-grid {
@@ -13,14 +14,29 @@
         max-width: 800px;
         margin: 40px auto;
       }
-      .image {
-        height: 400px;
-        overflow: hidden;
-        img {
-          margin-top: -300px;
-          width: 100%;
-        }
-      }
+    }
+  }
+
+  .image {
+    height: 400px;
+    overflow: hidden;
+    img {
+      margin-top: -300px;
+      width: 100%;
+    }
+  }
+
+  .title {
+    position: relative;
+    top: 275px;
+    left: 30px;
+    color: #fff;
+    .name {
+      font-family: $accent;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: -2px;
+      @include adjust-font-size-to(64px);
     }
   }
 }

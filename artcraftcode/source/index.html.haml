@@ -7,7 +7,9 @@ layout: home
   - pattern.images.each do |image|
     .cell
       .pattern
-        .title
-          %h2 forest park cowl
         .image
+          .title
+            .name forest park cowl
+            .description
+              = pattern.description
           %img{ src: image }
