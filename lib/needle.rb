@@ -1,10 +1,11 @@
 require_relative './libraries.rb'
 
 class Needle
-  attr_reader :mm, :us
+  attr_reader :mm, :us, :label
 
-  def initialize(mm)
+  def initialize(mm, label=nil)
     @mm = mm
+    @label = label
     @source = set_source
   end
 
