@@ -49,6 +49,7 @@ module ForestPark
     yarns: self.yarns,
     yarns_shown: self.yarns_shown,
     needles: NEEDLES,
-    sizes: self.sizes
+    sizes: self.sizes,
+    url: 'forest-park'
   }
 end

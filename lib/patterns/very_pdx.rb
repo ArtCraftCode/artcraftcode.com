@@ -61,7 +61,8 @@ module VeryPDX
     notions: NOTIONS,
     version: VERSION,
     images: IMAGES,
-    ravelry: Ravelry.new("very-pdx-hat")
+    ravelry: Ravelry.new("very-pdx-hat"),
+    url: 'very-pdx'
   }
 
   CUSTOM_FIELDS = {

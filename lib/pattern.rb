@@ -1,5 +1,5 @@
 class Pattern
-  attr_reader :name, :version, :version_updates, :gauge, :notions, :images, :designer, :description, :yarns, :yarns_shown, :needles, :sizes, :ravelry
+  attr_reader :name, :version, :version_updates, :gauge, :notions, :images, :designer, :description, :yarns, :yarns_shown, :needles, :sizes, :ravelry, :url
   def initialize(data)
     @name = data[:name]
     @version = data[:version][:current]
@@ -14,5 +14,6 @@ class Pattern
     @yarns_shown = data[:yarns_shown]
     @needles = data[:needles]
     @sizes = data[:sizes]
+    @url = data[:url]
   end
 end

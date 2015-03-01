@@ -46,6 +46,7 @@ module WinterSea
     notions: NOTIONS,
     version: VERSION,
     images: IMAGES,
-    ravelry: Ravelry.new("winter-sea-shawl-2")
+    ravelry: Ravelry.new("winter-sea-shawl-2"),
+    url: 'winter-sea'
   }
 end
