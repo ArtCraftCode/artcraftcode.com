@@ -1,0 +1,6 @@
+.images
+  %h2 Additional Images 
+  .flex-grid
+    - images.each do |image|
+      .cell
+        %img{ src: image }
