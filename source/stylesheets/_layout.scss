@@ -5,17 +5,14 @@ $smallCell: 50px;
   @include adjust-font-size-to(10px);
 }
 
-#container {
-  padding: 20px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
 .flex {
   @include display-flex;
+  @include justify-content(space-between);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
 
   .cell {
-    @include flex(1 0);
+    @include flex(0 0 47%);
   }
 
   .cell-fixed-left {
@@ -35,6 +32,10 @@ $smallCell: 50px;
   .cell-large {
     @include flex(1 0);
   }
+
+  &.pad-bottom {
+    padding-bottom: 10px;
+  }
 }
 
 .flex-grid {
@@ -43,7 +44,8 @@ $smallCell: 50px;
   @include flex-wrap(wrap);
   @include justify-content(center);
   .cell {
-    @include flex(0 0 25%);
+    @include flex(0 0 35%);
+    padding: 0px 20px 100px 20px;
     margin-bottom: -6px;
     img {
       max-width: 100%;
@@ -57,9 +59,9 @@ $smallCell: 50px;
   @include flex-direction(row);
   @include flex-wrap(wrap);
   .cell {
-    @include flex(0 0 40%);
+    @include flex(0 0 46%);
     @include display-flex;
-    padding-right: 20px;
+    padding-bottom: 10px;
     .small {
       @include flex(0 0 $smallCell);
     }

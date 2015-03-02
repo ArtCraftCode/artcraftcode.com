@@ -6,6 +6,18 @@ module PatternHelpers
     Patterns::WINTER_SEA
   end
 
+  def forest_park
+    Patterns::FOREST_PARK
+  end
+
+  def winter_sea
+    Patterns::WINTER_SEA
+  end
+
+  def very_pdx
+    Patterns::VERY_PDX
+  end
+
   def patterns
     Patterns::ALL
   end

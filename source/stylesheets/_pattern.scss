@@ -1,0 +1,50 @@
+@import "typography";
+@import "colors";
+
+#container {
+  padding: 20px;
+  width: 640px;
+  margin: 0 auto;
+}
+
+.section {
+  border-bottom: 5px solid lighten(color(brand_gray), 70%);
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.right {
+  text-align: right;
+}
+
+.pattern {
+  a {
+    color: color(brand_teal);
+  }
+  h1 {
+    font-family: $accent;
+    text-transform: uppercase;
+    @include adjust-font-size-to(48px);
+    &.small {
+      @include adjust-font-size-to(18px);
+    }
+  }
+  h2 {
+    @include adjust-font-size-to(36px);
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+  h3 {
+    text-transform: lowercase;
+    font-weight: 300;
+    font-family: $font;
+    border-bottom: 1px dotted lighten(color(brand_gray), 70%);
+    @include adjust-font-size-to(24px);
+  }
+  img {
+    width: 100%;
+    &.no-resize {
+      width: auto;
+    }
+  }
+}

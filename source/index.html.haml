@@ -16,13 +16,14 @@ layout: home
   - patterns.each do |pattern|
     .cell
       .pattern
-        .title
+        %a.title{ href: pattern.url }
           .name
             %h3
               = pattern.name
-            %p
-              = pattern.description
-        %img.pattern-image{ src: pattern.images[0] }
+        %p
+          = pattern.description
+        %a{ href: pattern.url }
+          %img.pattern-image{ src: pattern.images[0] }
 
 #footer
   %p

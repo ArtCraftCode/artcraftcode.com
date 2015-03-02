@@ -13,6 +13,10 @@ class CustomHatSize
     size.label
   end
 
+  def measurements_string
+    size.measurements_string
+  end
+
   def to_s
     size.to_s
   end

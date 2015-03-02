@@ -9,4 +9,9 @@
     = stylesheet_link_tag "normalize", "app"
     = javascript_include_tag  "all"
   %body{:class => page_classes}
-    = yield
+    #container
+      .pattern
+        = yield
+    %script{src: "//use.typekit.net/ihj4klv.js"}
+    %script 
+      try{Typekit.load();}catch(e){}

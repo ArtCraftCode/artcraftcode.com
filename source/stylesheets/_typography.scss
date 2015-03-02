@@ -12,16 +12,8 @@ body {
   color: #333;
 }
 
-em {
-  font-style: italic;
-}
-
-.content {
-  @include adjust-font-size-to(14px);
-}
-
-section {
-  padding: 20px 0px;
+p {
+  @include adjust-font-size-to(16px);
 }
 
 em {
@@ -57,23 +49,4 @@ h4 {
 
 h5 {
   text-decoration: underline;
-}
-
-.header {
-  text-transform: lowercase;
-  h1, h2 {
-    display: inline-block;
-  }
-  h2:before {
-    content: ' / ';
-  }
-  padding-bottom: 40px;
-}
-
-.text-heavy {
-  font-weight: 700;
-}
-
-.text-medium {
-  font-weight: 500;
 }

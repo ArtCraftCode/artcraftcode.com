@@ -8,6 +8,6 @@ class Ravelry
   end
 
   def button
-    "http://api.ravelry.com/badges/projects?p=#{perma}&amp;t=.gif"
+    "http://api.ravelry.com/badges/projects?p=#{@perma}&amp;t=.gif"
   end
 end
