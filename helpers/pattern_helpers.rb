@@ -18,6 +18,10 @@ module PatternHelpers
     Patterns::VERY_PDX
   end
 
+  def in_winter
+    Patterns::IN_WINTER
+  end
+
   def patterns
     Patterns::ALL
   end
