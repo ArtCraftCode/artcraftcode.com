@@ -1,7 +1,7 @@
 require_relative './utils.rb'
 
 module InWinter
-  DESCRIPTION = 'A description should go here at some point.'
+  DESCRIPTION = 'A wrapped stitch motif and simple lace in colors hoping for the end to winter.'
 
   NEEDLES = [Needle.new(4), Needle.new(5)]
 
