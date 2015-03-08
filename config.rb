@@ -53,11 +53,11 @@ end
 #   end
 # end
 
-set :css_dir, 'stylesheets'
+set :css_dir, 'test/stylesheets'
 
-set :js_dir, 'javascripts'
+set :js_dir, 'test/javascripts'
 
-set :images_dir, 'images'
+set :images_dir, 'test/images'
 
 # Build-specific configuration
 configure :build do
