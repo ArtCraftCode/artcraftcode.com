@@ -49,8 +49,9 @@ $text: map-get($colors, gray);
   }
 }
 
+// decorative sidebars
 @each $pattern, $value in $patternColors {
-  .#{$pattern} {
+  .patterns_#{$pattern} {
     .sidebar-left {
       background-color: pattern-color($pattern, 'primary');
     }
@@ -61,6 +62,38 @@ $text: map-get($colors, gray);
 
     #pattern a {
       color: pattern-color($pattern, 'primary');
+    }
+  }
+}
+
+// buttons
+@each $pattern, $value in $patternColors {
+  .patterns_#{$pattern} {
+    .button {
+      background-color: lighten(pattern-color($pattern, 'secondary'), 20%);
+      &:hover {
+        background-color: pattern-color($pattern, 'primary');
+      }
+      &.selected {
+        background-color: pattern-color($pattern, 'primary');
+        font-weight: 700;
+      }
+    }
+    .primary {
+      &.background { 
+        background-color: pattern-color($pattern, 'primary');
+      }
+      &.text {
+       color: pattern-color($pattern, 'primary'); 
+      }
+    }
+    .secondary {
+      &.background {
+        background-color: pattern-color($pattern, 'secondary');
+      }
+      &.text {
+        color: pattern-color($pattern, 'secondary');
+      }
     }
   }
 }

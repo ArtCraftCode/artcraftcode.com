@@ -7,33 +7,3 @@
   margin: 5px;  
 }
 
-@each $pattern, $value in $patternColors {
-  .#{$pattern} {
-    .button {
-      background-color: lighten(pattern-color($pattern, 'secondary'), 20%);
-      &:hover {
-        background-color: pattern-color($pattern, 'primary');
-      }
-      &.selected {
-        background-color: pattern-color($pattern, 'primary');
-        font-weight: 700;
-      }
-    }
-    .primary {
-      &.background { 
-        background-color: pattern-color($pattern, 'primary');
-      }
-      &.text {
-       color: pattern-color($pattern, 'primary'); 
-      }
-    }
-    .secondary {
-      &.background {
-        background-color: pattern-color($pattern, 'secondary');
-      }
-      &.text {
-        color: pattern-color($pattern, 'secondary');
-      }
-    }
-  }
-}
