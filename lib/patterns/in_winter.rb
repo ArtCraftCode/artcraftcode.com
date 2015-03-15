@@ -3,7 +3,7 @@ require_relative './utils.rb'
 module InWinter
   DESCRIPTION = 'A wrapped stitch motif resemmling bundles of wheat is paired with simple lace. Knit using vibrant colors, this comforting shawl is sure to chase away winter blues.'
 
-  NEEDLES = [Needle.new(4), Needle.new(5)]
+  NEEDLES = [Needle.new(4, 'Color A'), Needle.new(5, 'Colors B, C')]
 
   IMAGES =  [
               'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_6976.JPG',
