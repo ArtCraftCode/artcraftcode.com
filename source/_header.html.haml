@@ -1,8 +1,11 @@
 .header
   %img{ src: pattern.images[0] }
-  %h1.over-image
-    = pattern.name
+  .over-image
+    %h1= pattern.name
+    %h2
+      designed by
+      = pattern.designer
   .section.no-bottom
     %h2= pattern.description
-  = partial(:images_2, locals: { images: forest_park.images })
+  = partial(:images_2, locals: { images: pattern.images })
 .sidebar-right
