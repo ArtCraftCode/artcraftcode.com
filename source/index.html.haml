@@ -3,24 +3,16 @@ title: artcraftcode.com - customizable knitting patterns for the modern knitter
 layout: home
 ---
 
-#header
-  %h1
-    %span.brand_red art
-    %br
-    %span.brand_orange craft
-    %br
-    %span.brand_teal code
-  %h2 uniquely simple, customizable knitting patterns for the modern knitter.
-
+= partial(:branding, locals: { header: "h1" })
 .patterns.flex-grid
   - patterns.each do |pattern|
     .cell
+      %a{ href: "/patterns/#{pattern.url}" }
+        %img.pattern-image{ src: pattern.images[0] }
       .pattern
-        %a.title{ href: pattern.url }
+        %a.title{ href: "/patterns/#{pattern.url}" }
           .name
             %h3
               = pattern.name
         %p
           = pattern.description
-        %a{ href: pattern.url }
-          %img.pattern-image{ src: pattern.images[0] }
