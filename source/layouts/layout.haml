@@ -11,6 +11,8 @@
   %body{:class => page_classes}
     #container
       .pattern
+        .sidebar
+          = partial(:menu)
         = yield
       #footer
         %p

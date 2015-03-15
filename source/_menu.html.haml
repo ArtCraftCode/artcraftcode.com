@@ -1,0 +1,6 @@
+.menu
+  %ul
+    - patterns.each do |pattern|
+      %li 
+        %a{ href: pattern.url }
+          = pattern.name
