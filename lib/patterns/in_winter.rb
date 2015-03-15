@@ -1,7 +1,7 @@
 require_relative './utils.rb'
 
 module InWinter
-  DESCRIPTION = 'A wrapped stitch motif and simple lace in colors hoping for the end to winter.'
+  DESCRIPTION = 'A wrapped stitch motif resemmling bundles of wheat is paired with simple lace. Knit using vibrant colors, this comforting shawl is sure to chase away winter blues.'
 
   NEEDLES = [Needle.new(4), Needle.new(5)]
 
@@ -21,6 +21,43 @@ module InWinter
     current: "1 (March 5, 2015)",
     updates: []
   }
+
+  A = [
+    "(RS) k3, pm, yo, k1, yo, pm, k1, pm, yo, k1, yo, pm, k3.",
+    "(WS) k to 2nd m, slm, p1, slm, k to end.",
+    "k3, slm, yo, k to m, yo, slm, k1, slm, yo, k to m, yo, slm, k3."
+  ]
+
+  B = [
+    { row: 1, text: "(RS) k3, slm, yo, k to last m (removing 2nd and 3rd markers as you come to them), yo, slm, k3." },
+    { row: 2, text: "(WS) k3, slm, k2, *wrap3, rpt from * to 2 sts before m, k2, slm, k3." },
+    { row: 3, text: "k3, slm, yo, k2, *drop5, rpt from * to 2 sts before m, k2, yo, slm, k3." },
+    { row: 4, text: "k all sts." },
+    { row: 5, text: "k3, slm, yo, k to m, yo, slm, k3." },
+    { row: 6, text: "k all sts." },
+    { row: 7, text: "k3, slm, yo, k to m, yo, slm, k3." },
+    { row: 8, text: "k3, slm, k2, *wrap3, rpt from * to 1 st before m, k1, slm, k3." },
+    { row: 9, text: "k3, slm, yo, k1, drop7, *drop5, rpt from * to 8 sts before m, drop6, k2, yo, slm, k3. " },
+    { row: "10-13", text: "as Rows 4-7." },
+    { row: "14-15", text: "as Rows 4-5." },
+    { row: 16, text: "k3, slm, k1, *wrap3, rpt from * to 2 sts before m, k2, slm, k3." },
+    { row: 17, text: "k3, slm, yo, k2, *drop5, rpt from * to last 7 sts, drop6, k1, yo, slm, k3." },
+    { row: "18-21", text: "as Rows 4-7." },
+    { row: "22-25", text: "as Rows 4-7." }
+  ]
+
+  C = [
+    { row: 1, text: "(RS) k3, slm, yo, kfb, k to 1 st before m, kfb, yo, slm, k3." },
+    { row: 2, text: "(WS) k all sts." },
+    { row: 3, text: "k3, slm, yo, *k2tog, yo, k1, rpt from * to m, yo, slm, k3." },
+    { row: 4, text: "k all sts." },
+    { row: 5, text: "k3, slm, yo, k to m, yo, slm, k3." },
+    { row: 6, text: "k all sts." },
+    { row: 7, text: "k3, slm, yo, k to m, yo, slm, k3." },
+    { row: 8, text: "k3, slm, yo, *k2tog, yo, k1, rpt from * to m, yo, slm, k3." },
+    { row: "9-12", text: "as Rows 5-8." },
+    { row: "13-15", text: "as Rows 5-8." }
+  ]
 
   def self.yarns
     yarns = []
@@ -67,6 +104,11 @@ module InWinter
     yarns_shown: self.yarns_shown,
     needles: NEEDLES,
     sizes: self.sizes,
-    url: 'in-winter'
+    url: 'in-winter',
+    instructions: {
+      a: A,
+      b: B,
+      c: C
+    }
   }
 end
