@@ -14,9 +14,6 @@ angular.module('directives', [])
           scope.$emit('customized', scope.option)
           element.parent().find('custom-button').removeClass('selected')
           element.addClass 'selected'
-        else
-          element.removeClass 'selected'
-          scope.customSetting = undefined
       return
   }
 ]
