@@ -12,7 +12,11 @@ angular.module('controllers', ['values'])
       brim_height: 2,
       body_height: 6.5,
       multiple: 4,
-      baby_decreases: false
+      baby_decreases: false,
+      mc_yards: 135,
+      cc_yards: 25,
+      gauge_inch: 3.25,
+      gauge_row_inch: 5
     }
 
     # used in the view
