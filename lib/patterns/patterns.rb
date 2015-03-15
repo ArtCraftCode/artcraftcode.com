@@ -10,10 +10,6 @@ require_relative './very_pdx.rb'
 module Patterns
   def self.very_pdx
     custom = CustomPattern.new(VeryPDX::DATA)
-    custom.fields = VeryPDX::CUSTOM_FIELDS
-    custom.options = VeryPDX::CUSTOM_OPTIONS
-    custom.note = VeryPDX::CUSTOM_NOTE
-    custom
   end
 
   FOREST_PARK = Pattern.new(ForestPark::DATA)

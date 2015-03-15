@@ -13,13 +13,6 @@ module VeryPDX
   }
   IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg']
 
-  def self.yarns
-    yarns = []
-    yarns << Yarn.new("aran", 135, "MC")
-    yarns << Yarn.new("aran", 25, "CC")
-    yarns
-  end
-
   def self.yarns_shown
     yarns = []
     mc = YarnShown.new("aran", 135, "MC")
@@ -41,40 +34,18 @@ module VeryPDX
     needles
   end
 
-  def self.sizes
-    sizes = Libraries::HAT_SIZES
-    as_written = []
-    as_written << Measurement.new("circumference", 21)
-    sizes << Size.new("women's small (as written)", as_written)
-    sizes
-  end
 
   DATA = {
     name: "Very PDX",
     designer: "Liz Abinante",
     description: DESCRIPTION,
-    yarns: self.yarns,
     yarns_shown: self.yarns_shown,
     needles: self.needles,
     gauge: GAUGE,
-    sizes: self.sizes,
     notions: NOTIONS,
     version: VERSION,
     images: IMAGES,
     ravelry: Ravelry.new("very-pdx-hat"),
     url: 'very-pdx'
   }
-
-  CUSTOM_FIELDS = {
-    cast_on: 72,
-    brim_rows: 11,
-    brim_height: 2,
-    body_height: 6.5,
-    multiple: 4,
-    baby_decreases: false
-  }
-
-  CUSTOM_OPTIONS = Libraries::HAT_SIZES
-
-  CUSTOM_NOTE = "The finished measurements are the actual measurements of the hat. Choose a size that gives you approximately 1in/2.54cm negative ease. I knit a women\'s small (21in/53cm) for myself and my head is approximately 22in/56cm around."
 end
