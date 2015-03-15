@@ -22,9 +22,8 @@ angular.module('controllers', ['values'])
       # copy the template for manipulation
       custom = angular.copy($scope.patternTemplate)
 
-      # after all is said and done, sent the customized pattern to the view
+      # after all is said and done, send the customized pattern to the view
       $scope.pattern = custom
-      # do a thing!!!!
 
     # listen for the directive to customize the size
     $scope.$on 'customized', (event, size) ->
