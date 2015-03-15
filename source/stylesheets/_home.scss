@@ -2,21 +2,30 @@
 @import "layout";
 @import "typography";
 
-#home {
-  max-width: 400px;
-  margin: 0 auto;
+.home {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
 
-  #header {
-    padding: 0px 20px;
-    background-color: $white;
+  a {
+    color: lighten(color(brand_gray), 60%);
+    text-decoration: none;
+    &:hover {
+      color: color(brand_teal);
+    }
+  }
+
+  .branding {
     h1 {
-      @include adjust-font-size-to(72px);
-      text-transform: uppercase;
-      font-family: $accent;
+      @include adjust-font-size-to(124px);
+      padding: 0px 20px;
+      margin: 0;
+      color: $white;
     }
-    h2 {
-      font-weight: 300;
-    }
+  }
+
+  .pattern {
+    padding: 10px 20px;
   }
 
   .pattern-image {
@@ -35,8 +44,9 @@
     @include flex-wrap(wrap);
     @include justify-content(center);
     .cell {
-      @include flex(0 0 400px);
-      padding: 50px 0px;
+      @include flex(0 0 25%);
+      padding: 0;
+      margin: 0;
       img {
         width: 100%;
       }
