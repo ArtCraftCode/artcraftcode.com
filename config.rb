@@ -13,7 +13,7 @@ end
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
-set :images_dir, 'test/images'
+set :images_dir, 'images'
 
 # Build-specific configuration
 configure :build do
