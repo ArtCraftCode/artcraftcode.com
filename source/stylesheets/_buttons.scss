@@ -10,9 +10,13 @@
 @each $pattern, $value in $patternColors {
   .#{$pattern} {
     .button {
-      background-color: lighten(pattern-color($pattern, 'primary'), 20%);
+      background-color: lighten(pattern-color($pattern, 'secondary'), 20%);
       &:hover {
-        background-color: pattern-color($pattern, 'secondary');
+        background-color: pattern-color($pattern, 'primary');
+      }
+      &.selected {
+        background-color: pattern-color($pattern, 'primary');
+        font-weight: 700;
       }
     }
     .primary {
