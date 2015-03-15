@@ -5,6 +5,28 @@ $colors: (
   brand_gray: #333336
 );
 
+$patternColors: (
+  forest_park: (
+    primary: #7E9277,
+    secondary: #435046
+  ),
+
+  in_winter: (
+    primary: #6AC5C0,
+    secondary: #8C778A
+  ),
+
+  very_pdx: (
+    primary: #F93891,
+    secondary: #887D8E
+  ),
+
+  winter_sea: (
+    primary: lighten(#665b71, 15%),
+    secondary: #413234
+  )
+);
+
 $white: darken(#fff, 3%);
 $text: map-get($colors, gray);
 
@@ -12,24 +34,33 @@ $text: map-get($colors, gray);
   @return map-get($colors, $color);
 }
 
+@function pattern-color($pattern, $color) {
+  $tempPattern: map-get($patternColors, $pattern);
+  @return map-get($tempPattern, $color);
+}
+
 @each $color, $hex in $colors {
   .#{$color} {
     color: $hex;
   }
 
-  // .text-#{$color}-light {
-  //   color: lighten($hex, 30%);
-  // }
-
-  // .text-#{$color}-lightest {
-  //   color: lighten($hex, 50%);
-  // }
-
   .background-#{$color} {
     background-color: $hex;
   }
+}
 
-  // .background-#{$color}-lightest {
-  //   background-color: lighten($hex, 70%);
-  // }
+@each $pattern, $value in $patternColors {
+  #pattern.#{$pattern} {
+    .sidebar-left {
+      background-color: pattern-color($pattern, 'primary');
+    }
+
+    .sidebar-right {
+      background-color: pattern-color($pattern, 'secondary');
+    }
+
+    a {
+      color: pattern-color($pattern, 'primary');
+    }
+  }
 }

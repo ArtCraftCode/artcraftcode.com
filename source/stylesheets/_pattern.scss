@@ -24,7 +24,6 @@
 
   .sidebar-left {
     @include flex(1 0);
-    background-color: color(brand_red);
   }
 
   .materials {
@@ -40,7 +39,6 @@
 
   .sidebar-right {
     @include flex(1 0);
-    background-color: color(brand_orange);
   }
 
   .content {
