@@ -3,6 +3,7 @@
 //= require "vendor/ngDialog.min"
 //= require "controllers"
 //= require "directives"
+//= require "filters"
 //= require "values"
 
 var App = angular.module('app',
@@ -11,6 +12,7 @@ var App = angular.module('app',
     'ngDialog',
     'controllers',
     'directives',
+    'filters',
     'values'
   ]
 );

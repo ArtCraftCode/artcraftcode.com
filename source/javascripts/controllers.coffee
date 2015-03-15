@@ -25,6 +25,7 @@ angular.module('controllers', ['values'])
     $scope.customize = ->
       # copy the template for manipulation
       custom = angular.copy($scope.patternTemplate)
+      custom.customized = true
 
       # after all is said and done, send the customized pattern to the view
       $scope.pattern = custom
