@@ -59,7 +59,7 @@ $text: map-get($colors, gray);
       background-color: pattern-color($pattern, 'secondary');
     }
 
-    a {
+    #pattern a {
       color: pattern-color($pattern, 'primary');
     }
   }
