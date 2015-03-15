@@ -27,7 +27,7 @@ pattern: in_winter
       %p I am also interested in things like pattern format suggestions! This is optimized for web use, and it should be good on mobile phones and tablets (although I confess, the mobile layout is still a work in progress). 
 
       %p Thanks again for test knitting! 
-    .abbreviations.section.comments
+    .abbreviations.section
       %h2 Special abbreviations
       .flex.pad-bottom
         .cell-small CN
@@ -49,14 +49,14 @@ pattern: in_winter
     .instructions.section
       %h2 Instructions
 
-      %h3.comments Set up
+      %h3 Set up
 
       %p Using A and smallest needle, CO 3 sts.
       %p k 6 rows, do not turn work.
       %p Rotate work 90 degrees clockwise and pick up 6 sts (3 along the row edge, and 3 along the CO edge).
 
     .colorA.section
-      %h2.comments Color A: Body
+      %h2 Color A: Body
       - in_winter.instructions[:a].each_with_index do |row, number|
         .row.flex.pad-bottom
           .number.cell-small
@@ -66,7 +66,7 @@ pattern: in_winter
       %p Repeat Rows 2-3 42 more times until you have 189 sts total.
 
     .colorB.section
-      %h2.comments Color B: Winter Lace
+      %h2 Color B: Winter Lace
 
       %p
         %em Switch to largest needle.
@@ -79,7 +79,7 @@ pattern: in_winter
       %p 215 sts total.
 
     .colorC.section
-      %h2.comments Color C: Edging
+      %h2 Color C: Edging
       %p
         %em Continue using largest needle.
       - in_winter.instructions[:c].each do |ins|
@@ -91,25 +91,16 @@ pattern: in_winter
 
 
     .finishing.section
-      %h2.comments Finishing
+      %h2 Finishing
 
       %p BO all sts loosely. Be sure to take care when binding off as anything too tight will restrict the shape of the shawl.
       %p Block gently.
 
-    .abbreviations.section.comments
+    .abbreviations.section
       = partial(:abbreviations_table)
 
     = partial(:images, locals: { images: in_winter.images })
+    = partial(:updates, locals: { pattern: in_winter })
 
-    .comment.section
-      %div#disqus_thread
   .fake-padding-right
 
-%script{ src:"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" }
-%script{ src:"/test/javascripts/vendor/inlineDisqussions.js" }
-
-:javascript
-  disqus_shortname = 'artcraftcode';
-  jQuery(document).ready(function() {
-    jQuery(".comments").inlineDisqussions();
-  });
