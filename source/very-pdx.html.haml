@@ -4,6 +4,7 @@ title: very pdx hat - by liz abinante - artcraftcode.com
 
 %script{ src: 'javascripts/custom_patterns_app.js' }
 .app(ng-app='app')
+  = partial(:header, locals: { pattern: very_pdx } )
   = partial(:materials, locals: { pattern: very_pdx } )
   .controller(ng-controller="VeryPdxCtrl")
     .instructions.sections
