@@ -28,7 +28,7 @@
     - pattern.notions.each do |notion|
       %p
         = notion
-    - if pattern.sizes.length < 6
+    - if pattern.sizes && pattern.sizes.length < 6
       -# TODO: MAKE THIS SMARTER!!!
       %h3 Finished sizes
       - pattern.sizes.each do |size|
