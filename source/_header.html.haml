@@ -1,0 +1,25 @@
+.header
+  .title.section
+    %h1.small
+      %span.brand_red art
+      %br
+      %span.brand_orange craft
+      %br
+      %span.brand_teal code
+
+    %h1
+      = pattern.name
+    %h2
+      = pattern.description
+    %h3
+      designed by
+      = pattern.designer
+    %img{ src: pattern.images[0] }
+    .links.flex
+      .cell
+        %h4
+          %a{ href: pattern.ravelry.link } View on Ravelry
+      .cell.right
+        %br
+        %a{ href: pattern.ravelry.link }
+          %img.no-resize{ src: pattern.ravelry.button }
