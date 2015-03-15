@@ -77,7 +77,7 @@ module WinterSea
     version: VERSION,
     images: IMAGES,
     ravelry: Ravelry.new("winter-sea-shawl-2"),
-    url: 'winter-sea',
+    url: 'winter_sea',
     instructions: {
       setup: SETUP,
       body: BODY

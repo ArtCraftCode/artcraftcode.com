@@ -104,7 +104,7 @@ module InWinter
     yarns_shown: self.yarns_shown,
     needles: NEEDLES,
     sizes: self.sizes,
-    url: 'in-winter',
+    url: 'in_winter',
     instructions: {
       a: A,
       b: B,

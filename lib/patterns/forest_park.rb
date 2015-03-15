@@ -68,7 +68,7 @@ module ForestPark
     yarns_shown: self.yarns_shown,
     needles: NEEDLES,
     sizes: self.sizes,
-    url: 'forest-park',
+    url: 'forest_park',
     instructions: {
       cable_set_one: CABLE_SET_ONE,
       cable_set_two: CABLE_SET_TWO

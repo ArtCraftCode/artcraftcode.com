@@ -46,7 +46,7 @@ module VeryPDX
     version: VERSION,
     images: IMAGES,
     ravelry: Ravelry.new("very-pdx-hat"),
-    url: 'very-pdx',
+    url: 'very_pdx',
     instructions: {
       # !(pattern.babyDecreases() && pattern.decrease_4)
       standard: [
