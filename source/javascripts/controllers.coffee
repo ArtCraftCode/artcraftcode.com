@@ -1,7 +1,7 @@
 angular.module('controllers', ['values'])
 .controller 'VeryPdxCtrl', [
-  '$scope', 'ngDialog', 'hatSizes'
-  ($scope, ngDialog, hatSizes) ->
+  '$scope', 'hatSizes'
+  ($scope, hatSizes) ->
     $scope.size = undefined
     $scope.customOptions = hatSizes
 
