@@ -46,6 +46,67 @@ module VeryPDX
     version: VERSION,
     images: IMAGES,
     ravelry: Ravelry.new("very-pdx-hat"),
-    url: 'very-pdx'
+    url: 'very-pdx',
+    instructions: {
+      # !(pattern.babyDecreases() && pattern.decrease_4)
+      standard: [
+        "*k7, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k6, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k5, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k4, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k3, k2tog, rpt from * to end.",
+        "*k2, k2tog, rpt from * to end.",
+        "*k1, k2tog, rpt from * to end.",
+        "*k2tog, rpt from * to end."
+      ],
+      # pattern.babyDecreases() && !pattern.decrease_4
+      baby: [
+        "*k4, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k3, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k2, k2tog, rpt from * to end.",
+        "*k1, k2tog, rpt from * to end.",
+        "*k2tog, rpt from * to end.",
+      ],
+      # pattern.babyDecreases() && pattern.decrease_4
+      baby4: [
+        "*k8, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k7, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k6, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k5, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k4, k2tog, rpt from * to end.",
+        "*k3, k2tog, rpt from * to end.",
+        "*k2, k2tog, rpt from * to end.",
+        "*k1, k2tog, rpt from * to end.",
+        "*k2tog, rpt from * to end."
+      ],
+      # !pattern.babyDecreases() && !pattern.decrease_4
+      adult4: [
+        "*k8, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k7, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k6, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k5, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k4, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k3, k2tog, rpt from * to end.",
+        "k all sts.",
+        "*k2, k2tog, rpt from * to end.",
+        "*k1, k2tog, rpt from * to end.",
+        "*k2tog, rpt from * to end."
+      ]
+    }
   }
 end
