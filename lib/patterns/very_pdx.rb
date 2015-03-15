@@ -5,10 +5,11 @@ module VeryPDX
   GAUGE = "13 sts, 20 rows per 4in/10cm in stockinette stitch using largest needle"
   NOTIONS = ['stitch marker', 'waste yarn', 'darning needle']
   VERSION = {
-    current: '3 (January 25, 2015)',
+    current: '4 (March 15, 2015)',
     updates: [
       'Version 2: Corrected missing CC for brim CO; corrected missing yarn weight labels for custom sizes.',
-      'Verison 3: Corrected last line of brim instructions before folding; originally read "Using smallest circular needle, k all sts", changed to "Using largest circular needle, k all sts".'
+      'Verison 3: Corrected last line of brim instructions before folding; originally read "Using smallest circular needle, k all sts", changed to "Using largest circular needle, k all sts".',
+      'Version 4: Updated calculation that generates the number of inches knit before beginning decreases. Only impacted a few sizes, and it was pretty obvious (ex: 2 inches instead of 7 inches).'
     ]
   }
   IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg']

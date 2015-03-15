@@ -18,7 +18,7 @@ module InWinter
   GAUGE = "17 sts, 32 rows per 4in/10cm, garter stitch using smallest needle. 14 sts, 28 rows per 4 in/10cm, garter stitch using largest needle"
 
   VERSION = {
-    current: "1 (March 5, 2015)",
+    current: "Beta (March 5, 2015)",
     updates: []
   }
 
