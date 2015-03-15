@@ -5,20 +5,20 @@
     - pattern.yarns.each do |yarn|
       %p
         - if yarn.label
-          %span #{yarn.label} -
+          %span.bold #{yarn.label}:
         Approximately #{yarn.yards} yards / #{yarn.meters} meters #{yarn.weight} weight yarn.
     %h3 Yarn Shown
     - pattern.yarns_shown.each do |yarn|
       %p
         - if yarn.label
-          %span #{yarn.label} -
+          %span.bold #{yarn.label}:
         #{yarn.detail} in #{yarn.color}
     %h3 Needles
     - pattern.needles.each do |needle|
       %p
-        = needle.to_s
         - if needle.label
-          %span - #{needle.label}
+          %span.bold #{needle.label}:
+        = needle.to_s
     %h3 Gauge
     %p
       = pattern.gauge
@@ -32,8 +32,8 @@
       - pattern.sizes.each do |size|
         %p #{size.label}: #{size.measurements_string}
     %h3 Ravelry
-    %a{ href: forest_park.ravelry.link }
-      %img.no-resize{ src: forest_park.ravelry.button }
+    %a{ href: pattern.ravelry.link }
+      %img.no-resize{ src: pattern.ravelry.button }
     %br
     %h4
       %a{ href: pattern.ravelry.link } View on Ravelry
