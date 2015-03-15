@@ -1,8 +1,9 @@
 $sidebar: 200px;
-$smallCell: 75px;
+$smallCell: 120px;
 
 #footer {
   @include adjust-font-size-to(10px);
+  padding: 40px;
 }
 
 .flex {
