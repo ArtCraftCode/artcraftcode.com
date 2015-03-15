@@ -3,5 +3,4 @@
   %p The finished measurements are the actual measurements of the hat. Choose a size that gives you approximately 1"/2.54cm negative ease. I knit a women's small (21"/53cm) for myself and my head is approximately 22"/56cm around.
 
   .options
-    .button.clickable(ng-repeat='option in pattern.custom_options' ng-click='select(option)')
-      {{option.label}}
+    %custom-button.button.clickable(ng-repeat='option in pattern.custom_options' option='option' custom-setting='pattern.size')

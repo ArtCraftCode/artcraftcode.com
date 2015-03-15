@@ -5,18 +5,18 @@ angular.module('directives', [])
     template: '{{option.label}}',
     scope: {
       option: '=',
-      pattern: '='
+      customSetting: '='
     },
     link: (scope, element, attrs) ->
       scope.selected = false;
       element.on 'click', (event) ->
         scope.selected = !scope.selected
         if scope.selected
-          scope.pattern.size = scope.option
+          scope.customSetting = scope.option
           element.addClass 'selected'
         else
           element.removeClass 'selected'
-          scope.pattern.size = undefined
+          scope.customSetting = undefined
       return
   }
 ]

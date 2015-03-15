@@ -3,6 +3,7 @@ angular.module('controllers', ['values'])
   '$scope', 'ngDialog', 'hatSizes'
   ($scope, ngDialog, hatSizes) ->
     $scope.pattern = {
+      size: undefined,
       custom_options: hatSizes
     }
 
