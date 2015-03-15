@@ -17,6 +17,24 @@ module ForestPark
     ]
   }
 
+  CABLE_SET_ONE = [
+    "*k5, p2, k8, p2, k5, p2, rpt from * to end.",
+    "*k1, p3, k1, p2, k8, p2, k1, p3, k1, p2, rpt from * to end.",
+    "*k5, p2, k8, p2, k5, p2, rpt from * to end.",
+    "*k1, p3, k1, p2, C4F, C4B, p2, k1, p3, k1, p2, rpt from * to end."
+  ]
+
+  CABLE_SET_TWO = [
+    "*k5, p2, k8, p2, k5, p1, m1p, p1, rpt from * to end.",
+    "*k1, p3, k1, p2, k8, p2, k1, p3, k1, p1, k1, p1, rpt from * to end.",
+    "*k5, p2, k8, p2, k5, p1, m1l, kfb, m1r, p1, rpt from * to end.",
+    "*k1, p3, k1, p2, C4F, C4B, p2, k1, p3, k1, pfb, C4F, pfb, rpt from * to end.",
+    "*k5, p2, k8, p2, k5, p2, k4, p2, rpt from * to end.",
+    "*k1, p3, k1, p2, k8, p2, k1, p3, k1, p2, k4, p2, rpt from * to end.",
+    "*k5, p2, k8, p2, k5, p2, k4, p2, rpt from * to end.",
+    "*k1, p3, k1, p2, C4F, C4B, p2, k1, p3, k1, p2, C4F, p2, rpt from * to end."
+  ]
+
   def self.yarns
     yarn = Yarn.new('aran', 300)
     [yarn]
@@ -50,6 +68,10 @@ module ForestPark
     yarns_shown: self.yarns_shown,
     needles: NEEDLES,
     sizes: self.sizes,
-    url: 'forest-park'
+    url: 'forest-park',
+    instructions: {
+      cable_set_one: CABLE_SET_ONE,
+      cable_set_two: CABLE_SET_TWO
+    }
   }
 end
