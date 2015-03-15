@@ -1,0 +1,35 @@
+@import "colors";
+@import "typography";
+
+.button {
+  padding: 5px;
+  display: inline-block;
+  margin: 5px;  
+}
+
+@each $pattern, $value in $patternColors {
+  .#{$pattern} {
+    .button {
+      background-color: lighten(pattern-color($pattern, 'primary'), 20%);
+      &:hover {
+        background-color: pattern-color($pattern, 'secondary');
+      }
+    }
+    .primary {
+      &.background { 
+        background-color: pattern-color($pattern, 'primary');
+      }
+      &.text {
+       color: pattern-color($pattern, 'primary'); 
+      }
+    }
+    .secondary {
+      &.background {
+        background-color: pattern-color($pattern, 'secondary');
+      }
+      &.text {
+        color: pattern-color($pattern, 'secondary');
+      }
+    }
+  }
+}
