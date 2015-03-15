@@ -4,23 +4,6 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 
 activate :directory_indexes
 
-###
-# Page options, layouts, aliases and proxies
-###
-
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
-
 # Automatic image dimensions on image_tag helper
 # activate :automatic_image_sizes
 
