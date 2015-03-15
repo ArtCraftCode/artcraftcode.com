@@ -9,12 +9,7 @@ pattern: in_winter
 .content
   .fake-padding-left
   .actual-pattern
-    .title.section
-      %h1= in_winter.name
-      %h2= in_winter.description
-      %h3
-        designed by
-        = in_winter.designer
+    = partial(:subtitle, locals: { pattern: in_winter })
     .comment.section
       %h1 Test knitting:
       %h2 In Winter

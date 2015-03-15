@@ -9,12 +9,7 @@ pattern: forest_park
 .content
   .fake-padding-left
   .actual-pattern
-    .title.section
-      %h1= forest_park.name
-      %h2= forest_park.description
-      %h3
-        designed by
-        = forest_park.designer
+    = partial(:subtitle, locals: { pattern: forest_park })
     .instructions.section
       %h2 Instructions
 

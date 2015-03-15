@@ -10,12 +10,7 @@ controller: VeryPdxCtrl
 .content
   .fake-padding-left
   .actual-pattern
-    .title.section
-      %h1= very_pdx.name
-      %h2= very_pdx.description
-      %h3
-        designed by
-        = very_pdx.designer
+    = partial(:subtitle, locals: { pattern: very_pdx })
     .instructions.section
       %h2 Instructions
       %p Using smallest needle with CC and waste yarn, provisionally CO {{pattern.cast_on}} sts.
