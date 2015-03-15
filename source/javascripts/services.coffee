@@ -33,7 +33,7 @@ angular.module('services', [])
       if adjusted and multiple and castOn % multiple != 0
         height - 1
       else if multiple and castOn % multiple != 0
-        height = 0.6
+        height - 0.6
       else
         height
 
