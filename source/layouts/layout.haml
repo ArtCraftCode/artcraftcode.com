@@ -11,17 +11,16 @@
   %body{:class => page_classes}
     #container
       .pattern
-        .sidebar
-          = partial(:menu)
+        .sidebar-left
         = yield
-      #footer
-        %p
-          %a(href='http://www.ravelry.com/groups/traveling-woman') Get pattern help!
-        %p
-          %span &copy; 2014-2015 Liz Abinante
-          %a(href='https://github.com/ArtCraftCode/artcraftcode.com/blob/master/LICENSE') (license)
-          %span ArtCraftCode.com is an
-          %a(href='https://github.com/ArtCraftCode/artcraftcode.com') open source project.
+        -# #footer
+        -#   %p
+        -#     %a(href='http://www.ravelry.com/groups/traveling-woman') Get pattern help!
+        -#   %p
+        -#     %span &copy; 2014-2015 Liz Abinante
+        -#     %a(href='https://github.com/ArtCraftCode/artcraftcode.com/blob/master/LICENSE') (license)
+        -#     %span ArtCraftCode.com is an
+        -#     %a(href='https://github.com/ArtCraftCode/artcraftcode.com') open source project.
 
     %script{src: "//use.typekit.net/ihj4klv.js"}
     %script 

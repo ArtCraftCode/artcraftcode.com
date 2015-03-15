@@ -54,6 +54,21 @@ $smallCell: 75px;
   }
 }
 
+.flex-grid--flush {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  .cell {
+    @include flex(0 0 50%);
+    margin-bottom: -6px;
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
 .flex-grid--small {
   @include display-flex;
   @include flex-direction(row);

@@ -25,9 +25,9 @@ $text: map-get($colors, gray);
   //   color: lighten($hex, 50%);
   // }
 
-  // .background-#{$color} {
-  //   background-color: $hex;
-  // }
+  .background-#{$color} {
+    background-color: $hex;
+  }
 
   // .background-#{$color}-lightest {
   //   background-color: lighten($hex, 70%);

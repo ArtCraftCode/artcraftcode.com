@@ -1,16 +1,59 @@
 @import "typography";
 @import "colors";
 
+// core layout and flex
 #container {
-  padding: 20px;
-  max-width: 1600px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 
+.pattern {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  .sidebar, .materials, .header, .content {
+    @include flex(1 100%);
+  }
+
+  .sidebar-left {
+    @include flex(1 0);
+    background-color: color(brand_red);
+  }
+
+  .materials {
+    @include flex(3 0);
+    @include adjust-font-size-to(14px);
+    background-color: lighten(color(brand_gray), 77%);
+    padding: 30px;
+  }
+
+  .header {
+    @include flex(7 0);
+  }
+
+  .sidebar-right {
+    @include flex(1 0);
+    background-color: color(brand_orange);
+  }
+}
+
 .section {
-  border-bottom: 5px solid lighten(color(brand_gray), 70%);
   padding-bottom: 50px;
-  margin-bottom: 40px;
+  margin: 0px 30px 40px 30px;
+  &.no-bottom {
+    padding-bottom: 0px;
+  }
+}
+
+.no-margin {
+  margin: 0px;
+  margin-top: -6px;
+  padding: 20px;
+}
+
+.no-background-color {
+  background-color: none;
 }
 
 .right {
@@ -28,6 +71,14 @@
     &.small {
       @include adjust-font-size-to(18px);
     }
+    &.over-image {
+      @include adjust-font-size-to(144px);
+      color: $white;
+      padding: 0px 30px;
+      z-index: 1;
+      top: 10px;
+      position: absolute;
+    }
   }
   h2 {
     @include adjust-font-size-to(36px);
@@ -38,7 +89,7 @@
     text-transform: lowercase;
     font-weight: 300;
     font-family: $font;
-    border-bottom: 1px dotted lighten(color(brand_gray), 70%);
+    border-bottom: 1px dotted lighten(color(brand_gray), 50%);
     @include adjust-font-size-to(24px);
   }
   img {

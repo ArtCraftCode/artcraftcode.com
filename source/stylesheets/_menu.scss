@@ -1,0 +1,17 @@
+@import "colors";
+@import "typography";
+
+#menu {
+  ul, li {
+    display: inline;
+    padding: 0;
+    margin: 0;
+  }
+  li a {
+    padding: 30px;
+    border-bottom: 5px solid color(brand_orange);
+    display: block;
+    font-family: $accent;
+    text-transform: uppercase;
+  }
+}
