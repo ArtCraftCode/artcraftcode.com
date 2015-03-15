@@ -7,5 +7,8 @@
       = pattern.designer
   .section.no-bottom
     %h2= pattern.description
-  = partial(:images_2, locals: { images: pattern.images })
+    - if pattern.name == "Very PDX"
+      = partial(:customize, locals: { images: pattern })
+    - else
+      = partial(:images_2, locals: { images: pattern.images })
 .sidebar-right
