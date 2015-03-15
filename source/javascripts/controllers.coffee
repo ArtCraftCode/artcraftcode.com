@@ -1,7 +1,7 @@
-angular.module('controllers', ['values'])
+angular.module('controllers', ['factories', 'values'])
 .controller 'VeryPdxCtrl', [
-  '$scope', 'hatSizes'
-  ($scope, hatSizes) ->
+  '$scope', 'CustomHatPattern', 'hatSizes'
+  ($scope, CustomHatPattern, hatSizes) ->
     $scope.size = undefined
     $scope.customOptions = hatSizes
 
@@ -23,12 +23,10 @@ angular.module('controllers', ['values'])
     $scope.pattern = angular.copy($scope.patternTemplate)
 
     $scope.customize = ->
-      # copy the template for manipulation
-      custom = angular.copy($scope.patternTemplate)
-      custom.customized = true
-
-      # after all is said and done, send the customized pattern to the view
+      custom = new CustomHatPattern($scope.size, $scope.pattern, 8)
+      custom.generate()
       $scope.pattern = custom
+      $scope.$apply()
 
     # listen for the directive to customize the size
     $scope.$on 'customized', (event, size) ->
