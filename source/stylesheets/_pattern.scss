@@ -6,7 +6,13 @@
   margin: 0 auto;
 }
 
-.pattern {
+.branding {
+  font-family: $accent;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+#pattern {
   // core layout and flex
   @include display-flex;
   @include flex-direction(row);
@@ -82,15 +88,6 @@
     &.small {
       @include adjust-font-size-to(18px);
     }
-    &.over-image {
-      @include adjust-font-size-to(172px);
-      word-wrap: break-word;
-      color: $white;
-      padding: 0px 30px;
-      z-index: 1;
-      top: 0px;
-      position: absolute;
-    }
   }
 
   h2 {
@@ -106,7 +103,23 @@
     border-bottom: 1px dotted lighten(color(brand_gray), 50%);
     @include adjust-font-size-to(24px);
   }
-  
+  .over-image {
+    h1 {
+      @include adjust-font-size-to(172px);
+      padding: 0;
+      margin: 0;
+    }
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+    word-wrap: break-word;
+    color: $white;
+    padding: 0px 30px;
+    z-index: 1;
+    top: 50px;
+    position: absolute;
+  }
   img {
     width: 100%;
     &.no-resize {
