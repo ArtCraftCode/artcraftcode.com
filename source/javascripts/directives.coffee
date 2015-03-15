@@ -4,15 +4,15 @@ angular.module('directives', [])
     restrict: 'E',
     template: '{{option.label}}',
     scope: {
-      option: '=',
-      customSetting: '='
+      option: '='
     },
     link: (scope, element, attrs) ->
       scope.selected = false;
       element.on 'click', (event) ->
         scope.selected = !scope.selected
         if scope.selected
-          scope.customSetting = scope.option
+          scope.$emit('customized', scope.option)
+          element.parent().find('custom-button').removeClass('selected')
           element.addClass 'selected'
         else
           element.removeClass 'selected'
