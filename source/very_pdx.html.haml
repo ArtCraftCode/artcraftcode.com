@@ -1,6 +1,7 @@
 ---
 title: very pdx hat - by liz abinante - artcraftcode.com
 pattern: very_pdx
+controller: VeryPdxCtrl
 ---
 
 = partial(:materials, locals: { pattern: very_pdx } )
@@ -8,10 +9,7 @@ pattern: very_pdx
 
 .content
   .fake-padding-left
-  .actual-pattern.controller(ng-controller="VeryPdxCtrl")
-    .practie.section
-      %h1.clickable(ng-click='showPrompt()')
-        click me dammit
+  .actual-pattern
     .title.section
       %h1= very_pdx.name
       %h2= very_pdx.description

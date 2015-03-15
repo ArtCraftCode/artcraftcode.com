@@ -50,7 +50,7 @@ $text: map-get($colors, gray);
 }
 
 @each $pattern, $value in $patternColors {
-  #pattern.#{$pattern} {
+  .#{$pattern} {
     .sidebar-left {
       background-color: pattern-color($pattern, 'primary');
     }
