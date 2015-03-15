@@ -1,0 +1,68 @@
+---
+title: winter sea - by liz abinante - artcraftcode.com
+pattern: winter_sea
+---
+
+= partial(:materials, locals: { pattern: winter_sea } )
+= partial(:header, locals: { pattern: winter_sea } )
+
+
+.content.winter_sea
+  .fake-padding-left
+  .actual-pattern
+    .notes.section
+      %h2 Pattern notes
+
+      %h3 Construction
+      %p Knit from the bottom up, the shawl has increases incorporated into the stitch motif. With the right side facing, the shawl increases once every other row along the left edge and once every row along the right edge.
+      %br
+      %img.scaled(src='https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/diagram.png')
+
+      %h3 Gauge
+      %p There is a very large difference between the finished item before and after blocking, both in size and drape. Be sure to check your gauge: you want a loose fabric, not a tight one, and if your gauge is too tight the shawl will not lay very well.
+
+    .modifications.section
+      %h2 Modifications
+      %p This is my favorite kind of shawl: it's done when you say it's done. You can keep knitting until it has reached the size you want, or you run out of yarn, and you can knit it in any yarn weight you wish. The instructions are more of a template than a pattern, don't feel restricted by the yarn weight or size I've knit for myself.
+
+      %h3 Finished size
+      %p If you have more yarn, you can continue working in pattern until the shawl reaches your desired size, ending on Row 8 or 16 of the Chevon motif.
+
+      %h3 Yarn weight
+      %p To work with a different yarn weight, select a needle that produces a loose gauge (typically the largest needle size recommended for the yarn).
+
+    .instructions.section
+      %h2 Instructions
+
+      %h3 Set up
+      %p CO 9 sts.
+
+      %p
+        %em Throughout the entire pattern:
+        odd-numbered rows are RS rows, even-numbered rows are WS rows.
+
+      - winter_sea.instructions[:setup].each_with_index do |row, number|
+        .row.flex.pad-bottom
+          .number.cell-small
+            %span Row #{number + 1}:
+          .text.cell-large
+            %span #{row}
+            - if number + 1 === 3
+              %em Place split-ring marker to indicate RS.
+
+      %h3 Body
+      - winter_sea.instructions[:body].each_with_index do |row, number|
+        .row.flex.pad-bottom
+          .number.cell-small
+            %span Row #{number + 1}:
+          .text.cell-large
+            %span #{row}
+
+      %p Repeat Body Rows 1–16 7 times more. Remove split-ring marker from RS on last repeat.
+
+      %h3 Finishing
+      %p BO all sts and block gently.
+
+    = partial(:abbreviations, locals: { cable: false })
+    = partial(:images, locals: { images: winter_sea.images })
+  .fake-padding-right

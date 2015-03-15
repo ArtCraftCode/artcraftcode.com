@@ -1,69 +1,39 @@
-.title.section
-  %h1.small
-    %span.brand_red art
-    %br
-    %span.brand_orange craft
-    %br
-    %span.brand_teal code
-
-  %h1
-    = pattern.name
-  %h2
-    = pattern.description
-  %h3
-    designed by
-    = pattern.designer
-  %img{ src: pattern.images[0] }
-  .links.flex
-    .cell
-      %h4
-        %a{ href: pattern.ravelry.link } View on Ravelry
-    .cell.right
-      %br
-      %a{ href: pattern.ravelry.link }
-        %img.no-resize{ src: pattern.ravelry.button }
-
-.materials.section.comments
-  %h2 materials
-  .flex
-    .cell
-      %h3 Yarn
-      - pattern.yarns.each do |yarn|
-        %p
-          - if yarn.label
-            %span #{yarn.label} -
-          Approximately #{yarn.yards} yards / #{yarn.meters} meters #{yarn.weight} weight yarn.
-    .cell
-      %h3 Yarn Shown
-      - pattern.yarns_shown.each do |yarn|
-        %p
-          - if yarn.label
-            %span #{yarn.label} -
-          #{yarn.detail} in #{yarn.color}
-    .cell
-      %h3 Needles
-      - pattern.needles.each do |needle|
-        %p
-          = needle.to_s
-          - if needle.label
-            %span - #{needle.label}
-    .cell
-      %h3 Gauge
+.materials
+  .comments
+    %h2 materials
+    %h3 Yarn
+    - pattern.yarns.each do |yarn|
       %p
-        = pattern.gauge
-    .cell
-      %h3 Notions
-      - pattern.notions.each do |notion|
-        %p
-          = notion
-    - if pattern.sizes.length <= 3
-      .cell
-        %h3 Finished sizes
-        - pattern.sizes.each do |size|
-          %p #{size.label}: #{size.measurements_string}
-  - if pattern.sizes.length >= 3
-    %h3 Finished sizes
-    .flex
+        - if yarn.label
+          %span #{yarn.label} -
+        Approximately #{yarn.yards} yards / #{yarn.meters} meters #{yarn.weight} weight yarn.
+    %h3 Yarn Shown
+    - pattern.yarns_shown.each do |yarn|
+      %p
+        - if yarn.label
+          %span #{yarn.label} -
+        #{yarn.detail} in #{yarn.color}
+    %h3 Needles
+    - pattern.needles.each do |needle|
+      %p
+        = needle.to_s
+        - if needle.label
+          %span - #{needle.label}
+    %h3 Gauge
+    %p
+      = pattern.gauge
+    %h3 Notions
+    - pattern.notions.each do |notion|
+      %p
+        = notion
+    - if pattern.sizes.length < 6
+      -# TODO: MAKE THIS SMARTER!!!
+      %h3 Finished sizes
       - pattern.sizes.each do |size|
-        .cell
-          %p #{size.label}: #{size.measurements_string}
+        %p #{size.label}: #{size.measurements_string}
+    %h3 Ravelry
+    %a{ href: forest_park.ravelry.link }
+      %img.no-resize{ src: forest_park.ravelry.button }
+    %br
+    %h4
+      %a{ href: pattern.ravelry.link } View on Ravelry

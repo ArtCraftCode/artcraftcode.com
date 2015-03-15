@@ -1,0 +1,120 @@
+---
+title: in winter - by liz abinante - artcraftcode.com
+pattern: in_winter
+---
+
+= partial(:materials, locals: { pattern: in_winter } )
+= partial(:header, locals: { pattern: in_winter } )
+
+.content
+  .fake-padding-left
+  .actual-pattern
+    .title.section
+      %h1= in_winter.name
+      %h2= in_winter.description
+      %h3
+        designed by
+        = in_winter.designer
+    .comment.section
+      %h1 Test knitting:
+      %h2 In Winter
+
+      %p Hey! Thanks for test knitting. This pattern is still a work in progress, so there might be some errors.
+
+      %p You can leave comments inline with each pattern section by clicki.ng the "+" symbol to the right. General comments and feedback can be left at the bottom of the page. Sroll all the way down and click "comments" to expand the form.
+
+      %p It's super helpful to me if you can leave the comments inline with the appropriate section, but if that ends up being a pain in the ass for you, feedback at the bottom is totally fine.
+
+      %p I won't be available at regular hours to help sort out any errors present in the pattern, but I should be able to check in about once a day and help (if someone else hasn't answered your question already).
+
+      %p For faster help, leave your question in the Ravelry group.
+
+      %p I am also interested in things like pattern format suggestions! This is optimized for web use, and it should be good on mobile phones and tablets (although I confess, the mobile layout is still a work in progress). 
+
+      %p Thanks again for test knitting! 
+    .abbreviations.section.comments
+      %h2 Special abbreviations
+      .flex.pad-bottom
+        .cell-small CN
+        .cell-large cable needle
+      .flex.pad-bottom
+        .cell-small wrap3
+        .cell-large k st, wrapping yarn around needle 3 times (instead of just once)
+      .flex.pad-bottom
+        .cell-small dropX
+        .cell-large
+          sl next X sts onto CN, dropping the extra loops. Wrap yarn around the sts from back to front, k X from CN.
+          %br
+          %em Replace the X with the number (ex: 3, 5, 6) after 'drop' in the pattern.
+      .flex.pad-bottom
+        %p
+          %em Reference bottom for standard abbreviations.
+
+
+    .instructions.section
+      %h2 Instructions
+
+      %h3.comments Set up
+
+      %p Using A and smallest needle, CO 3 sts.
+      %p k 6 rows, do not turn work.
+      %p Rotate work 90 degrees clockwise and pick up 6 sts (3 along the row edge, and 3 along the CO edge).
+
+    .colorA.section
+      %h2.comments Color A: Body
+      - in_winter.instructions[:a].each_with_index do |row, number|
+        .row.flex.pad-bottom
+          .number.cell-small
+            %span Row #{number + 1}:
+          .text.cell-large
+            %span= row
+      %p Repeat Rows 2-3 42 more times until you have 189 sts total.
+
+    .colorB.section
+      %h2.comments Color B: Winter Lace
+
+      %p
+        %em Switch to largest needle.
+      - in_winter.instructions[:b].each do |ins|
+        .row.flex.pad-bottom
+          .number.cell-small
+            %span Row #{ins[:row]}:
+          .text.cell-large
+            %span= ins[:text]
+      %p 215 sts total.
+
+    .colorC.section
+      %h2.comments Color C: Edging
+      %p
+        %em Continue using largest needle.
+      - in_winter.instructions[:c].each do |ins|
+        .row.flex.pad-bottom
+          .number.cell-small
+            %span Row #{ins[:row]}:
+          .text.cell-large
+            %span= ins[:text]
+
+
+    .finishing.section
+      %h2.comments Finishing
+
+      %p BO all sts loosely. Be sure to take care when binding off as anything too tight will restrict the shape of the shawl.
+      %p Block gently.
+
+    .abbreviations.section.comments
+      = partial(:abbreviations_table)
+
+    = partial(:images, locals: { images: in_winter.images })
+
+    .comment.section
+      %div#disqus_thread
+  .fake-padding-right
+
+%script{ src:"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" }
+%script{ src:"/test/javascripts/vendor/inlineDisqussions.js" }
+
+:javascript
+  disqus_shortname = 'artcraftcode';
+  jQuery(document).ready(function() {
+    jQuery(".comments").inlineDisqussions();
+  });

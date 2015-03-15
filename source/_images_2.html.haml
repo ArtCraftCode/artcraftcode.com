@@ -1,0 +1,9 @@
+.flex-grid--flush
+  - if images.length == 2
+    - images[0..1].each do |image|
+      .cell
+        %img{ src: image }
+  - else
+    - images[1..2].each do |image|
+      .cell
+        %img{ src: image }

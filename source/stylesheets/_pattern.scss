@@ -2,25 +2,83 @@
 @import "colors";
 
 #container {
-  padding: 20px;
-  width: 640px;
+  max-width: 1450px;
   margin: 0 auto;
 }
 
-.section {
-  border-bottom: 5px solid lighten(color(brand_gray), 70%);
-  padding-bottom: 50px;
-  margin-bottom: 40px;
+.branding {
+  font-family: $accent;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
-.right {
-  text-align: right;
-}
+#pattern {
+  // core layout and flex
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
 
-.pattern {
+  .sidebar, .materials, .header, .content {
+    @include flex(1 100%);
+  }
+
+  .sidebar-left {
+    @include flex(1 0);
+  }
+
+  .materials {
+    @include flex(3 0);
+    @include adjust-font-size-to(14px);
+    background-color: lighten(color(brand_gray), 77%);
+    padding: 30px;
+  }
+
+  .header {
+    @include flex(7 0);
+  }
+
+  .sidebar-right {
+    @include flex(1 0);
+  }
+
+  .content {
+    @include display-flex;
+  }
+
+  .fake-padding-left, .fake-padding-right {
+    @include flex(1 0);
+  }
+
+  .actual-pattern {
+    @include flex(10 0);
+  }
+
+  .section {
+    padding-bottom: 20px;
+    margin: 0px 30px 40px 30px;
+    &.no-bottom {
+      padding-bottom: 0px;
+    }
+  }
+
+  .no-margin {
+    margin: 0px;
+    margin-top: -6px;
+    padding: 20px;
+  }
+
+  .no-background-color {
+    background-color: none;
+  }
+
+  .right {
+    text-align: right;
+  }
+
   a {
     color: color(brand_teal);
   }
+
   h1 {
     font-family: $accent;
     text-transform: uppercase;
@@ -29,22 +87,58 @@
       @include adjust-font-size-to(18px);
     }
   }
+
   h2 {
     @include adjust-font-size-to(36px);
     font-weight: 300;
     text-transform: lowercase;
   }
+  
   h3 {
     text-transform: lowercase;
     font-weight: 300;
     font-family: $font;
-    border-bottom: 1px dotted lighten(color(brand_gray), 70%);
+    border-bottom: 1px dotted lighten(color(brand_gray), 50%);
     @include adjust-font-size-to(24px);
+  }
+  .over-image {
+    h1 {
+      @include adjust-font-size-to(172px);
+      padding: 0;
+      margin: 0;
+    }
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+    word-wrap: break-word;
+    color: $white;
+    padding: 0px 30px;
+    z-index: 1;
+    top: 50px;
+    position: absolute;
   }
   img {
     width: 100%;
     &.no-resize {
       width: auto;
+    }
+  }
+
+  .title {
+    padding-top: 80px;
+  }
+
+  .row {
+    .number {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .abbreviations {
+    .small, .cell-small {
+      font-weight: 600;
     }
   }
 }

@@ -10,17 +10,19 @@
     = javascript_include_tag  "all"
   %body{:class => page_classes}
     #container
-      .pattern
-        = yield
-      #footer
-        %p
-          %a(href='http://www.ravelry.com/groups/traveling-woman') Get pattern help!
-        %p
-          %span &copy; 2014-2015 Liz Abinante
-          %a(href='https://github.com/ArtCraftCode/artcraftcode.com/blob/master/LICENSE') (license)
-          %span ArtCraftCode.com is an
-          %a(href='https://github.com/ArtCraftCode/artcraftcode.com') open source project.
+      - if current_page.data.pattern == "very_pdx"
+        #pattern(class="#{current_page.data.pattern}" ng-app="app")
+          .sidebar-left
+          = yield
+          = partial(:footer)
+      - else
+        #pattern(class="#{current_page.data.pattern}")
+          .sidebar-left
+          = yield
+          = partial(:footer)
 
+    - if current_page.data.pattern == "very_pdx"
+      %script{ src: 'javascripts/custom_patterns_app.js' }
     %script{src: "//use.typekit.net/ihj4klv.js"}
     %script 
       try{Typekit.load();}catch(e){}
