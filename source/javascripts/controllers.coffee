@@ -22,4 +22,8 @@ angular.module('controllers', ['values'])
         scope: $scope,
         className: 'ngdialog-theme-default-xlarge'
       })
+
+      dialog.closePromise.then (data)->
+        if typeof data.value != 'string'
+          console.log data.value
 ]
