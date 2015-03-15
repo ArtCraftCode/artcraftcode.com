@@ -5,6 +5,7 @@ controller: VeryPdxCtrl
 ---
 
 = partial(:materials, locals: { pattern: very_pdx } )
+-# = partial(:materials_ng, locals: { pattern: very_pdx } )
 = partial(:header, locals: { pattern: very_pdx } )
 
 .content
@@ -18,14 +19,14 @@ controller: VeryPdxCtrl
         = very_pdx.designer
     .instructions.section
       %h2 Instructions
-      %p Using smallest needle with CC and waste yarn, provisionally CO #{very_pdx.fields[:cast_on]} sts.
+      %p Using smallest needle with CC and waste yarn, provisionally CO {{pattern.cast_on}} sts.
 
       %p pm and join for knitting in the round, taking care not to twist.
     .brim.section
       %h2 Brim
 
       .row.flex.pad-bottom
-        .number.cell-small #{very_pdx.fields[:brim_rows]} rounds:
+        .number.cell-small {{pattern.brim_rows}} rounds:
         .text.cell-large k all sts
       .row.flex.pad-bottom
         .number.cell-small Next round:
@@ -37,7 +38,7 @@ controller: VeryPdxCtrl
       %p Using largest circular needle:
 
       .row.flex.pad-bottom
-        .number.cell-small #{very_pdx.fields[:brim_rows]} rounds:
+        .number.cell-small {{pattern.brim_rows}} rounds:
         .text.cell-large
           k all sts
           %em (approximately #{very_pdx.fields[:brim_height]}"/#{very_pdx.fields[:brim_height] * 2.54}cm).
