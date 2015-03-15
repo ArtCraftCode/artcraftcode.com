@@ -1,7 +1,7 @@
 require_relative './utils.rb'
 
 module WinterSea
-  DESCRIPTION = "An asymmetrically shaped shawl that\'s surprisingly easy to wear."
+  DESCRIPTION = "An asymmetrically shaped shawl that's surprisingly easy to wear with a delicate drape for style."
   GAUGE = "20 sts and 30 rows per 4 in/10 cm, stockinette stitch."
   NOTIONS = ['split-ring marker', 'darning needle']
   VERSION = {
