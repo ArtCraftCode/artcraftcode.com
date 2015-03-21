@@ -5,7 +5,8 @@
 $breakpoints: (
   optimal: 1440px,
   acceptable: 1280px,
-  tablet: 960px
+  tablet: 960px,
+  mobile: 620px
 );
 
 @media (max-width: map-get($breakpoints, acceptable)) {
@@ -17,5 +18,11 @@ $breakpoints: (
 @media (max-width: map-get($breakpoints, tablet)) {
   #container {
     max-width: map-get($breakpoints, tablet) - 200;
+  }
+}
+
+@media (max-width: map-get($breakpoints, mobile)) {
+  #container {
+    max-width: map-get($breakpoints, mobile) - 50;
   }
 }

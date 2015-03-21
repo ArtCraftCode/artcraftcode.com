@@ -11,7 +11,7 @@
   %body{:class => page_classes}
     #container
       - if current_page.data.pattern == "very_pdx"
-        #pattern(ng-app="app" ng-controller="#{current_page.data.controller}")
+        #pattern(ng-app="app" ng-controller="#{current_page.data.controller}" class="#{current_page.data.pattern}")
           .sidebar-left
           = yield
           = partial(:footer)

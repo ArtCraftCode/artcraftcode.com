@@ -77,3 +77,28 @@
     }
   }
 }
+
+@media (max-width: map-get($breakpoints, tablet)) {
+  .home {
+    .branding h1 {
+      @include adjust-font-size-to(96px);
+      padding: 50px 0px;
+      span {
+        display: block;
+      }
+    }
+
+    .flex-grid .cell {
+      @include flex(0 0 100%);
+      .pattern {
+        padding-top: 0px;
+        padding-bottom: 120px;
+      }
+    }
+
+    #footer {
+      padding: 20px;
+    }
+  }
+}
+
