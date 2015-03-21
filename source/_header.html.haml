@@ -5,11 +5,12 @@
     %h2
       designed by
       = pattern.designer
-  .section.no-bottom
+  .section.no-bottom.description
     %h2= pattern.description
   - if pattern.name == "Very PDX"
     .section.no-bottom
       = partial(:customize_very_pdx)
   - else
-    = partial(:images_2, locals: { images: pattern.images })
+    .preview-images
+      = partial(:images_2, locals: { images: pattern.images })
 .sidebar-right

@@ -31,9 +31,3 @@
       %h3 Finished sizes
       - pattern.sizes.each do |size|
         %p #{size.label}: #{size.measurements_string}
-    %h3 Ravelry
-    %a{ href: pattern.ravelry.link }
-      %img.no-resize{ src: pattern.ravelry.button }
-    %br
-    %h4
-      %a{ href: pattern.ravelry.link } View on Ravelry

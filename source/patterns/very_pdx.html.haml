@@ -13,6 +13,10 @@ controller: VeryPdxCtrl
     = partial(:subtitle, locals: { pattern: very_pdx })
     .instructions.section
       %h2 Instructions
+      %p(ng-if='!size')
+        .bold As written, the pattern includes instructions for a Women's size Medium (22"/56cm).
+        %em This message will self-destruct when you select a custom size.
+        %br
       %p Using smallest needle with CC and waste yarn, provisionally CO {{pattern.cast_on}} sts.
 
       %p pm and join for knitting in the round, taking care not to twist.

@@ -1,7 +1,10 @@
 @import "colors";
 @import "layout";
 @import "typography";
+@import "responsive";
 
+// tablet sizes below
+// mobile sizes below
 .home {
   @include display-flex;
   @include flex-direction(row);
@@ -21,6 +24,11 @@
       padding: 0px 20px;
       margin: 0;
       color: $white;
+    }
+    @media (max-width: map-get($breakpoints, acceptable)) {
+      h1 {
+        padding: 0px 2px;
+      }
     }
   }
 
@@ -53,3 +61,44 @@
     }
   }
 }
+
+@media (max-width: map-get($breakpoints, tablet)) {
+  .home {
+    .branding h1 {
+      @include adjust-font-size-to(72px);
+    }
+
+    .flex-grid .cell {
+      @include flex(0 0 50%);
+    }
+
+    #footer {
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints, tablet)) {
+  .home {
+    .branding h1 {
+      @include adjust-font-size-to(96px);
+      padding: 50px 0px;
+      span {
+        display: block;
+      }
+    }
+
+    .flex-grid .cell {
+      @include flex(0 0 100%);
+      .pattern {
+        padding-top: 0px;
+        padding-bottom: 120px;
+      }
+    }
+
+    #footer {
+      padding: 20px;
+    }
+  }
+}
+
