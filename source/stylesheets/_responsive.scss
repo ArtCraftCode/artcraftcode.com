@@ -1,1 +1,14 @@
-// i should probably pick breakpoints first...
+// degrades at 1280px
+// optimal at 1440 
+
+// max widths
+$breakpoints: (
+  optimal: 1440px,
+  acceptable: 1280px
+);
+
+@media (max-width: map-get($breakpoints, acceptable)) {
+  #container {
+    max-width: map-get($breakpoints, acceptable) - 200;
+  }
+}

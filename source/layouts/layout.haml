@@ -16,7 +16,7 @@
           = yield
           = partial(:footer)
       - else
-        #pattern
+        #pattern{ class: current_page.data.pattern }
           .sidebar-left
           = yield
           = partial(:footer)

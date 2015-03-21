@@ -1,5 +1,6 @@
 @import "typography";
 @import "colors";
+@import "responsive";
 
 .branding {
   font-family: $accent;
@@ -28,6 +29,15 @@
     padding: 30px;
   }
 
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    .materials {
+      @include adjust-font-size-to(13px);
+    }
+    &.in_winter .materials {
+      @include adjust-font-size-to(11.5px);
+    }
+  }
+
   .header {
     @include flex(7 0);
   }
@@ -53,6 +63,12 @@
     margin: 0px 30px 40px 30px;
     &.no-bottom {
       padding-bottom: 0px;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    .customize {
+      @include adjust-font-size-to(14px);
     }
   }
 
@@ -96,6 +112,16 @@
     border-bottom: 1px dotted lighten(color(brand_gray), 50%);
     @include adjust-font-size-to(24px);
   }
+
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    h2 {
+      @include adjust-font-size-to(24px);
+    }
+    h3 {
+      @include adjust-font-size-to(20px); 
+    }
+  }
+
   .over-image {
     h1 {
       @include adjust-font-size-to(172px);
@@ -112,6 +138,18 @@
     z-index: 1;
     top: 50px;
     position: absolute;
+  }
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    .over-image {
+      max-width: (map-get($breakpoints, acceptable) / 12) * 5;
+      top: 150px;
+      h1 {
+        @include adjust-font-size-to(96px);
+      }
+    }
+    &.forest_park .over-image {
+      top: 60px;
+    }
   }
   img {
     width: 100%;
