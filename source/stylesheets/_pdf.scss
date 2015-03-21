@@ -1,0 +1,53 @@
+#pdf {
+  a {
+    color: lighten(color(brand_gray), 20%);
+  }
+
+  .materials {
+    margin: 0px 30px 40px 30px;
+  }
+
+  .section {
+    padding-bottom: 20px;
+    margin: 0px 30px 40px 30px;
+    &.no-bottom {
+      padding-bottom: 0px;
+    }
+  }
+
+  h1 {
+    font-family: $accent;
+    text-transform: uppercase;
+    @include adjust-font-size-to(48px);
+    &.small {
+      @include adjust-font-size-to(18px);
+    }
+  }
+
+  h2 {
+    @include adjust-font-size-to(36px);
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+  
+  h3 {
+    text-transform: lowercase;
+    font-weight: 300;
+    font-family: $font;
+    border-bottom: 1px dotted lighten(color(brand_gray), 50%);
+    @include adjust-font-size-to(24px);
+  }
+
+  .row {
+    .number {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .abbreviations {
+    .small, .cell-small {
+      font-weight: 600;
+    }
+  }
+}
