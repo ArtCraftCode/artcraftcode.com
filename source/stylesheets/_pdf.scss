@@ -1,4 +1,5 @@
 #pdf {
+  @include adjust-font-size-to(14px);
   a {
     color: lighten(color(brand_gray), 20%);
   }
@@ -7,13 +8,17 @@
     width: 100%;
   }
 
+  .flex-grid--flush .cell {
+    @include flex(0 0 50%);
+  }
+
   .materials {
-    margin: 0px 30px 40px 30px;
+    margin: 0px 0px 40px 0px;
   }
 
   .section {
     padding-bottom: 20px;
-    margin: 0px 30px 40px 30px;
+    margin: 0px 0px 40px 0px;
     &.no-bottom {
       padding-bottom: 0px;
     }
@@ -22,14 +27,14 @@
   h1 {
     font-family: $accent;
     text-transform: uppercase;
-    @include adjust-font-size-to(48px);
+    @include adjust-font-size-to(36px);
     &.small {
       @include adjust-font-size-to(18px);
     }
   }
 
   h2 {
-    @include adjust-font-size-to(36px);
+    @include adjust-font-size-to(24px);
     font-weight: 300;
     text-transform: lowercase;
   }
@@ -39,7 +44,7 @@
     font-weight: 300;
     font-family: $font;
     border-bottom: 1px dotted lighten(color(brand_gray), 50%);
-    @include adjust-font-size-to(24px);
+    @include adjust-font-size-to(18px);
   }
 
   .row {
