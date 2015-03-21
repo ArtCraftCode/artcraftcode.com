@@ -1,0 +1,71 @@
+.abbreviations.section
+  %h2 Special abbreviations
+  .flex.pad-bottom
+    .cell-small CN
+    .cell-large cable needle
+  .flex.pad-bottom
+    .cell-small wrap3
+    .cell-large k st, wrapping yarn around needle 3 times (instead of just once)
+  .flex.pad-bottom
+    .cell-small dropX
+    .cell-large
+      sl next X sts onto CN, dropping the extra loops. Wrap yarn around the sts from back to front, k X from CN.
+      %br
+      %em Replace the X with the number (ex: 3, 5, 6) after 'drop' in the pattern.
+  .flex.pad-bottom
+    %p
+      %em Reference bottom for standard abbreviations.
+
+
+.instructions.section
+  %h2 Instructions
+
+  %h3 Set up
+
+  %p Using A and smallest needle, CO 3 sts.
+  %p k 6 rows, do not turn work.
+  %p Rotate work 90 degrees clockwise and pick up 6 sts (3 along the row edge, and 3 along the CO edge).
+
+.colorA.section
+  %h2 Color A: Body
+  - in_winter.instructions[:a].each_with_index do |row, number|
+    .row.flex.pad-bottom
+      .number.cell-small
+        %span Row #{number + 1}:
+      .text.cell-large
+        %span= row
+  %p Repeat Rows 2-3 42 more times until you have 189 sts total.
+
+.colorB.section
+  %h2 Color B: Winter Lace
+
+  %p
+    %em Switch to largest needle.
+  - in_winter.instructions[:b].each do |ins|
+    .row.flex.pad-bottom
+      .number.cell-small
+        %span Row #{ins[:row]}:
+      .text.cell-large
+        %span= ins[:text]
+  %p 215 sts total.
+
+.colorC.section
+  %h2 Color C: Edging
+  %p
+    %em Continue using largest needle.
+  - in_winter.instructions[:c].each do |ins|
+    .row.flex.pad-bottom
+      .number.cell-small
+        %span Row #{ins[:row]}:
+      .text.cell-large
+        %span= ins[:text]
+
+
+.finishing.section
+  %h2 Finishing
+
+  %p BO all sts loosely. Be sure to take care when binding off as anything too tight will restrict the shape of the shawl.
+  %p Block gently.
+
+.abbreviations.section
+  = partial(:abbreviations_table)
