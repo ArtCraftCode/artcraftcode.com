@@ -1,0 +1,29 @@
+.instructions.section
+  %h2 Instructions
+
+  %p CO 120 sts.
+  %p pm and join for knitting in the round, taking care not to twist.
+
+  %h3 Cable Set One
+  - forest_park.instructions[:cable_set_one].each_with_index do |round, number|
+    .row.flex.pad-bottom
+      .number.cell-small
+        %span Round #{number + 1}:
+      .text.cell-large
+        %span #{round}
+
+  %p Repeat Rounds 1–4 6 times more (7 times total).
+
+  %h3 Cable Set Two
+  - forest_park.instructions[:cable_set_two].each_with_index do |round, number|
+    .row.flex.pad-bottom
+      .number.cell-small
+        %span Round #{number + 1}:
+      .text.cell-large
+        %span #{round}
+  %p Repeat Rounds 5–8 9 times more (10 times total).
+
+  %h3 Finishing
+
+  %p BO all sts and block gently.
+  %p Pro tip: use beer, wine, or soda bottles to block the edges of your cowl to prevent unsightly fold marks.
