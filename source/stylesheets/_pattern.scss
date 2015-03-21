@@ -8,6 +8,8 @@
   font-weight: 700;
 }
 
+// styles for acceptable breakpoints are mixed in
+// fully mobile and tablet are below
 #pattern {
   // core layout and flex
   @include display-flex;
@@ -172,6 +174,60 @@
   .abbreviations {
     .small, .cell-small {
       font-weight: 600;
+    }
+  }
+}
+
+// tablet sizing
+@media (max-width: map-get($breakpoints, tablet)) {
+  #pattern, #pattern.in_winter, #pattern.forest_park {
+    .header {
+      @include order(1);
+      @include flex(0 0 100%);
+      .preview-images, .description {
+        display: none;
+      }
+    }
+
+    .materials {
+      @include order(2);
+      @include flex(0 0 100%);
+      @include adjust-font-size-to(14px);
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+
+    .content {
+      @include order(3);
+      @include flex(0 0 100%);
+      @include adjust-font-size-to(14px);
+      box-sizing: border-box;
+    }
+
+    .fake-padding-right, .fake-padding-left,
+    .sidebar-left, .sidebar-right, .sidebar {
+      display: none;
+    }
+
+    #footer {
+      @include order(4);
+      @include flex(0 0 100%);
+      box-sizing: border-box;
+    }
+
+    .over-image {
+      max-width: map-get($breakpoints, tablet) - 300;
+      top: 150px;
+      h1 {
+        @include adjust-font-size-to(124px);
+      }
+    }
+    &.forest_park .over-image {
+      top: 60px;
+    }
+
+    .expanded-images .flex-grid .cell {
+      @include flex(0 0 75%);
     }
   }
 }

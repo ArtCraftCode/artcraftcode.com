@@ -3,6 +3,8 @@
 @import "typography";
 @import "responsive";
 
+// tablet sizes below
+// mobile sizes below
 .home {
   @include display-flex;
   @include flex-direction(row);
@@ -56,6 +58,22 @@
       img {
         width: 100%;
       }
+    }
+  }
+}
+
+@media (max-width: map-get($breakpoints, tablet)) {
+  .home {
+    .branding h1 {
+      @include adjust-font-size-to(72px);
+    }
+
+    .flex-grid .cell {
+      @include flex(0 0 50%);
+    }
+
+    #footer {
+      padding: 20px;
     }
   }
 }
