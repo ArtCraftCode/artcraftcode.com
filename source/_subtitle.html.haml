@@ -5,6 +5,9 @@
       %img.no-resize{ src: pattern.ravelry.button }
     %h4
       %a{ href: pattern.ravelry.link } View on Ravelry
+    - if pattern.url != 'very_pdx'
+      %h4
+        %a{ href: "/pdfs/#{pattern.url}.pdf" } Download PDF
 
   %h1= pattern.name
   %h2= pattern.description
