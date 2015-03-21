@@ -1,0 +1,6 @@
+.section.expanded-images
+  %h2 Photos
+  .flex-grid
+    - images.each do |image|
+      .cell
+        %img{ src: image }

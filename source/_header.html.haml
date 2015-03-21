@@ -1,0 +1,16 @@
+.header
+  %img{ src: pattern.images[0] }
+  .over-image
+    %h1= pattern.name
+    %h2
+      designed by
+      = pattern.designer
+  .section.no-bottom.description
+    %h2= pattern.description
+  - if pattern.name == "Very PDX"
+    .section.no-bottom
+      = partial(:customize_very_pdx)
+  - else
+    .preview-images
+      = partial(:images_2, locals: { images: pattern.images })
+.sidebar-right

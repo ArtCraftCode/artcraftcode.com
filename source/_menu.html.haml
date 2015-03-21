@@ -1,0 +1,10 @@
+#menu
+  -# %h1.small
+  -#   %span.brand_gray art
+  -#   %span.brand_orange craft
+  -#   %span.brand_teal code
+  %ul
+    - patterns.each do |pattern|
+      %li 
+        %a{ href: pattern.url }
+          = pattern.name

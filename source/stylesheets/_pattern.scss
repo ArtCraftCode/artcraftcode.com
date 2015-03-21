@@ -1,0 +1,276 @@
+@import "typography";
+@import "colors";
+@import "responsive";
+
+.branding {
+  font-family: $accent;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+// styles for acceptable breakpoints are mixed in
+// fully mobile and tablet are below
+#pattern {
+  // core layout and flex
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  .sidebar, .materials, .header, .content {
+    @include flex(1 100%);
+  }
+
+  .sidebar-left {
+    @include flex(1 0);
+  }
+
+  .materials {
+    @include flex(3 0);
+    @include adjust-font-size-to(14px);
+    background-color: lighten(color(brand_gray), 77%);
+    padding: 30px;
+  }
+
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    .materials {
+      @include adjust-font-size-to(13px);
+    }
+    &.in_winter .materials {
+      @include adjust-font-size-to(11.5px);
+    }
+  }
+
+  .header {
+    @include flex(7 0);
+  }
+
+  .sidebar-right {
+    @include flex(1 0);
+  }
+
+  .content {
+    @include display-flex;
+  }
+
+  .fake-padding-left, .fake-padding-right {
+    @include flex(1 0);
+  }
+
+  .actual-pattern {
+    @include flex(10 0);
+  }
+
+  .section {
+    padding-bottom: 20px;
+    margin: 0px 30px 40px 30px;
+    &.no-bottom {
+      padding-bottom: 0px;
+    }
+  }
+
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    .customize {
+      @include adjust-font-size-to(14px);
+    }
+  }
+
+  .no-margin {
+    margin: 0px;
+    margin-top: -6px;
+    padding: 20px;
+  }
+
+  .no-background-color {
+    background-color: none;
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  a {
+    color: color(brand_teal);
+  }
+
+  h1 {
+    font-family: $accent;
+    text-transform: uppercase;
+    @include adjust-font-size-to(48px);
+    &.small {
+      @include adjust-font-size-to(18px);
+    }
+  }
+
+  h2 {
+    @include adjust-font-size-to(36px);
+    font-weight: 300;
+    text-transform: lowercase;
+  }
+  
+  h3 {
+    text-transform: lowercase;
+    font-weight: 300;
+    font-family: $font;
+    border-bottom: 1px dotted lighten(color(brand_gray), 50%);
+    @include adjust-font-size-to(24px);
+  }
+
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    h2 {
+      @include adjust-font-size-to(24px);
+    }
+    h3 {
+      @include adjust-font-size-to(20px); 
+    }
+  }
+
+  .over-image {
+    h1 {
+      @include adjust-font-size-to(172px);
+      padding: 0;
+      margin: 0;
+    }
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+    word-wrap: break-word;
+    color: $white;
+    padding: 0px 30px;
+    z-index: 1;
+    top: 50px;
+    position: absolute;
+  }
+  @media (max-width: map-get($breakpoints, acceptable)) {
+    .over-image {
+      max-width: (map-get($breakpoints, acceptable) / 12) * 5;
+      top: 150px;
+      h1 {
+        @include adjust-font-size-to(96px);
+      }
+    }
+    &.forest_park .over-image {
+      top: 60px;
+    }
+  }
+  img {
+    width: 100%;
+    &.no-resize {
+      width: auto;
+    }
+  }
+
+  .title {
+    padding-top: 80px;
+  }
+
+  .row {
+    .number {
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  .abbreviations {
+    .small, .cell-small {
+      font-weight: 600;
+    }
+  }
+}
+
+// tablet sizing
+@media (max-width: map-get($breakpoints, tablet)) {
+  #pattern, #pattern.in_winter, #pattern.forest_park {
+    .header {
+      @include order(1);
+      @include flex(0 0 100%);
+      .preview-images, .description {
+        display: none;
+      }
+    }
+
+    .materials {
+      @include order(2);
+      @include flex(0 0 100%);
+      @include adjust-font-size-to(14px);
+      background-color: #fff;
+      box-sizing: border-box;
+    }
+
+    .content {
+      @include order(3);
+      @include flex(0 0 100%);
+      @include adjust-font-size-to(14px);
+      box-sizing: border-box;
+    }
+
+    .fake-padding-right, .fake-padding-left,
+    .sidebar-left, .sidebar-right, .sidebar {
+      display: none;
+    }
+
+    #footer {
+      @include order(4);
+      @include flex(0 0 100%);
+      box-sizing: border-box;
+    }
+
+    .over-image {
+      max-width: map-get($breakpoints, tablet) - 300;
+      top: 150px;
+      h1 {
+        @include adjust-font-size-to(124px);
+      }
+    }
+
+    .expanded-images .flex-grid .cell {
+      @include flex(0 0 75%);
+    }
+  }
+}
+
+// mobile sizing
+@media (max-width: map-get($breakpoints, mobile)) {
+  #pattern.very_pdx {
+    .flex .cell-small {
+      @include flex(0 0 120px);
+    }
+  }
+
+  #pattern, #pattern.forest_park, #pattern.in_winter {
+    .materials {
+      padding: 10px;
+    }
+
+    .section {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .over-image {
+      max-width: map-get($breakpoints, mobile) - 60;
+      top: 50px;
+      h1 {
+        @include adjust-font-size-to(72px);
+      }
+    }
+
+    .abbreviations .flex-grid--small .cell {
+      @include flex(0 0 100%);
+      .small {
+        @include flex(0 0 100px);
+      }
+    }
+
+    .flex .cell-small {
+      @include flex(0 0 100px);
+    }
+
+    .expanded-images .flex-grid .cell {
+      @include flex(0 0 100%);
+      &:last-child {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

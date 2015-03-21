@@ -1,0 +1,7 @@
+require_relative '../needle.rb'
+require_relative '../yarn.rb'
+require_relative '../yarn_shown.rb'
+require_relative '../size.rb'
+require_relative '../measurement.rb'
+require_relative '../ravelry.rb'
+require_relative '../libraries.rb'

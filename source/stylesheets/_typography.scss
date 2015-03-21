@@ -1,0 +1,56 @@
+$min-line-padding: 3px;
+$font: "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$accent: "brandon-grotesque", "Avenir", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+
+html {
+  @include establish-baseline;
+}
+
+body {
+  @include adjust-font-size-to(18px);
+  font-family: $font;
+  color: #333;
+}
+
+p {
+  @include adjust-font-size-to(16px);
+}
+
+em {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  @include adjust-font-size-to(36px);
+  &.fancy {
+    font-family: $accent;
+    text-transform: uppercase;
+  }
+}
+
+h2 {
+  @include adjust-font-size-to(24px);
+}
+
+h3 {
+  font-family: $accent;
+  text-transform: uppercase;
+  @include adjust-font-size-to(20px);
+}
+
+h4 {
+  @include adjust-font-size-to(16px);
+  text-transform: uppercase;
+}
+
+h5 {
+  text-decoration: underline;
+}

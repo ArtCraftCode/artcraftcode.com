@@ -1,0 +1,6 @@
+.updates.section
+  %h2 Pattern version
+  %h3 Information
+  %h4 Current version: #{pattern.version}
+  - pattern.version_updates.each do |update|
+    %p= update

@@ -1,0 +1,18 @@
+---
+title: artcraftcode.com - customizable knitting patterns for the modern knitter
+layout: home
+---
+
+= partial(:branding, locals: { header: "h1" })
+.patterns.flex-grid
+  - patterns.each do |pattern|
+    .cell
+      %a{ href: "/patterns/#{pattern.url}" }
+        %img.pattern-image{ src: pattern.images[0] }
+      .pattern
+        %a.title{ href: "/patterns/#{pattern.url}" }
+          .name
+            %h3
+              = pattern.name
+        %p
+          = pattern.description

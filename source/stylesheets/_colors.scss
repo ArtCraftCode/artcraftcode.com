@@ -1,0 +1,99 @@
+$colors: (
+  brand_teal: #80DDBE,
+  brand_red: #FC584C,
+  brand_orange: #FF8D45,
+  brand_gray: #333336
+);
+
+$patternColors: (
+  forest_park: (
+    primary: #7E9277,
+    secondary: #435046
+  ),
+
+  in_winter: (
+    primary: #6AC5C0,
+    secondary: #8C778A
+  ),
+
+  very_pdx: (
+    primary: #F93891,
+    secondary: #887D8E
+  ),
+
+  winter_sea: (
+    primary: lighten(#665b71, 15%),
+    secondary: #413234
+  )
+);
+
+$white: darken(#fff, 3%);
+$text: map-get($colors, gray);
+
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@function pattern-color($pattern, $color) {
+  $tempPattern: map-get($patternColors, $pattern);
+  @return map-get($tempPattern, $color);
+}
+
+@each $color, $hex in $colors {
+  .#{$color} {
+    color: $hex;
+  }
+
+  .background-#{$color} {
+    background-color: $hex;
+  }
+}
+
+// decorative sidebars
+@each $pattern, $value in $patternColors {
+  .patterns_#{$pattern} {
+    .sidebar-left {
+      background-color: pattern-color($pattern, 'primary');
+    }
+
+    .sidebar-right {
+      background-color: pattern-color($pattern, 'secondary');
+    }
+
+    #pattern a {
+      color: pattern-color($pattern, 'primary');
+    }
+  }
+}
+
+// buttons
+@each $pattern, $value in $patternColors {
+  .patterns_#{$pattern} {
+    .button {
+      background-color: lighten(pattern-color($pattern, 'secondary'), 20%);
+      &:hover {
+        background-color: pattern-color($pattern, 'primary');
+      }
+      &.selected {
+        background-color: pattern-color($pattern, 'primary');
+        font-weight: 700;
+      }
+    }
+    .primary {
+      &.background { 
+        background-color: pattern-color($pattern, 'primary');
+      }
+      &.text {
+       color: pattern-color($pattern, 'primary'); 
+      }
+    }
+    .secondary {
+      &.background {
+        background-color: pattern-color($pattern, 'secondary');
+      }
+      &.text {
+        color: pattern-color($pattern, 'secondary');
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+---
+title: very pdx hat - by liz abinante - artcraftcode.com
+pattern: very_pdx
+controller: VeryPdxCtrl
+---
+
+= partial(:materials_ng, locals: { pattern: very_pdx } )
+= partial(:header, locals: { pattern: very_pdx } )
+
+.content
+  .fake-padding-left
+  .actual-pattern
+    = partial(:subtitle, locals: { pattern: very_pdx })
+    .instructions.section
+      %h2 Instructions
+      %p(ng-if='!size')
+        .bold As written, the pattern includes instructions for a Women's size Medium (22"/56cm).
+        %em This message will self-destruct when you select a custom size.
+        %br
+      %p Using smallest needle with CC and waste yarn, provisionally CO {{pattern.cast_on}} sts.
+
+      %p pm and join for knitting in the round, taking care not to twist.
+    .brim.section
+      %h2 Brim
+
+      .row.flex.pad-bottom
+        .number.cell-small {{pattern.brim_rows}} rounds:
+        .text.cell-large k all sts
+      .row.flex.pad-bottom
+        .number.cell-small Next round:
+        .text.cell-large switch to MC and largest needle. k all sts.
+      .row.flex.pad-bottom
+        .number.cell-small Next round:
+        .text.cell-large p all sts.
+
+      %p Using largest circular needle:
+
+      .row.flex.pad-bottom
+        .number.cell-small {{pattern.brim_rows}} rounds:
+        .text.cell-large
+          k all sts
+          %em (approximately {{pattern.brim_height}}"/{{pattern.brim_height | inToCm}}cm).
+
+      %h3 Brim fold
+      %p This requires a little dexterity and some thinking, but really it's just a bunch of fancy knit two togethers. Once you have it down, I promise it goes quickly!
+
+      %p Place the provisionally CO stitches onto your original smaller needle. Fold the CC brim up inside of your hat so the two sets of needles are next to each in other. In front you should have your working MC on the largest needle, in back you should have your CC brim on the smallest needle. The wrong sides of each color should be hidden.
+
+      %p Next round: Using your MC and largest needle, knit the first st from your larger needle together with the first st from your smaller needle and remove both sts off of their needles. The st you just made should be on your larger working needle.
+
+      %p By the end of this round, you should have {{pattern.cast_on}} MC sts on your largest needle, and no sts on your smallest needle.
+
+    .body.section
+      %h2 Body
+
+      %p Work body in the Garter Rib pattern until hat measures approximately {{pattern.brim_height + pattern.body_height}}"/{{pattern.brim_height + pattern.body_height | inToCm }}cm from brim edge. It doesn't matter if you end the Garter Rib repeat on Round 1 or Round 2.
+
+      %h4 Garter Rib
+      .row.flex.pad-bottom
+        .number.cell-small Round 1:
+        .text.cell-large p3, k1.
+      .row.flex.pad-bottom
+        .number.cell-small Round 2:
+        .text.cell-large k all sts.
+
+    .decreases.section
+      %h2 Decreases
+      %p
+        %em Switch to your DPNs when the number of sts becomes too small to manage on circular needles.
+      %p If desired, you can continue to work the crown decreases in the Garter Rib pattern.
+
+      .decreases(ng-hide='pattern.babyDecreases() || pattern.decrease_4')
+        - very_pdx.instructions[:standard].each_with_index do |ins, num|
+          .row.flex.pad-bottom
+            .number.cell-small Round #{num + 1}:
+            .text.cell-large #{ins}
+      .decreases(ng-show='pattern.babyDecreases() && !pattern.decrease_4')
+        - very_pdx.instructions[:baby].each_with_index do |ins, num|
+          .row.flex.pad-bottom
+            .number.cell-small Round #{num + 1}:
+            .text.cell-large #{ins}
+      .decreases(ng-show='pattern.babyDecreases() && pattern.decrease_4')
+        - very_pdx.instructions[:baby4].each_with_index do |ins, num|
+          .row.flex.pad-bottom
+            .number.cell-small Round #{num + 1}:
+            .text.cell-large #{ins}
+      .decreases(ng-show='!pattern.babyDecreases() && pattern.decrease_4')
+        - very_pdx.instructions[:adult4].each_with_index do |ins, num|
+          .row.flex.pad-bottom
+            .number.cell-small Round #{num + 1}:
+            .text.cell-large #{ins}
+
+    .finishing.section
+      %p Break yarn, leaving a long tail for weaving in ends. Cinch remaining stitches closed. Weave in ends and block gently (if desired).
+
+    = partial(:abbreviations, locals: { cable: false } )
+    = partial(:images, locals: { images: very_pdx.images } )
+    = partial(:updates, locals: { pattern: very_pdx })
+  .fake-padding-right

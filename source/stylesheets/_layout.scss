@@ -1,0 +1,94 @@
+$sidebar: 200px;
+$smallCell: 150px;
+
+#container {
+  max-width: 1450px;
+  margin: 0 auto;
+}
+
+#footer {
+  @include adjust-font-size-to(10px);
+  padding: 40px;
+}
+
+.flex {
+  @include display-flex;
+  @include justify-content(space-between);
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+
+  .cell {
+    @include flex(0 0 47%);
+  }
+
+  .cell-fixed-left {
+    @include flex(0 0 $sidebar);
+    padding-right: 30px;
+  }
+
+  .cell-fixed-right {
+    @include flex(0 0 $sidebar);
+    padding-left: 30px;
+  }
+
+  .cell-small {
+    @include flex(0 0 $smallCell);
+  }
+
+  .cell-large {
+    @include flex(1 0);
+  }
+
+  &.pad-bottom {
+    padding-bottom: 10px;
+  }
+}
+
+.flex-grid {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  .cell {
+    @include flex(0 0 35%);
+    padding: 0px 20px 100px 20px;
+    margin-bottom: -6px;
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.flex-grid--flush {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  .cell {
+    @include flex(0 0 50%);
+    margin-bottom: -6px;
+    img {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.flex-grid--small {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+  .cell {
+    @include flex(0 0 46%);
+    @include display-flex;
+    padding-bottom: 10px;
+    .small {
+      @include flex(0 0 $smallCell);
+    }
+    .large {
+      @include flex(1 0);
+    }
+  }
+}
+
