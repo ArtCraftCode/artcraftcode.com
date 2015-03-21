@@ -8,6 +8,12 @@
     width: 100%;
   }
 
+  img.small {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
   .flex-grid--flush .cell {
     @include flex(0 0 50%);
   }
