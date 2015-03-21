@@ -1,5 +1,5 @@
 #pdf {
-  @include adjust-font-size-to(14px);
+  @include adjust-font-size-to(12px);
   a {
     color: lighten(color(brand_gray), 20%);
   }
