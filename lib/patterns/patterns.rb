@@ -4,8 +4,9 @@ require_relative '../custom_pattern.rb'
 # patterns
 require_relative './forest_park.rb'
 require_relative './in_winter.rb'
-require_relative './winter_sea.rb'
+require_relative './misdirected_cowl.rb'
 require_relative './very_pdx.rb'
+require_relative './winter_sea.rb'
 
 module Patterns
   def self.very_pdx
@@ -13,8 +14,14 @@ module Patterns
   end
 
   FOREST_PARK = Pattern.new(ForestPark::DATA)
-  WINTER_SEA = Pattern.new(WinterSea::DATA)
   IN_WINTER = Pattern.new(InWinter::DATA)
+  MISDIRECTED = Pattern.new(Misdirected::DATA)
   VERY_PDX = self.very_pdx
-  ALL = [IN_WINTER, FOREST_PARK, WINTER_SEA, VERY_PDX]
+  WINTER_SEA = Pattern.new(WinterSea::DATA)
+
+  ALL = [ FOREST_PARK,
+          IN_WINTER,
+          MISDIRECTED,
+          VERY_PDX,
+          WINTER_SEA ]
 end
