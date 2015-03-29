@@ -12,12 +12,14 @@
     #container
       - if current_page.data.pattern == "very_pdx"
         #pattern(ng-app="app" ng-controller="#{current_page.data.controller}" class="#{current_page.data.pattern}")
-          .sidebar-left
+          .main-title
+            %h1= by_name(current_page.data.pattern).name
           = yield
           = partial(:footer)
       - else
         #pattern{ class: current_page.data.pattern }
-          .sidebar-left
+          .main-title
+            %h1= by_name(current_page.data.pattern).name
           = yield
           = partial(:footer)
 
