@@ -1,0 +1,17 @@
+---
+title: misdirected cowl - by liz abinante - artcraftcode.com
+pattern: misdirected
+---
+
+= partial(:materials, locals: { pattern: misdirected } )
+= partial(:header, locals: { pattern: misdirected } )
+
+.content
+  .fake-padding-left
+  .actual-pattern
+    = partial(:subtitle, locals: { pattern: misdirected })
+    = partial(:misdirected)
+    = partial(:abbreviations, locals: { cable: false })
+    = partial(:images, locals: { images: misdirected.images })
+    = partial(:updates, locals: { pattern: misdirected })
+  .fake-padding-right
