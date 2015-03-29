@@ -10,6 +10,16 @@
   @include flex-direction(row);
   @include flex-wrap(wrap);
 
+  .featured {
+    padding-bottom: 120px;
+    h3 {
+      @include adjust-font-size-to(48px);
+      margin: 10px;
+    }
+    margin: 0 auto;
+    text-align: center;
+  }
+
   a {
     color: lighten(color(brand_gray), 60%);
     text-decoration: none;
@@ -19,8 +29,11 @@
   }
 
   .branding {
+    padding-top: 20px;
+    margin: 0 auto;
     h1 {
       @include adjust-font-size-to(124px);
+      text-align: center;
       padding: 0px 20px;
       margin: 0;
       color: $white;

@@ -4,6 +4,21 @@ layout: home
 ---
 
 = partial(:branding, locals: { header: "h1" })
+.featured
+  .pattern
+    %h3
+      %span.brand_orange New!
+      %a{ href: "/patterns/#{featured_pattern.url}" }
+        = featured_pattern.name
+  .flex-grid
+    - featured_pattern.images[0..3].each do |image|
+      .cell
+        %a{ href: "/patterns/#{featured_pattern.url}" }
+          %img.pattern-image{ src: image }
+  .pattern
+    %p= featured_pattern.description
+
+
 .patterns.flex-grid
   - patterns.each do |pattern|
     .cell
