@@ -16,12 +16,17 @@
   @include flex-direction(row);
   @include flex-wrap(wrap);
 
-  .sidebar, .materials, .header, .content {
+  .sidebar, .main-title, .materials, .header, .content {
     @include flex(1 100%);
   }
 
-  .sidebar-left {
-    @include flex(1 0);
+  .main-title {
+    padding: 10px 20px;
+    h1 {
+      @include adjust-font-size-to(96px);
+      padding: 0;
+      margin: 0;
+    }
   }
 
   .materials {
@@ -42,10 +47,6 @@
 
   .header {
     @include flex(7 0);
-  }
-
-  .sidebar-right {
-    @include flex(1 0);
   }
 
   .content {
@@ -124,35 +125,6 @@
     }
   }
 
-  .over-image {
-    h1 {
-      @include adjust-font-size-to(172px);
-      padding: 0;
-      margin: 0;
-    }
-    h2 {
-      padding: 0;
-      margin: 0;
-    }
-    word-wrap: break-word;
-    color: $white;
-    padding: 0px 30px;
-    z-index: 1;
-    top: 50px;
-    position: absolute;
-  }
-  @media (max-width: map-get($breakpoints, acceptable)) {
-    .over-image {
-      max-width: (map-get($breakpoints, acceptable) / 12) * 5;
-      top: 150px;
-      h1 {
-        @include adjust-font-size-to(96px);
-      }
-    }
-    &.forest_park .over-image {
-      top: 60px;
-    }
-  }
   img {
     width: 100%;
     &.no-resize {
@@ -161,7 +133,7 @@
   }
 
   .title {
-    padding-top: 80px;
+    padding-top: 40px;
   }
 
   .row {
