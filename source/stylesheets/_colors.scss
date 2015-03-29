@@ -16,6 +16,11 @@ $patternColors: (
     secondary: #8C778A
   ),
 
+  misdirected: (
+    primary: lighten(#45452D, 10%),
+    secondary: #CCCC9F
+  ),
+
   very_pdx: (
     primary: #F93891,
     secondary: #887D8E
@@ -49,18 +54,13 @@ $text: map-get($colors, gray);
   }
 }
 
-// decorative sidebars
 @each $pattern, $value in $patternColors {
-  .patterns_#{$pattern} {
-    .sidebar-left {
-      background-color: pattern-color($pattern, 'primary');
+  #pattern.#{$pattern} {
+    .main-title h1 {
+      color: pattern-color($pattern, 'primary');
     }
 
-    .sidebar-right {
-      background-color: pattern-color($pattern, 'secondary');
-    }
-
-    #pattern a {
+    a {
       color: pattern-color($pattern, 'primary');
     }
   }
