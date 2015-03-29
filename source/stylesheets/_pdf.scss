@@ -1,17 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Martel+Sans:300,400,700);
+
+$pdfFont: 'Martel Sans', 'Helvetica', 'Arial';
+
 #pdf {
+  font-family: $pdfFont;
+  font-weight: 300;
+  
   @include adjust-font-size-to(12px);
   a {
     color: lighten(color(brand_gray), 20%);
-  }
-
-  img.scaled {
-    width: 100%;
-  }
-
-  img.small {
-    width: 60%;
-    display: block;
-    margin: 0 auto;
   }
 
   .flex-grid--flush .cell {
@@ -24,14 +21,23 @@
 
   .section {
     padding-bottom: 20px;
-    margin: 0px 0px 40px 0px;
+    margin: 0px 0px 20px 0px;
+    &:last-child {
+      padding-bottom: 10px;
+      margin: 0px 0px 10px 0px;
+    }
     &.no-bottom {
       padding-bottom: 0px;
     }
   }
 
+  .title.section {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
   h1 {
-    font-family: $accent;
+    font-family: $pdfFont;
     text-transform: uppercase;
     @include adjust-font-size-to(36px);
     &.small {
@@ -40,29 +46,61 @@
   }
 
   h2 {
+    font-family: $pdfFont;
     @include adjust-font-size-to(24px);
-    font-weight: 300;
-    text-transform: lowercase;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 3px solid lighten(color(brand_gray), 70%);
   }
   
   h3 {
+    font-family: $pdfFont;
     text-transform: lowercase;
-    font-weight: 300;
-    font-family: $font;
-    border-bottom: 1px dotted lighten(color(brand_gray), 50%);
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px dotted lighten(color(brand_gray), 70%);
     @include adjust-font-size-to(18px);
+  }
+
+  .title {
+    h2 {
+      text-transform: none;
+      border-bottom: none;
+    }
   }
 
   .row {
     .number {
-      font-weight: 600;
-      text-transform: uppercase;
+      text-transform: none;
     }
   }
 
-  .abbreviations {
-    .small, .cell-small {
-      font-weight: 600;
+  img.small {
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  img.scaled {
+    width: 100%;
+  }
+
+  .flex, .flex-grid--small {
+    display: block;
+    .cell {
+      display: block;
     }
+    .small, .cell-small {
+      width: 100px;
+      float: left;
+      font-weight: 400;
+    }
+    .large, .cell-large {
+      width: auto;
+    }
+  }
+
+  #footer {
+    padding: 0px;
   }
 }
