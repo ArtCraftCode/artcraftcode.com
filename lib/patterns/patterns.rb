@@ -19,9 +19,11 @@ module Patterns
   VERY_PDX = self.very_pdx
   WINTER_SEA = Pattern.new(WinterSea::DATA)
 
-  ALL = [ FOREST_PARK,
+  ALL = [
+          # MISDIRECTED,
+          WINTER_SEA,
+          FOREST_PARK,
           IN_WINTER,
-          MISDIRECTED,
-          VERY_PDX,
-          WINTER_SEA ]
+          VERY_PDX
+        ]
 end

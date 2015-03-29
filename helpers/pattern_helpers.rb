@@ -7,7 +7,7 @@ module PatternHelpers
   end
 
   def featured_pattern
-    Patterns::WINTER_SEA
+    Patterns::MISDIRECTED
   end
 
   def forest_park
