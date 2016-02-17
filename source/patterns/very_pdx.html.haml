@@ -13,7 +13,7 @@ controller: VeryPdxCtrl
     = partial(:subtitle, locals: { pattern: very_pdx })
     .instructions.section
       %h2 Instructions
-      %p(ng-if='!size')
+      %div(ng-show='waitingForCustomizations()')
         .bold As written, the pattern includes instructions for a Women's size Medium (22"/56cm).
         %em This message will self-destruct when you select a custom size.
         %br

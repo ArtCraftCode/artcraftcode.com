@@ -22,6 +22,9 @@ angular.module('controllers', ['factories', 'services', 'values'])
     # used in the view
     $scope.pattern = angular.copy(patternTemplate)
 
+    $scope.waitingForCustomizations = ->
+      return !$scope.size
+
     # actually customize the pattern
     $scope.customize = ->
       custom = new CustomHatPattern($scope.size, patternTemplate, 8)
@@ -35,6 +38,7 @@ angular.module('controllers', ['factories', 'services', 'values'])
       $scope.pattern.set('mc_yards', mcYards())
       $scope.pattern.set('cc_yards', ccYards())
       $scope.$apply()
+      $scope.pattern
 
     # listen for the directive to customize the size
     $scope.$on 'customized', (event, size) ->
