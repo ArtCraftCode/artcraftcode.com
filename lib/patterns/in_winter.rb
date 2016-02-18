@@ -8,9 +8,7 @@ module InWinter
   IMAGES =  [
               'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_6976.JPG',
               'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_6999.JPG',
-              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_7001.JPG',
-              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_7002.JPG',
-              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_7003.JPG'
+              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_7002.JPG'
             ]
 
   NOTIONS = ['4 stitch markers', 'cable needle', 'darning needle']

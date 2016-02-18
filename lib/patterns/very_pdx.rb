@@ -12,7 +12,10 @@ module VeryPDX
       'Version 4: Updated calculation that generates the number of inches knit before beginning decreases. Only impacted a few sizes, and it was pretty obvious (ex: 2 inches instead of 7 inches).'
     ]
   }
-  IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg']
+  IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/very-pdx-1.jpg',
+            'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_7190_medium2.jpg',
+            'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_7189_medium2.jpg'
+            ]
 
   def self.yarns_shown
     yarns = []
