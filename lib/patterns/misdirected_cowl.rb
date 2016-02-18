@@ -7,7 +7,7 @@ module Misdirected
 
   IMAGES = [ 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6598.JPG',
              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6600.JPG',
-             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6602.JPG',
+             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6602.jpg',
              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6604.JPG' ]
 
   NOTIONS = ['darning needle']
