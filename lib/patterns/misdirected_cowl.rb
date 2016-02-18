@@ -5,10 +5,10 @@ module Misdirected
 
   NEEDLES = [Needle.new(4.5)]
 
-  IMAGES = [ 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/misdirected/IMG_6598.JPG',
-             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/misdirected/IMG_6600.JPG',
-             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/misdirected/IMG_6602.JPG',
-             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/misdirected/IMG_6604.JPG' ]
+  IMAGES = [ 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6598.JPG',
+             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6600.JPG',
+             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6602.JPG',
+             'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6604.JPG' ]
 
   NOTIONS = ['darning needle']
 

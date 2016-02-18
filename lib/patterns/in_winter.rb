@@ -6,9 +6,9 @@ module InWinter
   NEEDLES = [Needle.new(4, 'Color A'), Needle.new(5, 'Colors B, C')]
 
   IMAGES =  [
-              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_6976.JPG',
-              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_6999.JPG',
-              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/in-winter/IMG_7002.JPG'
+              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6976.JPG',
+              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_6999.JPG',
+              'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/IMG_7002.JPG'
             ]
 
   NOTIONS = ['4 stitch markers', 'cable needle', 'darning needle']

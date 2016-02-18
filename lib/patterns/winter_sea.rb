@@ -8,7 +8,7 @@ module WinterSea
     current: "1 (January 4, 2015)",
     updates: []
   }
-  IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/closeup.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/hanging.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/tail.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/fence.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/wingspan.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/winter-sea/bundle.JPG']
+  IMAGES = ['https://s3.amazonaws.com/artcraftcode.com/permanent_assets/closeup.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/hanging.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/tail.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/fence.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/wingspan.JPG', 'https://s3.amazonaws.com/artcraftcode.com/permanent_assets/bundle.JPG']
 
   SETUP = [
     "kfb, p7, kfb.",
