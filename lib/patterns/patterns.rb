@@ -2,6 +2,7 @@ require_relative '../pattern.rb'
 require_relative '../custom_pattern.rb'
 
 # patterns
+require_relative './crenel_hat.rb'
 require_relative './forest_park.rb'
 require_relative './in_winter.rb'
 require_relative './misdirected_cowl.rb'
@@ -18,6 +19,7 @@ module Patterns
   MISDIRECTED = Pattern.new(Misdirected::DATA)
   VERY_PDX = self.very_pdx
   WINTER_SEA = Pattern.new(WinterSea::DATA)
+  CRENEL_HAT = Pattern.new(CrenelHat::DATA)
 
   ALL = [
           # MISDIRECTED,

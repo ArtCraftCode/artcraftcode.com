@@ -1,0 +1,42 @@
+.notes.section
+  %h2 Pattern notes
+  %p As written, fits women's medium loosely (21in/53cm), or men's medium snugly (23in/58 cm). My husband says this hat fits him perfectly!
+
+  %h2 Sizing up or down
+  %p Simply add or subtract 7 from your cast on number to make the hat larger or smaller.
+  %p If you're making this hat much larger (or much smaller), you may need to add (or remove) decrease rows to compensate.
+  %p The decreases are too many rows for baby hats, but you should be able to work anywhere from toddler to a large men’s size without adjustments to the decreases.
+
+.instructions.section
+  %h2 Instructions
+
+  %h3 Cast on
+  - crenel_hat.instructions[:cast_on].each do |instruction|
+    %p= instruction
+
+.section
+  %h2 Ribbing
+  - crenel_hat.instructions[:ribbing].each do |instruction|
+    %p= instruction
+
+.section
+  %h2 Hat Body
+  - crenel_hat.instructions[:body].each do |instruction|
+    %p= instruction
+
+.section
+  %h2 Decreases
+  - crenel_hat.instructions[:decreases].each do |ins|
+    .row.flex.pad-bottom
+      .number.cell-medium
+        %span Round #{ins[:round]}:
+      .text.cell-large
+        %span= ins[:text]
+
+.finishing.section
+  %h2 Finishing
+  - crenel_hat.instructions[:finishing].each do |instruction|
+    %p= instruction
+
+.abbreviations.section
+  = partial(:abbreviations_table)

@@ -10,6 +10,10 @@ module PatternHelpers
     Patterns::MISDIRECTED
   end
 
+  def crenel_hat
+    Patterns::CRENEL_HAT
+  end
+
   def forest_park
     Patterns::FOREST_PARK
   end

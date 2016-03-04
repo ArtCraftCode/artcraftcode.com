@@ -1,0 +1,18 @@
+---
+title: crenel hat - by liz abinante - artcraftcode.com
+pattern: crenel_hat
+---
+
+= partial(:materials, locals: { pattern: crenel_hat } )
+= partial(:header, locals: { pattern: crenel_hat } )
+
+.content
+  .fake-padding-left
+  .actual-pattern
+    = partial(:subtitle, locals: { pattern: crenel_hat })
+    = partial(:crenel_hat)
+    = partial(:images, locals: { images: crenel_hat.images })
+    = partial(:updates, locals: { pattern: crenel_hat })
+
+  .fake-padding-right
+
