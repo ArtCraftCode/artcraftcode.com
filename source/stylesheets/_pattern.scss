@@ -107,7 +107,7 @@
     font-weight: 300;
     text-transform: lowercase;
   }
-  
+
   h3 {
     text-transform: lowercase;
     font-weight: 300;
@@ -121,7 +121,7 @@
       @include adjust-font-size-to(24px);
     }
     h3 {
-      @include adjust-font-size-to(20px); 
+      @include adjust-font-size-to(20px);
     }
   }
 
