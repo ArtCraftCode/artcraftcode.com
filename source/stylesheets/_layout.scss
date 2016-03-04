@@ -1,5 +1,6 @@
 $sidebar: 200px;
 $smallCell: 150px;
+$mediumCell: 250px;
 
 #container {
   max-width: 1450px;
@@ -33,6 +34,10 @@ $smallCell: 150px;
 
   .cell-small {
     @include flex(0 0 $smallCell);
+  }
+
+  .cell-medium {
+    @include flex(0 0 $mediumCell);
   }
 
   .cell-large {
